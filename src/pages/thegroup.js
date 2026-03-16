@@ -3,11 +3,11 @@ import Layout from "../components/Layout"
 import GroupMember from "../components/GroupMember"
 import placeholderImage from "../images/placeholder.jpeg"
 
-import photoHyeon   from "../static/images/hyeon.png"
-import photoNoh     from "../static/images/sihyeong.jpg"
-import photoMillard from "../static/images/clea.jpg"
-import photoHwang   from "../static/images/seunggyu.jpg"
-import photoBen     from "../static/images/benji_team.jpg"
+const photoHyeon = "/images/hyeon.png"
+const photoNoh = "/images/sihyeong.jpg"
+const photoMillard = "/images/clea.jpg"
+const photoHwang = "/images/seunggyu.jpg"
+const photoBen = "/images/benji_team.jpg"
 
 const TheGroupPage = () => (
   <Layout>
