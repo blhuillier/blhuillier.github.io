@@ -1,6 +1,4 @@
 module.exports = {
-  pathPrefix: "/blhuillier.github.io", // Required for GitHub Pages
-  
   siteMetadata: {
     title: "Benjamin L'Huillier - Cosmologist & Astrophysicist",
     description: "Official website of Benjamin L'Huillier, featuring his research, teaching, publications, and group.",

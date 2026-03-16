@@ -1,50 +1,161 @@
 import React from "react"
+import { Link } from "gatsby"
+import Layout from "../components/Layout"
+
+const sections = [
+  {
+    title: "Research",
+    description:
+      "Current research themes, cosmological tests, simulations, and publication links.",
+    to: "/research",
+  },
+  {
+    title: "Teaching",
+    description:
+      "Courses, supervision, and teaching philosophy across undergraduate and graduate levels.",
+    to: "/teaching",
+  },
+  {
+    title: "The Group",
+    description:
+      "Physical cosmology group members, current students, and alumni.",
+    to: "/thegroup",
+  },
+  {
+    title: "Outreach",
+    description:
+      "Public talks, science communication, and art-science collaborations.",
+    to: "/outreach",
+  },
+]
+
+const newsItems = [
+  {
+    date: "2026-01-29",
+    text: "Cléa Millard's first paper on tests of the FLRW model was submitted to arXiv.",
+  },
+  {
+    date: "2025-11-17 to 2025-11-21",
+    text: "The France-Korea Workshop on Cosmology was hosted at Sejong University.",
+  },
+  {
+    date: "2024-11-14",
+    text: "Work on black hole jet alignment with host galaxies was published in Nature Astronomy.",
+  },
+]
 
 const IndexPage = () => (
-  <main>
-    <h1>Benjamin L'Huillier | Cosmologist, Assistant Professor</h1>
+  <Layout>
+    <div className="homepage">
+      <section className="hero">
+        <div>
+          <p className="hero__eyebrow">Cosmology • Sejong University</p>
+          <h1 className="hero__title">Benjamin L&apos;Huillier</h1>
+          <p className="hero__subtitle">
+            Cosmologist, Assistant Professor, French researcher based in Seoul
+          </p>
+          <p className="hero__summary">
+            I study structure formation and the foundations of cosmology using
+            simulations, large-scale structure, and advanced statistical
+            methods. My work focuses on testing the concordance model, probing
+            gravity, and understanding how galaxies and cosmic structures
+            evolve.
+          </p>
+          <ul className="hero__links">
+            <li>
+              <a href="https://scholar.google.com/citations?user=vksMsj0AAAAJ">
+                Google Scholar
+              </a>
+            </li>
+            <li>
+              <a href="https://ui.adsabs.harvard.edu/">NASA ADS</a>
+            </li>
+            <li>
+              <a href="https://orcid.org/0000-0003-2934-6243">ORCID</a>
+            </li>
+            <li>
+              <a href="https://github.com/blhuillier">GitHub</a>
+            </li>
+          </ul>
+        </div>
 
-    <section>
-      <h2>About Me</h2>
-      <p>
-        I am an Assistant Professor in the <a href="https://sejong.elsevierpure.com/en/organisations/department-of-physics-and-astronomy">Department of Physics and Astronomy</a> at <a href="https://en.sejong.ac.kr/eng/index.do">Sejong University</a> in Seoul, South Korea.
-        I am also an associate member at the <a href="https://kias.re.kr/">Korea Institute for Advanced Study</a> and the <a href="https://gwuniverse.snu.ac.kr/">Center for Gravitational Wave Universe</a> at <a href="https://en.snu.ac.kr/index.html">Seoul National University</a>. My research is funded by the National Research Foundation of Korea.
-      </p>
-    </section>
+        <div className="hero__portrait">
+          <img
+            alt="Portrait placeholder for Benjamin L'Huillier"
+            src="/images/profile.jpg"
+          />
+        </div>
+      </section>
 
-    <section>
-      <h2>Research Interests</h2>
-      <p>
-        My research focuses on exploring and falsifying various aspects of the concordance LCDM model using N-body simulations and advanced statistical methods, both within and beyond the LCDM framework. I have been involved in the DESI collaboration, contributing to the time-domain and cosmological simulations working groups.
-      </p>
-    </section>
+      <div className="homepage-grid">
+        <section className="stack">
+          <div className="content-section">
+            <p className="section-label">Overview</p>
+            <h2>Current Position and Research Direction</h2>
+            <p>
+              I am an Assistant Professor in the{" "}
+              <a href="https://sejong.elsevierpure.com/en/organisations/department-of-physics-and-astronomy">
+                Department of Physics and Astronomy
+              </a>{" "}
+              at <a href="https://en.sejong.ac.kr/eng/index.do">Sejong University</a>.
+              My research is supported by the National Research Foundation of
+              Korea and centers on tests of LCDM, dark energy, modified gravity,
+              and the use of cosmological simulations to interpret observations.
+            </p>
+          </div>
 
-    <section>
-      <h2>Academic Background</h2>
-      <p>
-        I completed my PhD at <a href="http://lerma.obspm.fr/">LERMA</a>, <a href="https://obspm.fr/">Paris Observatory</a>, and <a href="https://www.sorbonne-universite.fr/en/education/study-sorbonne-university">Paris Sorbonne University</a>, working within the Galaxies and Cosmology group with Françoise Combes and Benoit Semelin as part of the Momentum project. I was also a Teaching Assistant at Université Paris Diderot, where I taught Physics and data analysis.
-      </p>
-    </section>
+          <div className="cards-grid">
+            {sections.map((section) => (
+              <article className="feature-card" key={section.to}>
+                <h3>{section.title}</h3>
+                <p>{section.description}</p>
+                <Link className="feature-card__link" to={section.to}>
+                  Explore {section.title}
+                </Link>
+              </article>
+            ))}
+          </div>
+        </section>
 
-    <section>
-      <h2>Professional Experience</h2>
-      <p>
-        After my PhD, I moved to South Korea, an emerging hub for research in Astronomy and Cosmology. I worked as a Research Fellow in the <a href="https://astro.kias.re.kr/">Astrophysics and Cosmology group</a> at the <a href="https://kias.re.kr/">Korea Institute for Advanced Study (KIAS)</a>, collaborating with Profs. Changbom Park and Juhan Kim on cosmological structure formation, from galaxies to large-scale structures in the Universe, using simulations like the Horizon Run 4 simulation. I then joined the CosKASI group at the Korea Astronomy and Space Science Institute in Daejeon to work with Arman Shafieloo, before becoming a Research Professor and W. C. Rufus Fellow in the Yonsei Observable UNiverse Group (YOUNG).
-      </p>
-    </section>
+        <aside className="stack">
+          <section className="news-panel">
+            <p className="section-label">Selected Highlights</p>
+            <h2>Recent News</h2>
+            <ul className="news-list">
+              {newsItems.map((item) => (
+                <li key={item.date + item.text}>
+                  <strong>{item.date}</strong>
+                  <p>{item.text}</p>
+                </li>
+              ))}
+            </ul>
+          </section>
 
-    <section>
-      <h2>News</h2>
-      <ul>
-        <li>
-          <strong>2023-10-01 to 2024-09-30</strong>: Partenariat Hubert Curien STAR with Marian Douspis' team at <a href="https://www.ias.u-psud.fr/">Institut d'Astrophysique Spatiale</a>: 30M KRW (Korea) / 20k EUR (France).
-        </li>
-        <li>
-          <strong>2022-06-01 to 2025-01-28</strong>: NRF Grant "향후 관측자료를 활용한 일반상대성이론의 검증" (Testing General Relativity with Upcoming Surveys), approximately 180M KRW.
-        </li>
-      </ul>
-    </section>
-  </main>
+          <section className="aside-panel">
+            <p className="section-label">Affiliations</p>
+            <h2>Institutional Links</h2>
+            <ul className="link-list">
+              <li>
+                <a className="link-pill" href="https://en.sejong.ac.kr/eng/index.do">
+                  Sejong University
+                </a>
+              </li>
+              <li>
+                <a className="link-pill" href="https://kias.re.kr/">
+                  KIAS
+                </a>
+              </li>
+              <li>
+                <a className="link-pill" href="https://gwuniverse.snu.ac.kr/">
+                  CGWU at SNU
+                </a>
+              </li>
+            </ul>
+          </section>
+        </aside>
+      </div>
+    </div>
+  </Layout>
 )
 
 export default IndexPage
