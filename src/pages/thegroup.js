@@ -3,11 +3,11 @@ import Layout from "../components/Layout"
 import GroupMember from "../components/GroupMember"
 import placeholderImage from "../images/placeholder.jpeg"
 
-const photoHyeon = "../static/images/hyeon.png"
-const photoNoh = "../static/images/sihyeong.jpg"
-const photoMillard = "../static/images/clea.jpg"
-const photoHwang = "../static/images/seunggyu.jpg"
-const photoBen = "../static/images/benji_team.jpg"
+import photoHyeon   from "../static/images/hyeon.png"
+import photoNoh     from "../static/images/sihyeong.jpg"
+import photoMillard from "../static/images/clea.jpg"
+import photoHwang   from "../static/images/seunggyu.jpg"
+import photoBen     from "../static/images/benji_team.jpg"
 
 const TheGroupPage = () => (
   <Layout>
@@ -19,17 +19,19 @@ const TheGroupPage = () => (
     <GroupMember
       name="Benjamin L'Huillier | 벤자민 르위예"
       period="2022-present"
-      researchFocus="researchFocus={
+      researchFocus={
   <>
-    <p>I combine cosmological N-body simulations and advanced statistical methods to test the  ​concordance model of cosmology, trying to understand</p>
+    <p>
+      I combine cosmological N-body simulations and advanced statistical methods to test the concordance model of cosmology, trying to understand:
+    </p>
     <ul>
       <li>The Nature of Cosmic Acceleration:
 Modified Gravity &amp; Dark Energy</li>
       <li>Inflation &amp; the Early Universe</li>
     </ul>
   </>
-}
-"
+      }
+      photo={photoBen}
       profileLinks={[
         { label: "Google Scholar", href: "https://scholar.google.com/citations?user=9n8sXoAAAAAJ&hl=en" },
         { label: "GitHub", href: "https://github.com/blhuillier" }
