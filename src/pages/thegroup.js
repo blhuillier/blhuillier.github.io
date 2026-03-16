@@ -3,53 +3,62 @@ import Layout from "../components/Layout"
 import GroupMember from "../components/GroupMember"
 import placeholderImage from "../images/placeholder.jpeg"
 
-// Attempt to import each image; fallback to placeholder if not found
-let photoHyeon, photoNoh, photoMillard, photoHwang, photoYu, photoChung;
-try { photoHyeon = require("../images/hyeon.jpg"); } catch { photoHyeon = placeholderImage; }
-try { photoNoh = require("../images/noh.jpg"); } catch { photoNoh = placeholderImage; }
-try { photoMillard = require("../images/millard.jpg"); } catch { photoMillard = placeholderImage; }
-try { photoHwang = require("../images/hwang.jpg"); } catch { photoHwang = placeholderImage; }
-try { photoYu = require("../images/yu.jpg"); } catch { photoYu = placeholderImage; }
-try { photoChung = require("../images/chung.jpg"); } catch { photoChung = placeholderImage; }
+const photoHyeon = "../static/images/hyeon.png"
+const photoNoh = "../static/images/sihyeong.jpg"
+const photoMillard = "../static/images/clea.jpg"
+const photoHwang = "../static/images/seunggyu.jpg"
+const photoBen = "../static/images/benji_team.jpg"
 
 const TheGroupPage = () => (
   <Layout>
     <h1>The Group</h1>
-    <p>Benjamin L'Huillier, Assistant Professor</p>
+
+
+    <section>
+    <h2>Benjamin L'Huillier, Assistant Professor</h2>
+    <GroupMember
+      name="Benjamin L'Huillier | 벤자민 르위예"
+      period="2022-present"
+      researchFocus="researchFocus={
+  <>
+    <p>I combine cosmological N-body simulations and advanced statistical methods to test the  ​concordance model of cosmology, trying to understand</p>
+    <ul>
+      <li>The Nature of Cosmic Acceleration:
+Modified Gravity &amp; Dark Energy</li>
+      <li>Inflation &amp; the Early Universe</li>
+    </ul>
+  </>
+}
+"
+      profileLinks={[
+        { label: "Google Scholar", href: "https://scholar.google.com/citations?user=9n8sXoAAAAAJ&hl=en" },
+        { label: "GitHub", href: "https://github.com/blhuillier" }
+      ]}
+    />
+    </section>
 
     <section>
       <h2>Graduate Students</h2>
       <GroupMember
-        name="M. Kim Hyeon"
-        role="Graduate Student"
-        startDate="Spring 2023"
-        description="Researching N-body Simulations."
+        name="M. Kim Hyeon | 김현"
+        role="Integrated Graduate Student"
+        period="Spring 2023-present"
+        researchFocus="N-body simulations"
         photo={photoHyeon}
       />
       <GroupMember
-        name="M. Si Hyeong Noh"
-        role="Graduate Student"
-        startDate="Spring 2023"
-        description="Focusing on Testing Modified Gravity."
+        name="M. Si Hyeong Noh | 노시형"
+        role="M.Sc. Candidate"
+        period="Spring 2023-Fall 2025"
+        researchFocus="Testing modified gravity"
         photo={photoNoh}
       />
       <GroupMember
-        name="Ms. Cléa Millard"
-        role="Graduate Student"
-        startDate="Fall 2024"
-        description="Working on SNIa Cosmology."
+        name="Ms. Cléa Millard | 클레아 밀라르"
+        role="Ph.D Candidate"
+        period="Fall 2024-present"
+        researchFocus="Type Ia supernova cosmology"
         photo={photoMillard}
-      />
-    </section>
-
-    <section>
-      <h2>Graduate Research Assistant</h2>
-      <GroupMember
-        name="M. Seung-gyu Hwang"
-        role="Graduate Research Assistant"
-        startDate="Summer 2024"
-        description="Researching SNIa Cosmology."
-        photo={photoHwang}
       />
     </section>
 
@@ -58,23 +67,40 @@ const TheGroupPage = () => (
       <GroupMember
         name="M. Seung-gyu Hwang"
         role="Alumnus"
-        startDate="Yonsei U. M. Sc, 2019-2022"
-        description=""
+        period="Yonsei University M.Sc. 2019-2022; Graduate Research Assistant 2022-2025"
+        researchFocus="Gaussian process regression in cosmology"
+        currentPosition="PhD student at CosmoStat, CEA Saclay"
+        profileLinks={[
+          { label: "GitHub", href: "https://github.com/sghwang-cosmos" },
+        ]}
         photo={photoHwang}
       />
       <GroupMember
         name="M. Seokhyeon Yu"
         role="Alumnus"
-        startDate="B. Sc., 2022"
-        description=""
-        photo={photoYu}
+        period="B.Sc., 2022"
+        researchFocus="Cosmological probes"
       />
       <GroupMember
         name="Ms. Sohee (Sophie) Chung"
         role="Alumna"
-        startDate="2019, Emory Rising Sophomore project"
-        description=""
-        photo={photoChung}
+        period="2019, Emory University summer project"
+        researchFocus="Type Ia supernova cosmology"
+        currentPosition="PhD Candidate, Washington University in St. Louis, USA"
+      />
+      <GroupMember
+        name="David Fernández Gil"
+        role="Alumnus"
+        period="Post-Masters Researcher, 2022"
+        researchFocus="Alignment of AGN and galaxies"
+        currentPosition="PhD Candidate, Centro de Estudios de Fisica del Cosmos de Aragón, Teruel, Spain"
+        profileLinks={[
+          {
+            label: "Profile",
+            href: "https://theconversation.com/profiles/david-fernandez-gil-2215115",
+          },
+        ]}
+        photo={placeholderImage}
       />
     </section>
   </Layout>

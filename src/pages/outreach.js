@@ -6,6 +6,25 @@ const OutreachPage = () => (
   <Layout>
     <h1>Public Outreach</h1>
 
+    <SectionFrame
+      title="Mentoring for the French National Physics Olympics"
+      dateRange="Seoul French School"
+      description={
+        <>
+          <p>
+            I mentored students from the Seoul French School for the French
+            National Physics Olympics. The team qualified for the finals and
+            was awarded 3rd Prize.
+          </p>
+          <p>
+            <a href="https://pr.sejong.ac.kr/news/people/faculty.do?mode=view&articleNo=863364">
+              Sejong University press release
+            </a>
+          </p>
+        </>
+      }
+    />
+
     {/* Public Talks Section */}
     <SectionFrame
       title="Public Talks on the History of the Universe"
