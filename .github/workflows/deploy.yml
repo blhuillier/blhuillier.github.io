@@ -3,38 +3,54 @@ name: Deploy Gatsby Site to GitHub Pages
 on:
   push:
     branches:
-      - main  # Adjust if your branch is named differently
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout the repository
-        uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: 18
+          cache: npm
 
       - name: Install dependencies
-        run: npm install --legacy-peer-deps
+        run: npm install
 
-      - name: Build the Gatsby site
-        run: npm run build  # Removed --prefix-paths
+      - name: Build Gatsby site
+        run: npm run build
 
-      - name: Configure Git user
-        run: |
-          git config --global user.email "lhuillier.benjamin@gmail.com"
-          git config --global user.name "Benjamin L'Huillier"
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
 
-      # Temporarily removed CNAME file preparation step
-      # - name: Prepare CNAME file for GitHub Pages
-      #   run: cp CNAME public/CNAME
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
 
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
       - name: Deploy to GitHub Pages
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          npx gh-pages -d public -b gh-pages -r https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+        id: deployment
+        uses: actions/deploy-pages@v4
