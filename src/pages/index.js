@@ -94,7 +94,7 @@ const IndexPage = () => (
         <div className="hero__portrait">
           <img
             alt="Portrait placeholder for Benjamin L'Huillier"
-            src="/images/profile.jpg"
+            src="/images/benji_team.jpg"
           />
         </div>
       </section>
