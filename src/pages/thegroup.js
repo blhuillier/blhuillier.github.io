@@ -112,7 +112,7 @@ Modified Gravity &amp; Dark Energy</li>
         name="David Fernández Gil | 다비드 페르난데스 길"
         role="Alumnus"
         period="Post-Masters Researcher, 2022"
-        researchFocus="Alignment of AGN and galaxies"
+        researchFocus="Alignment of AGN and galaxies (co-supervised with Jeff Hodgson, Sejong University, main supervisor)"
         currentPosition="PhD Candidate, Centro de Estudios de Fisica del Cosmos de Aragón, Teruel, Spain"
         profileLinks={[
           {
