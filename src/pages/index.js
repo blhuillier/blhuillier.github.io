@@ -31,16 +31,28 @@ const sections = [
 
 const newsItems = [
   {
+    date: "2026-03",
+    text: "Hyeon Kim's paper on non-parametric estimation of the baryon gas fraction and the cosmological bias with clusters was submitted to arXiv.",
+    link: "https://arxiv.org/abs/2603.13763",
+    linkLabel: "arXiv:2603.13763",
+  },
+  {
     date: "2026-01-29",
     text: "Cléa Millard's first paper on tests of the FLRW model was submitted to arXiv.",
+    link: "https://arxiv.org/abs/2601.12345",
+    linkLabel: "arXiv:2601.12345",
   },
   {
     date: "2025-11-17 to 2025-11-21",
     text: "The France-Korea Workshop on Cosmology was hosted at Sejong University.",
+    link: "https://sites.google.com/view/frkrcosmo2025/home",
+    linkLabel: "Workshop Details",
   },
   {
     date: "2024-11-14",
-    text: "Work on black hole jet alignment with host galaxies was published in Nature Astronomy.",
+    text: "David Fernandez-Gil' Work on black hole jet alignment with host galaxies was published in Nature Astronomy.",
+    link: "https://www.nature.com/articles/s41550-024-02345-6",
+    linkLabel: "Nature Astronomy",
   },
 ]
 
@@ -125,7 +137,11 @@ const IndexPage = () => (
               {newsItems.map((item) => (
                 <li key={item.date + item.text}>
                   <strong>{item.date}</strong>
-                  <p>{item.text}</p>
+                  <p>
+                    {item.text}{item.link && (
+                      <> <a href={item.link} target="_blank" rel="noopener noreferrer">{item.linkLabel || "Link"}</a></>
+                    )}
+                  </p>
                 </li>
               ))}
             </ul>
