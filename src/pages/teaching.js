@@ -24,10 +24,13 @@ const TeachingPage = () => (
           <ul>
             <li><strong>Mathematical Astronomy:</strong> Fall 2022, Spring 2024</li>
             <li><strong>Cosmology:</strong> Fall 2021</li>
-            <li><strong>Data Analysis:</strong> Spring 2021</li>
+            <li><strong>Astronomical Data Analysis:</strong> Spring 2021, Fall 2025</li>
+            <li><strong>Advanced Astronomical Instruments:</strong> Fall 2023</li>
           </ul>
           <h4>Undergraduate Courses</h4>
           <ul>
+            <li><strong>Mathematical Physics II:</strong> Fall 2025</li>
+            <li><strong>Mathematical Physics I:</strong> Spring 2025, Spring 2026</li>
             <li><strong>General Physics I:</strong> Spring 2022, Spring 2023, Spring 2024</li>
             <li><strong>Intro to Astronomy:</strong> Fall 2023</li>
             <li><strong>Physics of Everyday Life:</strong> Fall 2024</li>
@@ -36,14 +39,16 @@ const TeachingPage = () => (
       }
     />
 
-    {/* 2. Invited Lectures Section (Cosmological Simulations) */}
+    {/* 2. Invited Lectures Section */}
     <SectionFrame
-      title="Invited Lectures on Cosmological Simulations"
-      dateRange="2013-2016"
+      title="Invited Lectures"
+      dateRange="2015-"
       description={
         <>
-          <p><strong>Nov. 2015:</strong> Invited lecture on cosmological simulations (PhD candidates), Indian Institute of Astrophysics, Bangalore, India. Theory and hands-on session with Gadget-2.</p>
-          <p><strong>July 2015:</strong> Pyeongchang Summer Institute 2015, tutorials on cosmological N-body simulations using the GOTPM code: design the initial conditions, run the simulation, visualize and analyze the outputs.</p>
+          <p><strong>July 2025:</strong> Gaussian Process by Example, STAR Summer School 2025, Indian Institute of Astrophysics (online).</p>
+          <p><strong>June 2023:</strong> Cosmology, Summer School on Theoretical Physics, Institute of Physics and Technology, Mongolian Academy of Sciences (online).</p>
+          <p><strong>Nov. 2015:</strong> Large-Scale Structures and Cosmological Simulations (8 hours), Indian Institute of Astrophysics, Bangalore, India.</p>
+          <p><strong>July 2015:</strong> Lecture and hands-on session on cosmological simulations (4 hours), Pyeongchang Summer Institute, KIAS, Korea.</p>
           <p><strong>Nov. 2013:</strong> 1-hour lecture on cosmological simulations to undergraduate astronomy students, Kyunghee University, Suwon, Korea.</p>
         </>
       }

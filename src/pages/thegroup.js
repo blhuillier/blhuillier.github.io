@@ -49,25 +49,50 @@ Modified Gravity &amp; Dark Energy</li>
         photo={photoHyeon}
       />
       <GroupMember
-        name="M. Si Hyeong Noh | 노시형"
-        role="M.Sc. Candidate"
-        period="Spring 2023-Fall 2025"
-        researchFocus="Testing modified gravity"
-        photo={photoNoh}
-      />
-      <GroupMember
         name="Ms. Cléa Millard | 클레아 밀라르"
         role="Ph.D Candidate"
         period="Fall 2024-present"
         researchFocus="Type Ia supernova cosmology"
         photo={photoMillard}
       />
+      <GroupMember
+        name="M. Si Hyeong Noh | 노시형"
+        role="Post-Graduate Research Assistant"
+        period="Spring 2023-present"
+        researchFocus="Testing modified gravity"
+        currentPosition="M.Sc. Sejong University, 2025"
+        photo={photoNoh}
+      />
+    </section>
+
+
+
+    <section>
+      <h2>Interns &amp; Undergraduate Projects</h2>
+      <GroupMember
+        name="Tarik Ouadjou"
+        role="Master's Intern"
+        period="Spring 2026"
+        researchFocus="Co-supervised with A. Rimmel (CentraleSupélec, France)"
+      />
+      <GroupMember
+        name="Ussan Abassi"
+        role="Master's Intern"
+        period="Spring 2026"
+        researchFocus="École Normale Supérieure, France"
+      />
+      <GroupMember
+        name="Edwyn Howarth"
+        role="Master's Intern"
+        period="Spring 2026"
+        researchFocus="Paris Sorbonne, France"
+      />
     </section>
 
     <section>
       <h2>Alumni</h2>
       <GroupMember
-        name="M. Seung-gyu Hwang"
+        name="M. Seung-gyu Hwang | 황승규"
         role="Alumnus"
         period="Yonsei University M.Sc. 2019-2022; Graduate Research Assistant 2022-2025"
         researchFocus="Gaussian process regression in cosmology"
@@ -78,20 +103,13 @@ Modified Gravity &amp; Dark Energy</li>
         photo={photoHwang}
       />
       <GroupMember
-        name="M. Seokhyeon Yu"
-        role="Alumnus"
-        period="B.Sc., 2022"
-        researchFocus="Cosmological probes"
+        name="ManalIkram Bensahli"
+        role="Undergraduate Intern"
+        period="Summer 2023"
+        researchFocus="Information theory and FERMI lightcurves (ESTACA)"
       />
       <GroupMember
-        name="Ms. Sohee (Sophie) Chung"
-        role="Alumna"
-        period="2019, Emory University summer project"
-        researchFocus="Type Ia supernova cosmology"
-        currentPosition="PhD Candidate, Washington University in St. Louis, USA"
-      />
-      <GroupMember
-        name="David Fernández Gil"
+        name="David Fernández Gil | 다비드 페르난데스 길"
         role="Alumnus"
         period="Post-Masters Researcher, 2022"
         researchFocus="Alignment of AGN and galaxies"
@@ -103,6 +121,19 @@ Modified Gravity &amp; Dark Energy</li>
           },
         ]}
         photo={placeholderImage}
+      />
+      <GroupMember
+        name="M. Seokhyeon Yu | 유석현"
+        role="Alumnus"
+        period="B.Sc., 2022"
+        researchFocus="Cosmological probes"
+      />
+      <GroupMember
+        name="Ms. Sohee (Sophie) Chung | 정소희"
+        role="Alumna"
+        period="2019, Emory University summer project"
+        researchFocus="Type Ia supernova cosmology"
+        currentPosition="PhD Candidate, Washington University in St. Louis, USA"
       />
     </section>
   </Layout>
