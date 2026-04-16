@@ -10,8 +10,15 @@ const ResearchPage = () => (
       summary="I study structure formation, from galaxies to the large-scale structures of the Universe. I use cosmological simulations and advanced statistical tools to test the concordance model of cosmology, probe the nature of dark energy and gravity, and understand how galaxies form and evolve."
     />
 
+    <img
+      src="/images/researchareas_draft03_darker.png"
+      alt="Research areas overview"
+      style={{ width: "100%", maxHeight: "500px", objectFit: "cover", display: "block" }}
+    />
+
     <SectionFrame
       title="Testing the Concordance Model of Cosmology"
+      image="/images/2param_inverted_edited_edited.png"
       description={
         <>
           <p>
@@ -31,6 +38,7 @@ const ResearchPage = () => (
 
     <SectionFrame
       title="Cosmology beyond the Concordance Model"
+      image="/images/darkenergy1_edited.jpg"
       description={
         <>
           <p>
@@ -49,6 +57,7 @@ const ResearchPage = () => (
 
     <SectionFrame
       title="Cosmological Simulations"
+      image="/images/zoom_t91_long.jpg"
       description={
         <>
           <p>
