@@ -31,6 +31,14 @@ const sections = [
 
 const newsItems = [
   {
+    date: "2026-04-08",
+    text: <>Ussan Abbassi (<a href="https://www.ens.psl.eu/" target="_blank" rel="noopener noreferrer">École Normale Supérieure</a>) joins the group to work on cosmology with gravitational waves.</>,
+  },
+  {
+    date: "2026-03-01",
+    text: <>Tarik Ouadjou (<a href="https://www.centralesupelec.fr/" target="_blank" rel="noopener noreferrer">CentraleSupélec</a>) joins the group to work on Machine Learning with the <a href="https://www.skao.int/" target="_blank" rel="noopener noreferrer">Square Kilometre Array (SKA)</a>.</>,
+  },
+  {
     date: "2026-03",
     text: "Hyeon Kim's paper on non-parametric estimation of the baryon gas fraction and the cosmological bias with clusters was submitted to arXiv.",
     link: "https://arxiv.org/abs/2603.13763",
