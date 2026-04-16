@@ -41,6 +41,7 @@ Modified Gravity &amp; Dark Energy</li>
 
     <section>
       <h2>Graduate Students</h2>
+      <div id="hyeon">
       <GroupMember
         name="M. Kim Hyeon | 김현"
         role="Integrated Graduate Student"
@@ -48,6 +49,8 @@ Modified Gravity &amp; Dark Energy</li>
         researchFocus="N-body simulations"
         photo={photoHyeon}
       />
+      </div>
+      <div id="clea">
       <GroupMember
         name="Ms. Cléa Millard | 클레아 밀라르"
         role="Ph.D Candidate"
@@ -55,6 +58,7 @@ Modified Gravity &amp; Dark Energy</li>
         researchFocus="Type Ia supernova cosmology"
         photo={photoMillard}
       />
+      </div>
       <GroupMember
         name="M. Si Hyeong Noh | 노시형"
         role="Post-Graduate Research Assistant"
@@ -69,18 +73,22 @@ Modified Gravity &amp; Dark Energy</li>
 
     <section>
       <h2>Interns &amp; Undergraduate Projects</h2>
+      <div id="tarik">
       <GroupMember
         name="Tarik Ouadjou"
         role="Master's Intern"
         period="Spring 2026"
         researchFocus="Co-supervised with A. Rimmel (CentraleSupélec, France)"
       />
+      </div>
+      <div id="ussan">
       <GroupMember
         name="Ussan Abassi"
         role="Master's Intern"
         period="Spring 2026"
         researchFocus="École Normale Supérieure, France"
       />
+      </div>
       <GroupMember
         name="Edwyn Howarth"
         role="Master's Intern"

@@ -32,21 +32,21 @@ const sections = [
 const newsItems = [
   {
     date: "2026-04-08",
-    text: <>Ussan Abbassi (<a href="https://www.ens.psl.eu/" target="_blank" rel="noopener noreferrer">École Normale Supérieure</a>) joins the group to work on cosmology with gravitational waves.</>,
+    text: <><a href="/thegroup#ussan">Ussan Abbassi</a> (<a href="https://www.ens.psl.eu/" target="_blank" rel="noopener noreferrer">École Normale Supérieure</a>) joins the group to work on cosmology with gravitational waves.</>,
   },
   {
     date: "2026-03-01",
-    text: <>Tarik Ouadjou (<a href="https://www.centralesupelec.fr/" target="_blank" rel="noopener noreferrer">CentraleSupélec</a>) joins the group to work on Machine Learning with the <a href="https://www.skao.int/" target="_blank" rel="noopener noreferrer">Square Kilometre Array (SKA)</a>.</>,
+    text: <><a href="/thegroup#tarik">Tarik Ouadjou</a> (<a href="https://www.centralesupelec.fr/" target="_blank" rel="noopener noreferrer">CentraleSupélec</a>) joins the group to work on Machine Learning with the <a href="https://www.skao.int/" target="_blank" rel="noopener noreferrer">Square Kilometre Array (SKA)</a>.</>,
   },
   {
     date: "2026-03",
-    text: "Hyeon Kim's paper on non-parametric estimation of the baryon gas fraction and the cosmological bias with clusters was submitted to arXiv.",
+    text: <><a href="/thegroup#hyeon">Hyeon Kim</a>'s paper on non-parametric estimation of the baryon gas fraction and the cosmological bias with clusters was submitted to arXiv.</>,
     link: "https://arxiv.org/abs/2603.13763",
     linkLabel: "arXiv:2603.13763",
   },
   {
     date: "2026-01-29",
-    text: "Cléa Millard's first paper on tests of the FLRW model was submitted to arXiv.",
+    text: <><a href="/thegroup#clea">Cléa Millard</a>'s first paper on tests of the FLRW model was submitted to arXiv.</>,
     link: "https://arxiv.org/abs/2601.12345",
     linkLabel: "arXiv:2601.12345",
   },
