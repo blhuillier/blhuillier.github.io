@@ -5,6 +5,7 @@ import "./layout.css"
 const navItems = [
   { label: "Home", to: "/" },
   { label: "Research", to: "/research" },
+  { label: "Publications", to: "/publications" },
   { label: "Teaching", to: "/teaching" },
   { label: "Outreach", to: "/outreach" },
   { label: "The Group", to: "/thegroup" },
