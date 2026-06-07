@@ -12,9 +12,9 @@
 - [ ] Expand the outreach page with the fuller Wix outreach content.
 - [ ] Add outreach dates, venues, images, and press links where useful.
 - [ ] Compare the group page against Wix and decide which people should appear in the Gatsby version.
-- [ ] Resolve spelling inconsistencies in group/news entries, especially `Ussan Abassi` vs `Ussan Abbassi`.
+- [x] Resolve spelling inconsistencies in group/news entries, especially `Ussan Abassi` vs `Ussan Abbassi`.
 - [ ] Make Benjamin's profile links consistent across the site.
-- [ ] Check whether the Google Scholar ID should be `vksMsj0AAAAJ` or `9n8sXoAAAAAJ`.
+- [x] Check whether the Google Scholar ID should be `vksMsj0AAAAJ` or `9n8sXoAAAAAJ`.
 - [ ] Review all PDF and image assets currently used by Wix and make sure needed assets exist in Gatsby.
 
 ## Site Structure

@@ -33,7 +33,7 @@ Modified Gravity &amp; Dark Energy</li>
       }
       photo={photoBen}
       profileLinks={[
-        { label: "Google Scholar", href: "https://scholar.google.com/citations?user=9n8sXoAAAAAJ&hl=en" },
+        { label: "Google Scholar", href: "https://scholar.google.com/citations?user=vksMsj0AAAAJ&hl=en" },
         { label: "GitHub", href: "https://github.com/blhuillier" }
       ]}
     />
@@ -83,7 +83,7 @@ Modified Gravity &amp; Dark Energy</li>
       </div>
       <div id="ussan">
       <GroupMember
-        name="Ussan Abassi"
+        name="Ussan Abbassi"
         role="Master's Intern"
         period="Spring 2026"
         researchFocus="École Normale Supérieure, France"
