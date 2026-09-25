@@ -14,7 +14,6 @@ const Seo = ({ title, description, pathname = "/", image, noindex, children }) =
 
   return (
     <>
-      <html lang="en" />
       <title>{pageTitle}</title>
       <meta name="description" content={pageDescription} />
       <meta name="author" content={meta.author} />

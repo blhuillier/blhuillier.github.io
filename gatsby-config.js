@@ -1,7 +1,14 @@
 const siteMeta = require("./src/siteMeta")
 
 module.exports = {
-  siteMetadata: siteMeta,
+  siteMetadata: {
+    title: siteMeta.title,
+    titleTemplate: siteMeta.titleTemplate,
+    description: siteMeta.description,
+    author: siteMeta.author,
+    siteUrl: siteMeta.siteUrl,
+    image: siteMeta.image,
+  },
 
   plugins: [
     `gatsby-plugin-image`,
