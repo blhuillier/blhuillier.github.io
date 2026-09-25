@@ -39,5 +39,6 @@
   .outreach-item { grid-template-columns: 1fr; }
   .outreach-item:nth-child(even) { direction: ltr; }
   .outreach-item__media { min-height: 220px; }
+  .outreach-item__media--empty { display: none; }
   .outreach-item__body { padding: 26px 22px; }
 }

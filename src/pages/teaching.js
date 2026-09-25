@@ -5,6 +5,8 @@ import PageHero from "../components/PageHero"
 import SummaryFrame from "../components/SummaryFrame"
 import SectionFrame from "../components/SectionFrame"
 
+const ext = { target: "_blank", rel: "noopener noreferrer" }
+
 const TeachingPage = () => (
   <Layout>
     <PageHero
@@ -57,7 +59,7 @@ const TeachingPage = () => (
           <div>
             <p className="section-frame__dates" style={{ marginBottom: ".6em" }}>Undergraduate</p>
             <ul>
-              <li>Spring 2026 — Mathematical Physics I</li>
+              <li>Spring 2026 — <a href="https://github.com/blhuillier/MathPhysI" {...ext}>Mathematical Physics I</a></li>
               <li>Fall 2025 — Mathematical Physics II</li>
               <li>Spring 2025 — Mathematical Physics I</li>
               <li>Fall 2024 — Physics of Everyday Life</li>
@@ -88,11 +90,12 @@ const TeachingPage = () => (
           </li>
           <li>
             <strong>Nov. 2015</strong> — Invited lecture on cosmological simulations for PhD
-            candidates, Indian Institute of Astrophysics, Bangalore, India. Theory and hands-on
+            candidates, <a href="https://www.iiap.res.in/" {...ext}>Indian Institute of Astrophysics</a>, Bangalore, India. Theory and hands-on
             session with Gadget-2 (8 hours).
           </li>
           <li>
-            <strong>July 2015</strong> — Pyeongchang Summer Institute 2015: tutorials on
+            <strong>July 2015</strong> —{" "}
+            <a href="http://psi.kias.re.kr/2015/sub03/sub03_01.php" {...ext}>Pyeongchang Summer Institute 2015</a>: tutorials on
             cosmological N-body simulations using the GOTPM code — designing initial conditions,
             running the simulation, visualising and analysing the outputs (4 hours).
           </li>

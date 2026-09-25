@@ -18,8 +18,8 @@ const OutreachPage = () => (
       <div className="wrap--narrow prose">
         <p>
           My approach to outreach blends education, cultural exchange, and creative experimentation.
-          I currently mentor high-school students preparing for physics olympiads, and regularly give
-          talks in schools and public venues. I&apos;ve led hands-on workshops in cosmology,
+          From 2024 to 2026 I mentored high-school students preparing for the French National
+          Physics Olympiad, and I regularly give talks in schools and public venues. I&apos;ve led hands-on workshops in cosmology,
           contributed to bilingual educational programmes, and given invited lectures at
           international schools and cultural centres in Korea. As a French scientist based in Seoul,
           I&apos;ve been actively involved in fostering scientific and cultural dialogue between
@@ -43,14 +43,14 @@ const OutreachPage = () => (
     <section className="section section--paper">
       <div className="wrap">
         <OutreachItem
-          meta="Seoul French School · ongoing"
+          meta="Seoul French School · 2024–2026"
           title="Mentoring for the French National Physics Olympiad"
           image="/images/lfs2-web.jpg"
           alt="Students at the Lycée Français de Seoul"
         >
           <p>
-            I mentor students from the Seoul French School for the French National Physics Olympiad.
-            The team qualified for the finals and was awarded 3rd prize.
+            I mentored students from the Seoul French School for the French National Physics Olympiad.
+            The team qualified for the finals and was awarded 3rd prize in January 2026.
           </p>
           <p>
             <a href="https://pr.sejong.ac.kr/news/people/faculty.do?mode=view&articleNo=863364" {...ext}>
@@ -116,6 +116,8 @@ const OutreachPage = () => (
         <OutreachItem
           meta="October 2016"
           title="Daejeon International Science Festival — France booth"
+          image="/images/daejeon2016-web.jpg"
+          alt="France booth at the Daejeon International Science Festival 2016"
         >
           <p>Presentation of French science and scientists, with Korean interpretation.</p>
         </OutreachItem>

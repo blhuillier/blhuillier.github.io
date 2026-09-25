@@ -6,7 +6,7 @@ const OutreachItem = ({ title, href, meta, image, alt, children }) => (
     {image ? (
       <img className="outreach-item__media" src={image} alt={alt || title} loading="lazy" />
     ) : (
-      <div className="outreach-item__media" aria-hidden="true" style={{ background: "var(--paper-warm)" }} />
+      <div className="outreach-item__media outreach-item__media--empty" aria-hidden="true" style={{ background: "var(--paper-warm)" }} />
     )}
     <div className="outreach-item__body">
       {meta && <p className="outreach-item__meta">{meta}</p>}

@@ -19,7 +19,7 @@ const ResearchPage = () => (
         <img
           src="/images/researchareas_draft03_darker.png"
           alt="Diagram connecting the research areas: dark energy, modified gravity, inflation, large-scale structure and galaxy formation"
-          style={{ margin: "0 auto 46px", maxWidth: "820px" }}
+          style={{ margin: "0 auto 46px", width: "100%", maxWidth: "820px" }}
         />
       </div>
 
@@ -50,6 +50,7 @@ const ResearchPage = () => (
         <SectionFrame
           title="Testing the Concordance Model of Cosmology"
           image="/images/2param_inverted_edited_edited.png"
+          link="/modeltesting/"
           description={
             <ul>
               <li>Is the Universe isotropic and homogeneous? Is the metric FLRW?</li>
@@ -74,6 +75,7 @@ const ResearchPage = () => (
         <SectionFrame
           title="Cosmological Simulations"
           image="/images/zoom_t91_long.jpg"
+          link="/simulations/"
           description={
             <p>
               I use cosmological N-body simulations to study the evolution of galaxies and dark matter
@@ -90,6 +92,7 @@ const ResearchPage = () => (
         <SectionFrame
           title={"Galaxy Formation & Evolution"}
           image="/images/HR4_1919_1199.jpg"
+          link="/galaxy-formation-and-evolution/"
           description={
             <ul>
               <li>How do galaxies assemble their mass?</li>

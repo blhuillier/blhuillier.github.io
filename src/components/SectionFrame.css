@@ -50,6 +50,7 @@
 .section-frame__body ul { list-style: none; padding: 0; margin: 0; }
 .section-frame__body li { margin-bottom: .4em; }
 .section-frame__body--left { text-align: left; }
+.section-frame__more { margin: 1.8em 0 0; }
 
 /* ---------- square tiles, 2-column grid (research, teaching) ---------- */
 
