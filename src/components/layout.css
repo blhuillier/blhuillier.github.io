@@ -387,7 +387,7 @@ li { margin-bottom: .35em; }
     padding: 10px 0;
   }
   .site-logo { grid-area: logo; }
-  .site-logo img { height: 44px; }
+  .site-logo img { width: 200px; max-width: 100%; height: auto; }
   .site-header__right { display: contents; }
   .nav-toggle { display: block; grid-area: toggle; }
   .site-header .social-bar { grid-area: social; }
