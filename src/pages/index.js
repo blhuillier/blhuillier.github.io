@@ -211,10 +211,13 @@ const IndexPage = () => (
     <section className="section section--paper">
       <div className="wrap">
         <figure className="timeline-figure">
-          <img
-            src="/images/timeline_draft6.png"
-            alt="Timeline of Benjamin L'Huillier's career from 2007 to 2026: transition from engineering, PhD in Paris, KIAS, KASI, Yonsei, and Sejong University"
-          />
+          <a className="bare" href="/images/timeline_draft6.png" target="_blank" rel="noopener noreferrer">
+            <img
+              src="/images/timeline_draft6.png"
+              alt="Timeline of Benjamin L'Huillier's career from 2007 to 2026: transition from engineering, PhD in Paris, KIAS, KASI, Yonsei, and Sejong University"
+            />
+          </a>
+          <figcaption className="timeline-figure__hint">Tap to enlarge</figcaption>
         </figure>
       </div>
 
