@@ -120,15 +120,6 @@ const OutreachPage = () => (
           <p>Presentation of French science and scientists, with Korean interpretation.</p>
         </OutreachItem>
 
-        <OutreachItem
-          meta="Seoul"
-          title="Public talks on the history of the Universe"
-        >
-          <p>
-            Talks on the history of our Universe delivered at the Seoul French School, the Lycée
-            International Xavier, and the French Cultural Center.
-          </p>
-        </OutreachItem>
       </div>
     </section>
   </Layout>

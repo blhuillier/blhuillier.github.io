@@ -95,40 +95,16 @@ const TheGroupPage = () => (
 
     <section className="section section--white">
       <div className="wrap">
-        <h2 className="section-title">Interns &amp; undergraduate projects</h2>
+        <h2 className="section-title">Interns</h2>
         <div className="member-grid">
-          <div id="tarik">
+          <div id="mathias">
             <GroupMember
               light
-              name="Tarik Ouadjou"
+              name="Mathias Tan"
               role="Master's Intern"
-              period="Spring 2026"
               researchFocus={
-                <p>
-                  Machine learning for the SKA. Co-supervised with A. Rimmel, CentraleSupélec,
-                  France.
-                </p>
+                <p>Cosmological applications of optimal transport. CentraleSupélec, France.</p>
               }
-            />
-          </div>
-          <div id="ussan">
-            <GroupMember
-              light
-              name="Ussan Abbassi"
-              role="Master's Intern"
-              period="Spring 2026"
-              researchFocus={
-                <p>Cosmology with gravitational waves. École Normale Supérieure, France.</p>
-              }
-            />
-          </div>
-          <div id="edwyn">
-            <GroupMember
-              light
-              name="Edwyn Howarth"
-              role="Master's Intern"
-              period="Spring 2026"
-              researchFocus={<p>Paris Sorbonne, France.</p>}
             />
           </div>
         </div>
@@ -139,6 +115,19 @@ const TheGroupPage = () => (
       <div className="wrap--narrow">
         <h2 className="section-title">Alumni</h2>
         <ul className="alumni-list">
+          <li id="tarik">
+            <strong>Tarik Ouadjou</strong> — Master&apos;s intern, Spring 2026 (CentraleSupélec,
+            France). Machine learning for the Square Kilometre Array, co-supervised with
+            A. Rimmel.
+          </li>
+          <li id="ussan">
+            <strong>Ussan Abbassi</strong> — Master&apos;s intern, Spring 2026 (École Normale
+            Supérieure, France). Cosmology with gravitational waves.
+          </li>
+          <li id="edwyn">
+            <strong>Edwyn Howarth</strong> — Master&apos;s intern, Spring 2026 (Paris Sorbonne,
+            France).
+          </li>
           <li>
             <strong>
               <a href="https://github.com/sghwang-cosmos" {...ext}>Seung-gyu Hwang</a> | 황승규

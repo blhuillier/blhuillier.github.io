@@ -34,13 +34,15 @@ const TeachingPage = () => (
       </p>
     </SummaryFrame>
 
+    <section className="section section--paper">
+      <div className="wrap tile-grid tile-grid--gap">
     <SectionFrame
       title="Courses at Sejong University"
       dateRange="Since 2021"
       image="/images/structure%20bg_edited_edited.jpg"
       align="left"
       description={
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: "28px" }}>
+        <div style={{ display: "grid", gap: "22px" }}>
           <div>
             <p className="section-frame__dates" style={{ marginBottom: ".6em" }}>Graduate school</p>
             <ul>
@@ -159,6 +161,8 @@ const TeachingPage = () => (
         </>
       }
     />
+      </div>
+    </section>
   </Layout>
 )
 

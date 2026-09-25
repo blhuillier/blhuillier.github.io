@@ -45,57 +45,61 @@ const ResearchPage = () => (
       </div>
     </section>
 
-    <SectionFrame
-      title="Testing the Concordance Model of Cosmology"
-      image="/images/2param_inverted_edited_edited.png"
-      description={
-        <ul>
-          <li>Is the Universe isotropic and homogeneous? Is the metric FLRW?</li>
-          <li>What is the nature of dark energy? Is it a cosmological constant?</li>
-          <li>What is the curvature of the Universe?</li>
-        </ul>
-      }
-    />
+    <section className="section--dark">
+      <div className="tile-grid">
+        <SectionFrame
+          title="Testing the Concordance Model of Cosmology"
+          image="/images/2param_inverted_edited_edited.png"
+          description={
+            <ul>
+              <li>Is the Universe isotropic and homogeneous? Is the metric FLRW?</li>
+              <li>What is the nature of dark energy? Is it a cosmological constant?</li>
+              <li>What is the curvature of the Universe?</li>
+            </ul>
+          }
+        />
 
-    <SectionFrame
-      title="Cosmology beyond the Concordance Model"
-      image="/images/darkenergy1_edited.jpg"
-      description={
-        <ul>
-          <li>What is dark energy?</li>
-          <li>Is gravity correctly described by Einstein&apos;s General Theory of Relativity?</li>
-          <li>Is the primordial power spectrum a pure power law?</li>
-        </ul>
-      }
-    />
+        <SectionFrame
+          title="Cosmology beyond the Concordance Model"
+          image="/images/darkenergy1_edited.jpg"
+          description={
+            <ul>
+              <li>What is dark energy?</li>
+              <li>Is gravity correctly described by Einstein&apos;s General Theory of Relativity?</li>
+              <li>Is the primordial power spectrum a pure power law?</li>
+            </ul>
+          }
+        />
 
-    <SectionFrame
-      title="Cosmological Simulations"
-      image="/images/zoom_t91_long.jpg"
-      description={
-        <p>
-          I use cosmological N-body simulations to study the evolution of galaxies and dark matter
-          halos within the Universe&apos;s large-scale structure, and contributed to the design and
-          analysis of{" "}
-          <a href="http://sdss.kias.re.kr/astro/Horizon-Runs/" {...ext}>Horizon Run 4</a>, one of the
-          largest cosmological simulations at the time of its release. Simulations let us build mock
-          catalogues, test analysis pipelines, and interpret observations within a controlled
-          theoretical framework.
-        </p>
-      }
-    />
+        <SectionFrame
+          title="Cosmological Simulations"
+          image="/images/zoom_t91_long.jpg"
+          description={
+            <p>
+              I use cosmological N-body simulations to study the evolution of galaxies and dark matter
+              halos within the Universe&apos;s large-scale structure, and contributed to the design and
+              analysis of{" "}
+              <a href="http://sdss.kias.re.kr/astro/Horizon-Runs/" {...ext}>Horizon Run 4</a>, one of the
+              largest cosmological simulations at the time of its release. Simulations let us build mock
+              catalogues, test analysis pipelines, and interpret observations within a controlled
+              theoretical framework.
+            </p>
+          }
+        />
 
-    <SectionFrame
-      title={"Galaxy Formation & Evolution"}
-      image="/images/HR4_1919_1199.jpg"
-      description={
-        <ul>
-          <li>How do galaxies assemble their mass?</li>
-          <li>How do galaxies evolve within the large-scale structure?</li>
-          <li>What is the connection between AGN activity and host galaxy properties?</li>
-        </ul>
-      }
-    />
+        <SectionFrame
+          title={"Galaxy Formation & Evolution"}
+          image="/images/HR4_1919_1199.jpg"
+          description={
+            <ul>
+              <li>How do galaxies assemble their mass?</li>
+              <li>How do galaxies evolve within the large-scale structure?</li>
+              <li>What is the connection between AGN activity and host galaxy properties?</li>
+            </ul>
+          }
+        />
+      </div>
+    </section>
   </Layout>
 )
 

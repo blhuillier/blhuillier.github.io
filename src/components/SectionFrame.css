@@ -50,3 +50,30 @@
 .section-frame__body ul { list-style: none; padding: 0; margin: 0; }
 .section-frame__body li { margin-bottom: .4em; }
 .section-frame__body--left { text-align: left; }
+
+/* ---------- square tiles, 2-column grid (research, teaching) ---------- */
+
+.tile-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.tile-grid--gap { gap: 20px; }
+
+.tile-grid > .section-frame {
+  aspect-ratio: 1 / 1;          /* square; grows taller if content needs it */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 44px;
+}
+
+.tile-grid > .section-frame .section-frame__content { width: 100%; }
+.tile-grid > .section-frame--light { border: 1px solid var(--line); }
+
+@media (max-width: 800px) {
+  .tile-grid { grid-template-columns: 1fr; }
+  .tile-grid > .section-frame { aspect-ratio: auto; padding: 56px 24px; }
+}

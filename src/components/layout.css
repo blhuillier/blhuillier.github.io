@@ -229,7 +229,7 @@ li { margin-bottom: .35em; }
 
 /* ---------- prose ---------- */
 
-.prose { font-size: 1rem; color: var(--ink); }
+.prose { font-size: 1rem; }
 .prose p { margin: 0 0 1.15em; }
 .prose--center { text-align: center; }
 
@@ -317,6 +317,11 @@ li { margin-bottom: .35em; }
 .card h3 { font-size: .88rem; letter-spacing: .18em; text-transform: uppercase; }
 .card p { color: var(--ink-soft); font-size: .95rem; margin: 0; }
 .card .card-link { margin-top: auto; padding-top: 10px; font-family: var(--font-display); font-size: .72rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; border-bottom: 0; color: var(--accent); }
+
+/* ---------- plain link list (publications) ---------- */
+
+.plain-links { list-style: none; padding: 0; margin: 0; text-align: center; font-size: 1.05rem; }
+.plain-links li { margin: 0 0 .7em; }
 
 /* ---------- question list (research) ---------- */
 
