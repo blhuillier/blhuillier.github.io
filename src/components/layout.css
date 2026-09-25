@@ -40,7 +40,7 @@ body {
 
 a { color: inherit; text-decoration: none; border-bottom: 1px solid var(--accent); transition: color .18s ease, border-color .18s ease; }
 a:hover { color: var(--accent); }
-a.bare, .site-nav a, .social-bar a, .btn { border-bottom: 0; }
+a.bare, .site-logo, .site-nav a, .social-bar a, .btn { border-bottom: 0; }
 
 img { display: block; max-width: 100%; }
 
@@ -149,15 +149,29 @@ li { margin-bottom: .35em; }
 
 .nav-toggle {
   display: none;
+  position: relative;
+  width: 44px;
+  height: 44px;
+  padding: 0;
   background: none;
-  border: 1px solid var(--line);
-  padding: 8px 12px;
-  font-family: var(--font-display);
-  font-size: .72rem;
-  letter-spacing: .18em;
-  text-transform: uppercase;
+  border: 0;
+  color: var(--ink);
   cursor: pointer;
 }
+.nav-toggle__bar {
+  position: absolute;
+  left: 11px;
+  width: 22px;
+  height: 2px;
+  background: currentColor;
+  transition: transform .2s ease, opacity .2s ease;
+}
+.nav-toggle__bar:nth-child(1) { top: 15px; }
+.nav-toggle__bar:nth-child(2) { top: 21px; }
+.nav-toggle__bar:nth-child(3) { top: 27px; }
+.nav-toggle.is-open .nav-toggle__bar:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+.nav-toggle.is-open .nav-toggle__bar:nth-child(2) { opacity: 0; }
+.nav-toggle.is-open .nav-toggle__bar:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
 
 .social-bar { display: flex; gap: 12px; list-style: none; margin: 0; padding: 0; }
 .social-bar a { display: block; padding: 6px; margin: -6px; color: var(--ink-soft); }
@@ -362,10 +376,21 @@ li { margin-bottom: .35em; }
 /* ---------- responsive ---------- */
 
 @media (max-width: 900px) {
-  .site-header__inner { align-items: center; }
+  /* centred logo with the social icons beneath it, hamburger on the right */
+  .site-header__inner {
+    display: grid;
+    grid-template-columns: 44px minmax(0, 1fr) 44px;
+    grid-template-areas: ". logo toggle" ". social .";
+    align-items: center;
+    justify-items: center;
+    gap: 6px 8px;
+    padding: 10px 0;
+  }
+  .site-logo { grid-area: logo; }
   .site-logo img { height: 44px; }
-  .nav-toggle { display: block; }
-  .site-header__right { align-items: flex-end; }
+  .site-header__right { display: contents; }
+  .nav-toggle { display: block; grid-area: toggle; }
+  .site-header .social-bar { grid-area: social; }
   .site-nav { display: none; }
   .site-nav.is-open {
     display: block;

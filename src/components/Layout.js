@@ -29,13 +29,16 @@ const Layout = ({ children }) => {
 
           <div className="site-header__right">
             <button
-              className="nav-toggle"
+              className={`nav-toggle${navOpen ? " is-open" : ""}`}
               type="button"
+              aria-label={navOpen ? "Close menu" : "Open menu"}
               aria-expanded={navOpen}
               aria-controls="primary-nav"
               onClick={() => setNavOpen((open) => !open)}
             >
-              {navOpen ? "Close" : "Menu"}
+              <span className="nav-toggle__bar" />
+              <span className="nav-toggle__bar" />
+              <span className="nav-toggle__bar" />
             </button>
 
             <nav
