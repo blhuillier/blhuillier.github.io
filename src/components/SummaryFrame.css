@@ -1,9 +1,22 @@
 .summary-frame {
-    border: 1px solid #ddd;
-    padding: 20px;
-    margin: 15px 0;
-    background-color: #f5f5f5;
-    border-radius: 8px;
-    text-align: center;
-  }
-  
+  padding: 70px 0;
+  background: var(--paper-alt);
+}
+
+.summary-frame__inner {
+  width: min(var(--narrow), calc(100% - 48px));
+  margin: 0 auto;
+  text-align: center;
+}
+
+.summary-frame h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1rem, 2.4vw, 1.35rem);
+  font-weight: 600;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  margin: 0 0 1em;
+}
+
+.summary-frame p { margin: 0 0 1.1em; }
+.summary-frame p:last-child { margin-bottom: 0; }

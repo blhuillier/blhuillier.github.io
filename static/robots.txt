@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.benjissi.com/sitemap/sitemap-index.xml

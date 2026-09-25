@@ -1,10 +1,7 @@
+const siteMeta = require("./src/siteMeta")
+
 module.exports = {
-  siteMetadata: {
-    title: "Benjamin L'Huillier - Cosmologist & Astrophysicist",
-    description: "Official website of Benjamin L'Huillier, featuring his research, teaching, publications, and group.",
-    author: "Benjamin L'Huillier",
-    siteUrl: "https://blhuillier.github.io",
-  },
+  siteMetadata: siteMeta,
 
   plugins: [
     `gatsby-plugin-image`,
@@ -13,16 +10,21 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: "Benjamin L'Huillier's Website",
-        short_name: "BLHuillier",
+        name: siteMeta.title,
+        short_name: "Benjissi",
         start_url: `/`,
-        background_color: `#ffffff`,
-        theme_color: `#663399`,
+        background_color: `#f3f0ea`,
+        theme_color: `#101010`,
         display: `standalone`,
-        icon: `src/images/favicon.png`, // Add a favicon in src/images
+        icon: `src/images/favicon.png`,
       },
     },
-    `gatsby-plugin-react-helmet`, // For SEO metadata
-    // `gatsby-plugin-sitemap`, // For automatic sitemap generation
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        output: `/sitemap`,
+        excludes: [`/thegroup/`, `/404/`, `/404.html`],
+      },
+    },
   ],
-};
+}

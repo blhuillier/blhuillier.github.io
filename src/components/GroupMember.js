@@ -1,6 +1,13 @@
 import React from "react"
 import "./GroupMember.css"
-import placeholderImage from "../images/placeholder.jpeg" // Placeholder image for members without a photo
+import { GitHubIcon, MailIcon, WebIcon, ScholarIcon } from "./Icons"
+
+const iconFor = (kind) => {
+  if (kind === "github") return GitHubIcon
+  if (kind === "email") return MailIcon
+  if (kind === "scholar") return ScholarIcon
+  return WebIcon
+}
 
 const GroupMember = ({
   name,
@@ -8,39 +15,47 @@ const GroupMember = ({
   period,
   researchFocus,
   currentPosition,
-  profileLinks,
+  links = [],
   photo,
+  light,
 }) => (
-  <div className="group-member">
-    <img src={photo || placeholderImage} alt={`${name}'s photo`} className="member-photo" />
-    <div className="member-info">
-      <h3>{name}</h3>
-      <p>{role}{period ? ` (${period})` : ""}</p>
-      {researchFocus && (
-        <div className="member-detail">
-          <p>
-            <span className="member-label">Research:</span>
-          </p>
-          <div className="member-detail__content">{researchFocus}</div>
-        </div>
-      )}
+  <article className={`group-member${light ? " group-member--light" : ""}`}>
+    <img
+      className="group-member__photo"
+      src={photo || "/images/placeholder.jpeg"}
+      alt={`Portrait of ${name}`}
+      loading="lazy"
+    />
+    <div className="group-member__info">
+      {role && <p className="group-member__role">{role}</p>}
+      <h3 className="group-member__name">{name}</h3>
+      {period && <p className="group-member__period">{period}</p>}
+      {researchFocus && <div className="group-member__focus">{researchFocus}</div>}
       {currentPosition && (
-        <p>
-          <span className="member-label">Current Position:</span> {currentPosition}
-        </p>
+        <p className="group-member__current">Now: {currentPosition}</p>
       )}
-      {profileLinks?.length ? (
-        <p className="member-links">
-          {profileLinks.map((link, index) => (
-            <React.Fragment key={link.href}>
-              {index > 0 ? " · " : ""}
-              <a href={link.href}>{link.label}</a>
-            </React.Fragment>
-          ))}
-        </p>
-      ) : null}
+      {links.length > 0 && (
+        <ul className="social-bar">
+          {links.map((link) => {
+            const Icon = iconFor(link.kind)
+            return (
+              <li key={link.href}>
+                <a
+                  href={link.href}
+                  title={link.label}
+                  aria-label={`${name} — ${link.label}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Icon />
+                </a>
+              </li>
+            )
+          })}
+        </ul>
+      )}
     </div>
-  </div>
+  </article>
 )
 
 export default GroupMember

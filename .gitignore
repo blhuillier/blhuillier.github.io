@@ -15,3 +15,8 @@ yarn-error.log*
 .env
 .env.*
 graphify-out/
+todo.md
+
+# Custom domain: only add this at DNS cutover, otherwise
+# blhuillier.github.io redirects to www.benjissi.com (still on Wix).
+static/CNAME
