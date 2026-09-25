@@ -19,7 +19,7 @@ const ResearchPage = () => (
         <img
           src="/images/researchareas_draft03_darker.png"
           alt="Diagram connecting the research areas: dark energy, modified gravity, inflation, large-scale structure and galaxy formation"
-          style={{ margin: "0 auto 46px", maxWidth: "820px" }}
+          style={{ margin: "0 auto 46px", width: "100%", maxWidth: "820px" }}
         />
       </div>
 
