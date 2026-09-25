@@ -116,6 +116,8 @@ const OutreachPage = () => (
         <OutreachItem
           meta="October 2016"
           title="Daejeon International Science Festival — France booth"
+          image="/images/daejeon2016-web.jpg"
+          alt="France booth at the Daejeon International Science Festival 2016"
         >
           <p>Presentation of French science and scientists, with Korean interpretation.</p>
         </OutreachItem>

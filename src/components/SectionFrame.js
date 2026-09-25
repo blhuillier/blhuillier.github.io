@@ -1,7 +1,8 @@
 import React from "react"
+import { Link } from "gatsby"
 import "./SectionFrame.css"
 
-const SectionFrame = ({ title, dateRange, description, image, light, align }) => (
+const SectionFrame = ({ title, dateRange, description, image, light, align, link }) => (
   <section
     className={`section-frame${light ? " section-frame--light" : ""}`}
     style={image ? { backgroundImage: `url("${image}")` } : undefined}
@@ -14,6 +15,11 @@ const SectionFrame = ({ title, dateRange, description, image, light, align }) =>
       >
         {description}
       </div>
+      {link && (
+        <p className="section-frame__more">
+          <Link className="btn" to={link}>Read more</Link>
+        </p>
+      )}
     </div>
   </section>
 )

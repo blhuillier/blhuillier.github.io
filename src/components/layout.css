@@ -269,6 +269,27 @@ li { margin-bottom: .35em; }
   margin-top: .8em;
 }
 
+/* ---------- figures (research detail pages) ---------- */
+
+.figure { margin: 2.2em auto; }
+.figure img { margin: 0 auto; width: 100%; height: auto; }
+.figure figcaption {
+  text-align: center;
+  font-size: .82rem;
+  color: var(--ink-faint);
+  margin-top: .8em;
+}
+.figure--narrow { max-width: 400px; }
+
+.back-link {
+  margin-top: 2.6em;
+  font-family: var(--font-display);
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+
 /* ---------- news ---------- */
 
 .news-feature {
