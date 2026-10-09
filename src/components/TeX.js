@@ -1,6 +1,6 @@
 import React from "react"
 import katex from "katex"
-import "katex/dist/katex.min.css"
+// KaTeX CSS is loaded once from a CDN in gatsby-ssr.js (importing it here would inline ~120 KB of fonts into every page).
 
 const render = (math, displayMode) =>
   katex.renderToString(math, { displayMode, throwOnError: false, output: "html" })

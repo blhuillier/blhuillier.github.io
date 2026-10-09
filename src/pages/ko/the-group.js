@@ -18,7 +18,7 @@ const TheGroupPageKo = () => (
     <section className="section section--paper">
       <div className="wrap">
         <article className="pi-card">
-          <img className="pi-card__photo" src="/images/benji_team.jpg" alt="벤자민 루일리예" />
+          <img className="pi-card__photo" src="/images/benji_team-web.jpg" alt="벤자민 루일리예" />
           <div className="pi-card__body">
             <h2 className="pi-card__name">Benjamin L&apos;Huillier | 벤자민 루일리예</h2>
             <p className="pi-card__role">조교수</p>

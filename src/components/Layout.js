@@ -90,7 +90,7 @@ const Layout = ({ children, lang: forcedLang }) => {
       <header className="site-header">
         <div className="site-header__inner">
           <Link className="site-logo" to={pathIn("/", lang)} aria-label={t.home}>
-            <img src="/images/benjissi-logo.png" alt={t.logoAlt} />
+            <img src="/images/benjissi-logo-web.png" alt={t.logoAlt} />
           </Link>
 
           <div className="site-header__right">

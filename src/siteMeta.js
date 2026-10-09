@@ -12,5 +12,5 @@ module.exports = {
     "Benjamin L'Huillier is a French cosmologist and Assistant Professor at Sejong University, Seoul. He tests the concordance model of cosmology with N-body simulations and advanced statistical methods.",
   author: "Benjamin L'Huillier",
   siteUrl: "https://www.benjissi.com",
-  image: "/images/aboutmefinal1.jpg",
+  image: "/images/og-image.jpg",
 }

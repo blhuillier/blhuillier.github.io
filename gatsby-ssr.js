@@ -12,6 +12,12 @@ exports.onRenderBody = ({ setHeadComponents, setHtmlAttributes, pathname = "/" }
       crossOrigin="anonymous"
     />,
     <link
+      key="katex-css"
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css"
+      crossOrigin="anonymous"
+    />,
+    <link
       key="gf-css"
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700&family=Kaushan+Script&display=swap"

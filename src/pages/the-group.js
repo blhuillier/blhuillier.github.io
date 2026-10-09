@@ -20,7 +20,7 @@ const TheGroupPage = () => (
         <article className="pi-card">
           <img
             className="pi-card__photo"
-            src="/images/benji_team.jpg"
+            src="/images/benji_team-web.jpg"
             alt="Benjamin L'Huillier"
           />
           <div className="pi-card__body">

@@ -14,7 +14,7 @@ const IndexPage = () => (
       <img
         className="home-hero__img"
         data-parallax="img"
-        src="/images/aboutmefinal1.jpg"
+        src="/images/aboutmefinal1-web.jpg"
         alt="Illustration of Benjamin L'Huillier running, working at a laptop, and playing music, against a cosmology blackboard"
       />
       <div className="home-hero__overlay">

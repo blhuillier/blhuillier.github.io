@@ -14,7 +14,7 @@ const IndexPageFr = () => (
       <img
         className="home-hero__img"
         data-parallax="img"
-        src="/images/aboutmefinal1.jpg"
+        src="/images/aboutmefinal1-web.jpg"
         alt="Illustration de Benjamin L’Huillier qui court, travaille sur un ordinateur et joue de la musique, devant un tableau de cosmologie"
       />
       <div className="home-hero__overlay">

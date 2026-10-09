@@ -14,7 +14,7 @@ const IndexPageKo = () => (
       <img
         className="home-hero__img"
         data-parallax="img"
-        src="/images/aboutmefinal1.jpg"
+        src="/images/aboutmefinal1-web.jpg"
         alt="달리기, 노트북 작업, 음악 연주를 하는 벤자민 루일리예의 일러스트와 우주론 칠판"
       />
       <div className="home-hero__overlay">
