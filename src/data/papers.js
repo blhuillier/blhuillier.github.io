@@ -22,7 +22,7 @@ export const papers = [
     arxiv: "2609.08457",
     tags: ["lensing", "large-scale-structure", "model-testing"],
     summary:
-      "We reconstruct the linear matter power spectrum at z = 0 from joint Planck PR4, ACT DR6 and SPT-3G CMB lensing, using a modified Richardson–Lucy deconvolution. The result follows the linear prediction on large scales, lies systematically higher for k ≳ 0.1 Mpc⁻¹, and partly preserves the BAO feature.",
+      "We reconstruct the linear matter power spectrum at $z = 0$ from joint Planck PR4, ACT DR6 and SPT-3G CMB lensing, using a modified Richardson–Lucy deconvolution. The result follows the linear prediction on large scales, lies systematically higher for $k \\gtrsim 0.1\\,\\mathrm{Mpc}^{-1}$, and partly preserves the BAO feature.",
     figure: {
       src: "/images/papers/dawn2026-lenses1.png",
       caption:
@@ -33,13 +33,13 @@ export const papers = [
     id: "jiang2026-lenses2",
     authors: ["Jiang, J.-Q.", "Dawn, A.", "Hazra, D. K.", ME, "Shafieloo, A."],
     year: 2026,
-    title: "Finding the distribution of matter using lenses – II: deconvolution-based reconstruction with 3×2pt measurements",
+    title: "Finding the distribution of matter using lenses – II: deconvolution-based reconstruction with $3\\times2$pt measurements",
     journal: null,
     doi: null,
     arxiv: "2609.08460",
     tags: ["lensing", "large-scale-structure", "model-testing"],
     summary:
-      "A regularised Richardson–Lucy framework tests scale-dependent departures from the nonlinear matter power spectrum using galaxy clustering, galaxy–galaxy lensing and cosmic shear. On LSST Year-10-like mocks, oscillations of about 1% or more are recovered over 0.1 ≲ k ≲ 0.5 Mpc⁻¹, and a 1% oscillation is detected at about 2.6σ.",
+      "A regularised Richardson–Lucy framework tests scale-dependent departures from the nonlinear matter power spectrum using galaxy clustering, galaxy–galaxy lensing and cosmic shear. On LSST Year-10-like mocks, oscillations of about 1% or more are recovered over $0.1 \\lesssim k \\lesssim 0.5\\,\\mathrm{Mpc}^{-1}$, and a 1% oscillation is detected at about $2.6\\sigma$.",
     figure: {
       src: "/images/papers/jiang2026-lenses2.png",
       caption:
@@ -90,11 +90,11 @@ export const papers = [
     arxiv: "2601.20293",
     tags: ["model-testing", "supernovae"],
     summary:
-      "We reconstruct distances and the Hubble rate from Pantheon+ and DES supernovae without assuming any dark energy model, and combine them with DESI DR2 baryon acoustic oscillations to test the FLRW metric and measure the spatial curvature. With Pantheon+ and DESI DR2 we find Ωk,0 = 0.045 (+0.045/−0.081), consistent with flatness and with Planck 2018.",
+      "We reconstruct distances and the Hubble rate from Pantheon+ and DES supernovae without assuming any dark energy model, and combine them with DESI DR2 baryon acoustic oscillations to test the FLRW metric and measure the spatial curvature. With Pantheon+ and DESI DR2 we find $\\Omega_{k,0} = 0.045^{+0.045}_{-0.081}$, consistent with flatness and with Planck 2018.",
     figure: {
       src: "/images/papers/millard2026-flrw.png",
       caption:
-        "𝒪_k(z) from supernova reconstructions combined with DESI DR2, for three data sets, colour-coded by Δχ²; right: the resulting likelihoods.",
+        "$\\mathcal{O}_k(z)$ from supernova reconstructions combined with DESI DR2, for three data sets, colour-coded by $\\Delta\\chi^2$; right: the resulting likelihoods.",
     },
   },
   {
@@ -118,17 +118,17 @@ export const papers = [
     id: "lhuillier2025-litmus",
     authors: [ME, "Mitra, A.", "Shafieloo, A.", "Keeley, R. E.", "Koo, H."],
     year: 2025,
-    title: "Litmus tests of the flat ΛCDM model and model-independent measurement of H₀r_d with LSST and DESI",
+    title: "Litmus tests of the flat ΛCDM model and model-independent measurement of $H_0 r_\\mathrm{d}$ with LSST and DESI",
     journal: "JCAP 05 (2025) 030",
     doi: "10.1088/1475-7516/2025/05/030",
     arxiv: "2407.07847",
     tags: ["model-testing", "supernovae"],
     summary:
-      "Reconstructing the expansion history from simulated LSST supernovae and combining it with simulated DESI 5-year BAO, we forecast constraints of up to ±4% on the curvature and ±0.1 on c/(H₀r_d), without assuming any form of dark energy.",
+      "Reconstructing the expansion history from simulated LSST supernovae and combining it with simulated DESI 5-year BAO, we forecast constraints of up to ±4% on the curvature and ±0.1 on $c/(H_0 r_\\mathrm{d})$, without assuming any form of dark energy.",
     figure: {
       src: "/images/papers/lhuillier2025-litmus.png",
       caption:
-        "The curvature diagnostic 𝒪_k on mocks from four fiducial models: it recovers Ωk,0 = 0.1 when the input is curved.",
+        "The curvature diagnostic $\\mathcal{O}_k$ on mocks from four fiducial models: it recovers $\\Omega_{k,0} = 0.1$ when the input is curved.",
     },
   },
   {
@@ -158,11 +158,11 @@ export const papers = [
     arxiv: "2301.00640",
     tags: ["model-testing", "modified-gravity"],
     summary:
-      "We reconstruct the effective gravitational coupling G_eff(z) as a Gaussian process from forecast stage-IV growth data. DESI-like surveys could detect departures from General Relativity if dark energy is well determined; massive neutrinos do not change this, but assuming a ΛCDM expansion biases the inferred Ω_m and σ₈.",
+      "We reconstruct the effective gravitational coupling $G_\\mathrm{eff}(z)$ as a Gaussian process from forecast stage-IV growth data. DESI-like surveys could detect departures from General Relativity if dark energy is well determined; massive neutrinos do not change this, but assuming a ΛCDM expansion biases the inferred $\\Omega_\\mathrm{m}$ and $\\sigma_8$.",
     figure: {
       src: "/images/papers/calderon2023-joint2.png",
       caption:
-        "Realistic forecast: reconstructed G_eff/G and fσ8 for two modified-gravity scenarios (bump and dip). Both rule out GR at more than 2σ around z ≈ 1.",
+        "Realistic forecast: reconstructed $G_\\mathrm{eff}/G$ and $f\\sigma_8$ for two modified-gravity scenarios (bump and dip). Both rule out GR at more than $2\\sigma$ around $z \\approx 1$.",
     },
   },
   {
@@ -175,11 +175,11 @@ export const papers = [
     arxiv: "2212.07917",
     tags: ["supernovae", "model-testing"],
     summary:
-      "The best-fit ΛCDM χ² of Pantheon+ is unusually small, and its residuals scatter less than the covariance matrix predicts, pointing to errors overestimated by about 7%. After accounting for this, no deviation from ΛCDM is found.",
+      "The best-fit ΛCDM $\\chi^2$ of Pantheon+ is unusually small, and its residuals scatter less than the covariance matrix predicts, pointing to errors overestimated by about 7%. After accounting for this, no deviation from ΛCDM is found.",
     figure: {
       src: "/images/papers/keeley2024-pantheon.png",
       caption:
-        "χ² of the best-fit flat ΛCDM model on Pantheon+ (red) compared with its distribution over ΛCDM mocks (blue).",
+        "$\\chi^2$ of the best-fit flat ΛCDM model on Pantheon+ (red) compared with its distribution over ΛCDM mocks (blue).",
     },
   },
   {
@@ -203,17 +203,17 @@ export const papers = [
     id: "calderon2022-joint1",
     authors: ["Calderón, R.", ME, "Polarski, D.", "Shafieloo, A.", "Starobinsky, A. A."],
     year: 2022,
-    title: "Joint reconstructions of growth and expansion histories from stage-IV surveys with minimal assumptions I: dark energy beyond Λ",
+    title: "Joint reconstructions of growth and expansion histories from stage-IV surveys with minimal assumptions I: dark energy beyond $\\Lambda$",
     journal: "Phys. Rev. D 106 (2022) 083513",
     doi: "10.1103/PhysRevD.106.083513",
     arxiv: "2206.13820",
     tags: ["model-testing", "dark-energy"],
     summary:
-      "Gaussian processes reconstruct the dark energy density from forecast stage-IV supernova, BAO and redshift-space-distortion data, assuming only a flat FLRW universe that becomes matter-dominated at high redshift, which also yields the growth history. Several dark energy models can be distinguished from ΛCDM at 2σ or more.",
+      "Gaussian processes reconstruct the dark energy density from forecast stage-IV supernova, BAO and redshift-space-distortion data, assuming only a flat FLRW universe that becomes matter-dominated at high redshift, which also yields the growth history. Several dark energy models can be distinguished from ΛCDM at $2\\sigma$ or more.",
     figure: {
       src: "/images/papers/calderon2022-joint1.png",
       caption:
-        "Joint reconstructions of the effective gravitational coupling, H(z) and fσ8(z) for three fiducial cosmologies; dashed lines show the truth.",
+        "Joint reconstructions of the effective gravitational coupling, $H(z)$ and $f\\sigma_8(z)$ for three fiducial cosmologies; dashed lines show the truth.",
     },
   },
   {
@@ -247,7 +247,7 @@ export const papers = [
     figure: {
       src: "/images/papers/koo2022-bayes.png",
       caption:
-        "Δχ² distributions for ΛCDM and PEDE over Roman-like mocks from a third model; vertical lines mark the 95% and 99% limits.",
+        "$\\Delta\\chi^2$ distributions for ΛCDM and PEDE over Roman-like mocks from a third model; vertical lines mark the 95% and 99% limits.",
     },
   },
   {
@@ -264,7 +264,7 @@ export const papers = [
     figure: {
       src: "/images/papers/koo2021-modelselection.png",
       caption:
-        "Distributions of Δχ² between the smoothed and best-fit models over WFIRST-like ΛCDM mocks, for ΛCDM, PEDE and Kink.",
+        "Distributions of $\\Delta\\chi^2$ between the smoothed and best-fit models over WFIRST-like ΛCDM mocks, for ΛCDM, PEDE and Kink.",
     },
   },
   {
@@ -277,11 +277,11 @@ export const papers = [
     arxiv: "2008.10237",
     tags: ["dark-energy", "model-testing"],
     summary:
-      "We study dark sectors made of a negative cosmological constant plus a late-time accelerating component. The acceleration is often transient and some models eventually contract; current data show no decisive evidence for a negative Λ, but the best fits are phantom at z ≳ 1.",
+      "We study dark sectors made of a negative cosmological constant plus a late-time accelerating component. The acceleration is often transient and some models eventually contract; current data show no decisive evidence for a negative $\\Lambda$, but the best fits are phantom at $z \\gtrsim 1$.",
     figure: {
       src: "/images/papers/calderon2021-neglambda.png",
       caption:
-        "Where a universe with a negative cosmological constant still accelerates today (white), accelerated only in the past (dark grey), or never accelerated (light grey), for Ωm = 0.3.",
+        "Where a universe with a negative cosmological constant still accelerates today (white), accelerated only in the past (dark grey), or never accelerated (light grey), for $\\Omega_\\mathrm{m} = 0.3$.",
     },
   },
   {
@@ -294,7 +294,7 @@ export const papers = [
     arxiv: "2003.10278",
     tags: ["agn", "distances"],
     summary:
-      "We propose measuring AGN distances by comparing the physical size implied by variability with the angular size measured by VLBI. For 3C 84 we find D_A = 72 (+5/−6) Mpc, consistent with other measurements at that redshift.",
+      "We propose measuring AGN distances by comparing the physical size implied by variability with the angular size measured by VLBI. For 3C 84 we find $D_A = 72^{+5}_{-6}$ Mpc, consistent with other measurements at that redshift.",
     figure: {
       src: "/images/papers/hodgson2020-vlbi.jpg",
       caption:
@@ -328,11 +328,11 @@ export const papers = [
     arxiv: "1910.01105",
     tags: ["dark-energy", "simulations"],
     summary:
-      "Using k-evolution N-body simulations, we quantify non-linear k-essence dark energy perturbations through an effective modification μ of the Poisson equation, show that linear theory is accurate at large sound speeds, and propose a simulation-calibrated parametrisation of μ.",
+      "Using k-evolution N-body simulations, we quantify non-linear k-essence dark energy perturbations through an effective modification $\\mu$ of the Poisson equation, show that linear theory is accurate at large sound speeds, and propose a simulation-calibrated parametrisation of $\\mu$.",
     figure: {
       src: "/images/papers/hassani2020-kessence.png",
       caption:
-        "Ratio μ(k, z) of the k-essence to ΛCDM gravitational potential for sound speed c_s² = 10⁻⁴, non-linear (points) versus linear (dashed).",
+        "Ratio $\\mu(k,z)$ of the k-essence to ΛCDM gravitational potential for sound speed $c_s^2 = 10^{-4}$, non-linear (points) versus linear (dashed).",
     },
   },
   {
@@ -345,11 +345,11 @@ export const papers = [
     arxiv: "1906.05991",
     tags: ["model-testing", "modified-gravity"],
     summary:
-      "From redshift-space distortion data alone, we reconstruct the growth history with crossing statistics and Gaussian processes, derive the expansion history from it, and fit supernovae to constrain Ω_m,0 and σ_8,0. The results are consistent with flat ΛCDM and General Relativity.",
+      "From redshift-space distortion data alone, we reconstruct the growth history with crossing statistics and Gaussian processes, derive the expansion history from it, and fit supernovae to constrain $\\Omega_{\\mathrm{m},0}$ and $\\sigma_{8,0}$. The results are consistent with flat ΛCDM and General Relativity.",
     figure: {
       src: "/images/papers/lhuillier2020-defying.png",
       caption:
-        "Reconstructions of Ωde(z) (left) and the growth index γ(z) (right) that fit the growth data better than ΛCDM, for three cases.",
+        "Reconstructions of $\\Omega_\\mathrm{de}(z)$ (left) and the growth index $\\gamma(z)$ (right) that fit the growth data better than ΛCDM, for three cases.",
     },
   },
   {
@@ -362,11 +362,11 @@ export const papers = [
     arxiv: "1905.10216",
     tags: ["gravitational-waves", "model-testing"],
     summary:
-      "Gaussian process regression can remove the bias in reconstructing H(z) from gravitational-wave standard sirens, and combined with supernovae it tests H₀ and ΛCDM. Dark-siren redshifts need close to spectroscopic precision to avoid significant bias.",
+      "Gaussian process regression can remove the bias in reconstructing $H(z)$ from gravitational-wave standard sirens, and combined with supernovae it tests $H_0$ and ΛCDM. Dark-siren redshifts need close to spectroscopic precision to avoid significant bias.",
     figure: {
       src: "/images/papers/keeley2020-sirens.png",
       caption:
-        "Gaussian-process reconstructions of 1/H(z) and D_L(z) from standard sirens and supernovae for a ΛCDM input, relative to the best-fit ΛCDM.",
+        "Gaussian-process reconstructions of $1/H(z)$ and $D_L(z)$ from standard sirens and supernovae for a ΛCDM input, relative to the best-fit ΛCDM.",
     },
   },
   {
@@ -379,11 +379,11 @@ export const papers = [
     arxiv: "1812.03623",
     tags: ["model-testing", "supernovae"],
     summary:
-      "A model-independent analysis of the Pantheon supernovae shows deviations from ΛCDM at z ≳ 1. They vanish with a simple Malmquist-like correction, but neither χ² tests nor Gaussian processes find that this extra correction is statistically required.",
+      "A model-independent analysis of the Pantheon supernovae shows deviations from ΛCDM at $z \\gtrsim 1$. They vanish with a simple Malmquist-like correction, but neither $\\chi^2$ tests nor Gaussian processes find that this extra correction is statistically required.",
     figure: {
       src: "/images/papers/lhuillier2019-pantheon.png",
       caption:
-        "Iterative smoothing of Pantheon: residuals, h(z), the Om diagnostic and w(z). Every curve fits the data better than the best-fit ΛCDM.",
+        "Iterative smoothing of Pantheon: residuals, $h(z)$, the $Om$ diagnostic and $w(z)$. Every curve fits the data better than the best-fit ΛCDM.",
     },
   },
   {
@@ -396,11 +396,11 @@ export const papers = [
     arxiv: "1804.04320",
     tags: ["model-testing", "modified-gravity"],
     summary:
-      "Combining model-independent expansion reconstructions from Pantheon supernovae and BAO, we test the FLRW metric and flatness, and use eBOSS DR14Q growth data to constrain Ω_m, γ and σ₈. Everything is consistent with a flat FLRW universe, General Relativity and Λ, with some tension at z > 1.",
+      "Combining model-independent expansion reconstructions from Pantheon supernovae and BAO, we test the FLRW metric and flatness, and use eBOSS DR14Q growth data to constrain $\\Omega_\\mathrm{m}$, $\\gamma$ and $\\sigma_8$. Everything is consistent with a flat FLRW universe, General Relativity and $\\Lambda$, with some tension at $z > 1$.",
     figure: {
       src: "/images/papers/shafieloo2018-falsifying.png",
       caption:
-        "Θ(z) (top) and 𝒪_k(z) (bottom) from supernovae and BOSS/eBOSS BAO. A flat FLRW universe gives Θ = 1.",
+        "$\\Theta(z)$ (top) and $\\mathcal{O}_k(z)$ (bottom) from supernovae and BOSS/eBOSS BAO. A flat FLRW universe gives $\\Theta = 1$.",
     },
   },
   {
@@ -413,11 +413,11 @@ export const papers = [
     arxiv: "1712.04865",
     tags: ["model-testing", "modified-gravity"],
     summary:
-      "We reconstruct the expansion history from supernovae and fit growth-rate data to constrain Ω_m, the growth index γ and σ₈ without a dark energy model. The results agree with ΛCDM in General Relativity, and requiring a positive dark energy density tightens them further.",
+      "We reconstruct the expansion history from supernovae and fit growth-rate data to constrain $\\Omega_\\mathrm{m}$, the growth index $\\gamma$ and $\\sigma_8$ without a dark energy model. The results agree with ΛCDM in General Relativity, and requiring a positive dark energy density tightens them further.",
     figure: {
       src: "/images/papers/lhuillier2018-growth.png",
       caption:
-        "Model-independent regions allowed by growth data (blue) compared with ΛCDM (red), at fixed γ = 0.55 (left) and fixed σ8 = 0.8 (right).",
+        "Model-independent regions allowed by growth data (blue) compared with ΛCDM (red), at fixed $\\gamma = 0.55$ (left) and fixed $\\sigma_8 = 0.8$ (right).",
     },
   },
   {
@@ -434,7 +434,7 @@ export const papers = [
     figure: {
       src: "/images/papers/uhlemann2018-cylinders.jpg",
       caption:
-        "Sub-halo counts in a 60 Mpc/h shell of the Horizon Run 4 lightcone at z = 0.36, projected on the sphere.",
+        "Sub-halo counts in a $60\\,h^{-1}\\,\\mathrm{Mpc}$ shell of the Horizon Run 4 lightcone at $z = 0.36$, projected on the sphere.",
     },
   },
   {
@@ -468,7 +468,7 @@ export const papers = [
     figure: {
       src: "/images/papers/uhlemann2018-separation.png",
       caption:
-        "Halo density against dark matter density in spheres of 15 Mpc/h at z = 0, with the reconstructed bias function (red).",
+        "Halo density against dark matter density in spheres of $15\\,h^{-1}\\,\\mathrm{Mpc}$ at $z = 0$, with the reconstructed bias function (red).",
     },
   },
   {
@@ -481,11 +481,11 @@ export const papers = [
     arxiv: "1703.07357",
     tags: ["simulations", "modified-gravity", "dark-matter"],
     summary:
-      "In N-body simulations of f(R) gravity, DGP and coupled dark energy, f(R) raises halo spin and weakens the spin alignment of interacting pairs, while only strongly coupled dark energy increases the halo interaction rate and the alignment of halo shapes with the large-scale structure.",
+      "In N-body simulations of $f(R)$ gravity, DGP and coupled dark energy, $f(R)$ raises halo spin and weakens the spin alignment of interacting pairs, while only strongly coupled dark energy increases the halo interaction rate and the alignment of halo shapes with the large-scale structure.",
     figure: {
       src: "/images/papers/lhuillier2017-modgrav.png",
       caption:
-        "Halo interaction rate versus mass in ΛCDM and in f(R), DGP and coupled dark energy simulations.",
+        "Halo interaction rate versus mass in ΛCDM and in $f(R)$, DGP and coupled dark energy simulations.",
     },
   },
   {
@@ -498,7 +498,7 @@ export const papers = [
     arxiv: "1701.04417",
     tags: ["simulations", "dark-matter"],
     summary:
-      "In Horizon Run 4, interacting haloes have lower spin and are more spherical than typical haloes. Pairs start with antiparallel spins that gradually become parallel, interactions are mostly radial, and alignments are strongest for massive, close pairs and persist up to z = 4.",
+      "In Horizon Run 4, interacting haloes have lower spin and are more spherical than typical haloes. Pairs start with antiparallel spins that gradually become parallel, interactions are mostly radial, and alignments are strongest for massive, close pairs and persist up to $z = 4$.",
     figure: {
       src: "/images/papers/lhuillier2017-ecology2.png",
       caption:
@@ -515,28 +515,28 @@ export const papers = [
     arxiv: "1607.01026",
     tags: ["large-scale-structure", "simulations"],
     summary:
-      "Parameter-free analytic bias functions extend Kaiser bias into the mildly non-linear regime, using large-deviation statistics and spherical collapse. They match Horizon Run 4 at the percent level down to about 10 Mpc/h, and reduce the variance of the estimator about fivefold.",
+      "Parameter-free analytic bias functions extend Kaiser bias into the mildly non-linear regime, using large-deviation statistics and spherical collapse. They match Horizon Run 4 at the percent level down to about $10\\,h^{-1}\\,\\mathrm{Mpc}$, and reduce the variance of the estimator about fivefold.",
     figure: {
       src: "/images/papers/uhlemann2017-kaiser.png",
       caption:
-        "Density-dependent clustering bias b(ρ) in Horizon Run 4 at z = 0.7 (points) against the saddle-point prediction (lines).",
+        "Density-dependent clustering bias $b(\\rho)$ in Horizon Run 4 at $z = 0.7$ (points) against the saddle-point prediction (lines).",
     },
   },
   {
     id: "lhuillier2017-flrw",
     authors: [ME, "Shafieloo, A."],
     year: 2017,
-    title: "Model-independent test of the FLRW metric, the flatness of the Universe, and non-local measurement of H₀r_d",
+    title: "Model-independent test of the FLRW metric, the flatness of the Universe, and non-local measurement of $H_0 r_\\mathrm{d}$",
     journal: "JCAP 01 (2017) 015",
     doi: "10.1088/1475-7516/2017/01/015",
     arxiv: "1606.06832",
     tags: ["model-testing", "supernovae"],
     summary:
-      "Combining BOSS DR12 BAO with JLA supernovae, we measure H₀r_d without assuming a cosmological model and introduce the Θ(z) diagnostic of the flat-FLRW metric. The results are consistent with a flat FLRW universe within 2σ.",
+      "Combining BOSS DR12 BAO with JLA supernovae, we measure $H_0 r_\\mathrm{d}$ without assuming a cosmological model and introduce the $\\Theta(z)$ diagnostic of the flat-FLRW metric. The results are consistent with a flat FLRW universe within $2\\sigma$.",
     figure: {
       src: "/images/papers/lhuillier2017-flrw.png",
       caption:
-        "Θ(z) and the curvature diagnostic 𝒪_k(z) at the BOSS LOWZ and CMASS redshifts, one point per supernova-based reconstruction. A flat FLRW universe gives Θ = 1 and 𝒪_k = 0.",
+        "$\\Theta(z)$ and the curvature diagnostic $\\mathcal{O}_k(z)$ at the BOSS LOWZ and CMASS redshifts, one point per supernova-based reconstruction. A flat FLRW universe gives $\\Theta = 1$ and $\\mathcal{O}_k = 0$.",
     },
   },
   {
@@ -549,11 +549,11 @@ export const papers = [
     arxiv: "1508.05107",
     tags: ["simulations", "large-scale-structure", "dark-matter"],
     summary:
-      "Horizon Run 4 follows 6300³ particles in a 3150 h⁻¹ Mpc box, with halo merger trees down to 2.7×10¹¹ h⁻¹ M☉. The halo mass function departs from universality and evolves with redshift, and the BAO peak in mock galaxy correlations broadens and shifts. The data are public.",
+      "Horizon Run 4 follows $6300^3$ particles in a $3150\\,h^{-1}\\,\\mathrm{Mpc}$ box, with halo merger trees down to $2.7\\times10^{11}\\,h^{-1}\\,M_\\odot$. The halo mass function departs from universality and evolves with redshift, and the BAO peak in mock galaxy correlations broadens and shifts. The data are public.",
     figure: {
       src: "/images/papers/kim2015-hr4.jpg",
       caption:
-        "A 7 Mpc/h-thick slice through Horizon Run 4 at z = 0, with two successive zooms onto a galaxy cluster.",
+        "A $7\\,h^{-1}\\,\\mathrm{Mpc}$-thick slice through Horizon Run 4 at $z = 0$, with two successive zooms onto a galaxy cluster.",
     },
   },
   {
@@ -566,11 +566,11 @@ export const papers = [
     arxiv: "1505.00788",
     tags: ["simulations", "dark-matter"],
     summary:
-      "Using Horizon Run 4, we measure how often haloes interact as a function of environment, separation, mass ratio, mass and redshift. Most interactions happen at density contrast δ ≈ 20, while the interacting fraction peaks at δ ≈ 1000; we provide a fitting formula and identify two interaction modes.",
+      "Using Horizon Run 4, we measure how often haloes interact as a function of environment, separation, mass ratio, mass and redshift. Most interactions happen at density contrast $\\delta \\approx 20$, while the interacting fraction peaks at $\\delta \\approx 1000$; we provide a fitting formula and identify two interaction modes.",
     figure: {
       src: "/images/papers/lhuillier2015-ecology1.png",
       caption:
-        "Haloes in the cosmic web at z = 0 (top) and z = 1 (bottom): the densest environments (red) sit in the nodes, intermediate ones (cyan) in filaments.",
+        "Haloes in the cosmic web at $z = 0$ (top) and $z = 1$ (bottom): the densest environments (red) sit in the nodes, intermediate ones (cyan) in filaments.",
     },
   },
   {
@@ -583,7 +583,7 @@ export const papers = [
     arxiv: "1401.6180",
     tags: ["simulations", "methods", "dark-matter"],
     summary:
-      "We test how the pre-initial configuration, the order of Lagrangian perturbation theory and the starting redshift affect N-body results. Glass and grid give similar results at z ≲ 2, while first-order LPT underestimates massive haloes by about 2% and small-scale power by 6%.",
+      "We test how the pre-initial configuration, the order of Lagrangian perturbation theory and the starting redshift affect N-body results. Glass and grid give similar results at $z \\lesssim 2$, while first-order LPT underestimates massive haloes by about 2% and small-scale power by 6%.",
     figure: {
       src: "/images/papers/lhuillier2014-ic.png",
       caption:

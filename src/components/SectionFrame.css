@@ -65,7 +65,9 @@
 .tile-grid--gap { gap: 20px; }
 
 .tile-grid > .section-frame {
-  aspect-ratio: 1 / 1;          /* square; grows taller if content needs it */
+  aspect-ratio: 1 / 1;          /* square at least… */
+  min-height: min-content;      /* …but grow when the content is taller */
+  overflow: clip;               /* not a scroll container, so aspect-ratio can grow */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -73,9 +75,29 @@
 }
 
 .tile-grid > .section-frame .section-frame__content { width: 100%; }
+
+/* a tile spanning the whole row, sized by its content */
+.tile-grid > .section-frame.tile--wide { grid-column: 1 / -1; aspect-ratio: auto; }
+.tile--wide .section-frame__content { max-width: 1040px; }
+
+/* two side-by-side lists inside a wide tile (teaching) */
+.split-cols { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 56px; }
+.split-cols h3 {
+  font-family: var(--font-display); font-size: .78rem; font-weight: 600;
+  letter-spacing: .2em; text-transform: uppercase; color: var(--accent); margin: 0 0 1em;
+}
+.course-list li { display: flex; flex-wrap: wrap; align-items: baseline; gap: .1em .6em; margin-bottom: .75em; }
+.course-list .course-name { font-weight: 600; }
+.course-list .course-terms { font-size: .88em; opacity: .78; }
+.course-now {
+  font-family: var(--font-display); font-size: .62rem; font-weight: 600; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--dark); background: var(--accent);
+  padding: .15em .55em; border-radius: 2px; align-self: center;
+}
 .tile-grid > .section-frame--light { border: 1px solid var(--line); }
 
 @media (max-width: 800px) {
   .tile-grid { grid-template-columns: 1fr; }
   .tile-grid > .section-frame { aspect-ratio: auto; padding: 56px 24px; }
+  .split-cols { grid-template-columns: 1fr; }
 }

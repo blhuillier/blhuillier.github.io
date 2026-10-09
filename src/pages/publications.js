@@ -4,6 +4,7 @@ import Seo from "../components/Seo"
 import PageHero from "../components/PageHero"
 import { getPaper } from "../data/papers"
 import { Authors, PaperLinks } from "../components/PaperSummary"
+import { RichText } from "../components/TeX"
 
 const ext = { target: "_blank", rel: "noopener noreferrer" }
 
@@ -58,7 +59,7 @@ const PublicationsPage = () => (
               {g.ids.map(getPaper).filter(Boolean).map((p) => (
                 <li key={p.id}>
                   <span className="pub-authors"><Authors list={p.authors} /></span>{" "}
-                  ({p.year}). <span className="pub-title">{p.title}</span>.{" "}
+                  ({p.year}). <span className="pub-title"><RichText text={p.title} /></span>.{" "}
                   <em>{p.journal || "arXiv preprint"}</em>. <PaperLinks paper={p} />
                 </li>
               ))}

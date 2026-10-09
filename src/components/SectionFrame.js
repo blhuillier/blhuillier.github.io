@@ -3,9 +3,9 @@ import { Link } from "gatsby"
 import ParallaxBg from "./ParallaxBg"
 import "./SectionFrame.css"
 
-const SectionFrame = ({ title, dateRange, description, image, light, align, link }) => (
+const SectionFrame = ({ title, dateRange, description, image, light, align, link, className }) => (
   <section
-    className={`section-frame${light ? " section-frame--light" : ""}`}
+    className={`section-frame${light ? " section-frame--light" : ""}${className ? ` ${className}` : ""}`}
   >
     {image && <ParallaxBg image={image} />}
     <div className="section-frame__content">
