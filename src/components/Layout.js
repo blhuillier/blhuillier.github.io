@@ -2,7 +2,8 @@ import React, { useState } from "react"
 import { Link } from "gatsby"
 import { useLocation } from "@reach/router"
 import SocialBar from "./SocialBar"
-import { langOf, otherLangPath } from "../i18n"
+import { FLAGS } from "./Flags"
+import { LANGS, LANG_NAME, langOf, pathIn } from "../i18n"
 import "./layout.css"
 
 const nav = {
@@ -18,11 +19,20 @@ const nav = {
   fr: [
     { label: "Accueil", to: "/fr/" },
     { label: "Recherche", to: "/fr/research/" },
-    { label: "Publications", to: "/publications/" },
+    { label: "Publications", to: "/fr/publications/" },
     { label: "Enseignement", to: "/fr/teaching/" },
     { label: "Le groupe", to: "/fr/the-group/" },
     { label: "Médiation", to: "/fr/outreach/" },
     { label: "Contact", to: "/fr/contact/" },
+  ],
+  ko: [
+    { label: "홈", to: "/ko/" },
+    { label: "연구", to: "/ko/research/" },
+    { label: "논문", to: "/ko/publications/" },
+    { label: "교육", to: "/ko/teaching/" },
+    { label: "연구실", to: "/ko/the-group/" },
+    { label: "과학 소통", to: "/ko/outreach/" },
+    { label: "연락처", to: "/ko/contact/" },
   ],
 }
 
@@ -33,7 +43,6 @@ const ui = {
     open: "Open menu",
     close: "Close menu",
     primary: "Primary",
-    switchLabel: "Version française",
     role: "Assistant Professor",
     dept: "Department of Physics and Astronomy",
     univ: "Sejong University, Seoul",
@@ -47,7 +56,6 @@ const ui = {
     open: "Ouvrir le menu",
     close: "Fermer le menu",
     primary: "Navigation principale",
-    switchLabel: "English version",
     role: "Professeur assistant",
     dept: "Département de physique et d\u2019astronomie",
     univ: "Université Sejong, Séoul",
@@ -55,20 +63,33 @@ const ui = {
     country: "Séoul 05006, Corée du Sud",
     elsewhere: "Sur le web",
   },
+  ko: {
+    home: "Benjissi — 홈",
+    logoAlt: "Benjissi — 우주론 연구자 벤자민 루일리예",
+    open: "메뉴 열기",
+    close: "메뉴 닫기",
+    primary: "주 메뉴",
+    role: "조교수",
+    dept: "세종대학교 물리천문학과",
+    univ: "서울",
+    where: "찾아오시는 길",
+    country: "서울특별시 광진구 능동로 209 (05006)",
+    elsewhere: "온라인",
+  },
 }
 
 const Layout = ({ children, lang: forcedLang }) => {
   const [navOpen, setNavOpen] = useState(false)
   const { pathname } = useLocation()
   const lang = forcedLang || langOf(pathname)
-  const t = ui[lang]
-  const navItems = nav[lang]
+  const t = ui[lang] || ui.en
+  const navItems = nav[lang] || nav.en
 
   return (
     <div className="site-shell">
       <header className="site-header">
         <div className="site-header__inner">
-          <Link className="site-logo" to={lang === "fr" ? "/fr/" : "/"} aria-label={t.home}>
+          <Link className="site-logo" to={pathIn("/", lang)} aria-label={t.home}>
             <img src="/images/benjissi-logo.png" alt={t.logoAlt} />
           </Link>
 
@@ -108,16 +129,22 @@ const Layout = ({ children, lang: forcedLang }) => {
 
             <div className="header-tools">
               <SocialBar keys={["scholar", "github", "x", "linkedin"]} />
-              <Link
-                className="lang-switch"
-                to={otherLangPath(pathname)}
-                hrefLang={lang === "fr" ? "en" : "fr"}
-                title={t.switchLabel}
-              >
-                <span className={lang === "en" ? "is-current" : undefined}>EN</span>
-                <span aria-hidden="true">|</span>
-                <span className={lang === "fr" ? "is-current" : undefined}>FR</span>
-              </Link>
+              <nav className="lang-switch" aria-label="Language / Langue / 언어">
+                {LANGS.map((l) => {
+                  const Flag = FLAGS[l]
+                  return l === lang ? (
+                    <span key={l} className="is-current" lang={l} title={LANG_NAME[l]} aria-current="true">
+                      <Flag className="flag" />
+                      <span className="visually-hidden">{LANG_NAME[l]}</span>
+                    </span>
+                  ) : (
+                    <Link key={l} to={pathIn(pathname, l)} hrefLang={l} lang={l} title={LANG_NAME[l]}>
+                      <Flag className="flag" />
+                      <span className="visually-hidden">{LANG_NAME[l]}</span>
+                    </Link>
+                  )
+                })}
+              </nav>
             </div>
           </div>
         </div>

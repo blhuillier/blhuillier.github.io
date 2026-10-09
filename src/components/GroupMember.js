@@ -24,7 +24,7 @@ const GroupMember = ({
     <img
       className="group-member__photo"
       src={photo || "/images/placeholder.jpeg"}
-      alt={lang === "fr" ? `Portrait de ${name}` : `Portrait of ${name}`}
+      alt={{ fr: `Portrait de ${name}`, ko: `${name} 사진` }[lang] || `Portrait of ${name}`}
       loading="lazy"
     />
     <div className="group-member__info">
@@ -33,7 +33,7 @@ const GroupMember = ({
       {period && <p className="group-member__period">{period}</p>}
       {researchFocus && <div className="group-member__focus">{researchFocus}</div>}
       {currentPosition && (
-        <p className="group-member__current">{lang === "fr" ? "Aujourd\u2019hui\u00a0:" : "Now:"} {currentPosition}</p>
+        <p className="group-member__current">{{ fr: "Aujourd\u2019hui\u00a0:", ko: "현재:" }[lang] || "Now:"} {currentPosition}</p>
       )}
       {links.length > 0 && (
         <ul className="social-bar">

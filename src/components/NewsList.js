@@ -21,6 +21,13 @@ const strings = {
     fewer: "Afficher moins",
     all: (n) => `Toutes les actualités (${n})`,
   },
+  ko: {
+    press: "국내 언론 보도:",
+    linkedin: "LinkedIn에서 게시물 보기 →",
+    embedTitle: "LinkedIn 게시물",
+    fewer: "접기",
+    all: (n) => `소식 전체 보기 (${n})`,
+  },
 }
 
 const NewsList = ({ items, lang = "en" }) => {
@@ -32,7 +39,7 @@ const NewsList = ({ items, lang = "en" }) => {
         {items.map((item, i) => (
           <li key={`${item.date}-${i}`} className={!all && i >= NEWS_PREVIEW ? "is-collapsed" : undefined}>
             <span className="news-date">{item.date}</span>
-            <p className="news-body">{lang === "fr" && item.fr ? item.fr : item.body}</p>
+            <p className="news-body">{(lang !== "en" && item[lang]) || item.body}</p>
             {item.press && (
               <p className="press-links">
                 {t.press}{" "}

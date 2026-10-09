@@ -24,7 +24,7 @@ const TheGroupPage = () => (
             alt="Benjamin L'Huillier"
           />
           <div className="pi-card__body">
-            <h2 className="pi-card__name">Benjamin L&apos;Huillier | 벤자민 르위예</h2>
+            <h2 className="pi-card__name">Benjamin L&apos;Huillier | 벤자민 루일리예</h2>
             <p className="pi-card__role">Assistant Professor</p>
             <p>
               I combine cosmological N-body simulations and advanced statistical methods to test the

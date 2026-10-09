@@ -1,0 +1,126 @@
+import React from "react"
+import { Link } from "gatsby"
+import Layout from "../../components/Layout"
+import Seo from "../../components/Seo"
+import PageHero from "../../components/PageHero"
+import { PaperList } from "../../components/PaperSummary"
+import TeX from "../../components/TeX"
+
+const ext = { target: "_blank", rel: "noopener noreferrer" }
+
+const ModelTestingPageKo = () => (
+  <Layout lang="ko">
+    <PageHero title="표준 우주론 모형 검증" image="/images/2param_inverted_edited_edited.png" />
+
+    <section className="section section--white">
+      <div className="wrap--narrow prose">
+        <p>표준 우주론 모형은 몇 가지 가정에 기초합니다.</p>
+        <ul>
+          <li>우주는 균일하고 등방적이다.</li>
+          <li>중력은 일반상대성이론(GR)으로 기술된다.</li>
+        </ul>
+        <p>
+          이 가정 아래에서 우주의 계량은 팽창하는 우주를 기술하는
+          프리드만–르메트르–로버트슨–워커(FLRW) 계량이 됩니다.
+        </p>
+        <p>
+          이 틀 안에서 현재의 표준 모형은 <TeX math={String.raw`\Lambda`} />CDM입니다. 우주의
+          에너지는 후기 우주의 가속 팽창을 일으키는 우주상수{" "}
+          <TeX math={String.raw`\Lambda`} />가 지배하고, 물질은 차갑고 비바리온적인 성분인
+          암흑물질이 대부분을 차지합니다. 그러나 두 성분 모두 직접 검출된 적이 없고, 입자물리학의
+          표준 모형에도 포함되어 있지 않습니다. 따라서 그 바탕에 있는 가정들을 질문해 볼 수
+          있습니다. FLRW가 올바른 계량인가? 우주는 등방적이고 균일한가? 암흑에너지는
+          우주상수인가?
+        </p>
+
+        <h2 className="section-title" style={{ marginTop: "2.4em" }}>
+          FLRW 계량과 곡률 검증
+        </h2>
+        <p>
+          JLA(Joint Light-curve Analysis) 초신성 자료로 팽창 역사{" "}
+          <TeX math={String.raw`h(z) = H(z)/H_0`} />를 모형에 의존하지 않고 재구성한 뒤
+          SDSS-III/BOSS의 바리온 음향 진동 측정과 결합하여, Arman Shafieloo 박사와 저는 허블
+          상수 <TeX math={String.raw`H_0`} />와 끌림 시기(drag epoch)의 음향 지평선{" "}
+          <TeX math={String.raw`r_\mathrm{d}`} />의 곱을 모형 독립적으로 측정했습니다. 또한 평탄한
+          FLRW 계량에 대한 새로운 리트머스 검증 <TeX math={String.raw`\Theta(z)`} />를
+          도입했는데, 이는 클라크슨 검증 <TeX math={String.raw`\mathcal{O}_k(z)`} />와 다음과 같이
+          연결됩니다.
+        </p>
+        <TeX block math={String.raw`\mathcal{O}_k(z) = \frac{\Theta^2(z) - 1}{\mathcal{D}^2(z)}, \qquad \Theta(z) \equiv h(z)\,\mathcal{D}'(z) \overset{\text{FLRW}}{=} \sqrt{1 + \Omega_{k,0}\,\mathcal{D}^2(z)},`} />
+        <p>
+          여기서 <TeX math={String.raw`\mathcal{D}`} />는 <TeX math={String.raw`c/H_0`} /> 단위의
+          공동 거리입니다. FLRW 우주에서는 모든 적색이동에서{" "}
+          <TeX math={String.raw`\mathcal{O}_k = \Omega_{k,0}`} />이고, 우주가 평탄하면{" "}
+          <TeX math={String.raw`\Theta = 1`} />, <TeX math={String.raw`\mathcal{O}_k = 0`} />입니다.
+        </p>
+        <p>
+          결과는 평탄한 FLRW 우주와 일치했지만, CMASS 표본에서 약간의 긴장(tension) 징후가
+          보였습니다 (
+          <a href="https://ui.adsabs.harvard.edu/abs/2017JCAP...01..015L/abstract" {...ext}>
+            L&apos;Huillier &amp; Shafieloo, JCAP 01 (2017) 015
+          </a>
+          ).
+        </p>
+
+        <h2 className="section-title" style={{ marginTop: "2.4em" }}>
+          모형 독립적인 일반상대성이론 검증
+        </h2>
+        <p>
+          Arman Shafieloo 박사, 김형진(워털루 대학교)과 함께 이 재구성 결과를 적색이동 공간
+          왜곡에서 얻은 구조 성장 측정과 결합하여, 물질 밀도{" "}
+          <TeX math={String.raw`\Omega_\mathrm{m}`} />, 밀도 요동의 진폭{" "}
+          <TeX math={String.raw`\sigma_8`} />, 그리고 다음과 같이 정의되는 성장 지수{" "}
+          <TeX math={String.raw`\gamma`} />를 모형 독립적으로 제한했습니다.
+        </p>
+        <TeX block math={String.raw`f(z) \equiv \frac{\mathrm{d}\ln\delta}{\mathrm{d}\ln a} \simeq \Omega_\mathrm{m}(z)^{\gamma},`} />
+        <p>
+          일반상대성이론에서는 <TeX math={String.raw`\gamma \simeq 0.55`} />입니다. 결과는{" "}
+          <TeX math={String.raw`\Lambda`} />CDM + GR과 일치했습니다 (
+          <a href="https://ui.adsabs.harvard.edu/abs/2018MNRAS.476.3263L/abstract" {...ext}>
+            L&apos;Huillier, Shafieloo &amp; Kim 2018, MNRAS 476, 3263
+          </a>
+          ).
+        </p>
+        <p>
+          이어서 Arman Shafieloo 박사, Alexei Starobinsky 교수와 함께 최신 Ia형 초신성
+          자료(Pantheon)와 구조 성장 측정(eBOSS DR14Q 포함)을 결합해 더 강한 제한을 얻었으며,
+          역시 <TeX math={String.raw`\Lambda`} />CDM + GR과 일치했습니다 (
+          <a href="https://ui.adsabs.harvard.edu/abs/2018PhRvD..98h3526S/abstract" {...ext}>
+            Shafieloo, L&apos;Huillier &amp; Starobinsky 2018, PRD 98, 083526
+          </a>
+          ).
+        </p>
+
+        <figure className="figure figure--narrow">
+          <img
+            src="/images/lcdm-tests-2018.png"
+            alt="모형 독립적인 ΛCDM 검증으로 얻은 성장 지수 gamma와 sigma_8에 대한 제한"
+          />
+          <figcaption>
+            ΛCDM 모형 검증 — Shafieloo, L&apos;Huillier &amp; Starobinsky (2018), Physical Review D.
+          </figcaption>
+        </figure>
+
+        <h2 className="section-title" style={{ marginTop: "2.4em" }}>
+          우주론 모형 검증 관련 논문
+        </h2>
+        <p className="pub-legend">논문 요약은 영어로 제공됩니다.</p>
+        <PaperList tag="model-testing" lang="ko" />
+
+        <p className="back-link">
+          <Link to="/ko/research/">← 연구로 돌아가기</Link>
+        </p>
+      </div>
+    </section>
+  </Layout>
+)
+
+export default ModelTestingPageKo
+
+export const Head = () => (
+  <Seo
+    title="표준 우주론 모형 검증"
+    pathname="/ko/modeltesting/"
+    description="초신성, BAO, 구조 성장 자료를 이용한 FLRW 계량, 공간 곡률, 일반상대성이론의 모형 독립적 검증."
+  />
+)

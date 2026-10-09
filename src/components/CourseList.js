@@ -4,8 +4,13 @@ import { NOW } from "../data/courses"
 const ext = { target: "_blank", rel: "noopener noreferrer" }
 
 const SEASON_FR = { Spring: "Printemps", Fall: "Automne", Summer: "Été", Winter: "Hiver" }
-const term = (t, lang) =>
-  lang === "fr" ? t.replace(/^(Spring|Fall|Summer|Winter)/, (m) => SEASON_FR[m]) : t
+const SEASON_KO = { Spring: "봄", Fall: "가을", Summer: "여름", Winter: "겨울" }
+const term = (t, lang) => {
+  if (lang === "fr") return t.replace(/^(Spring|Fall|Summer|Winter)/, (m) => SEASON_FR[m])
+  if (lang === "ko") return t.replace(/^(Spring|Fall|Summer|Winter) (\d{4})$/, (_, s, y) => `${y} ${SEASON_KO[s]}`)
+  return t
+}
+const NOW_LABEL = { en: "Now", fr: "En cours", ko: "진행 중" }
 
 const CourseList = ({ heading, courses, lang = "en" }) => (
   <div>
@@ -17,7 +22,7 @@ const CourseList = ({ heading, courses, lang = "en" }) => (
             {c.link ? <a href={c.link} {...ext}>{c.name}</a> : c.name}
           </span>
           {c.terms.includes(NOW) && (
-            <span className="course-now">{lang === "fr" ? "En cours" : "Now"}</span>
+            <span className="course-now">{NOW_LABEL[lang] || NOW_LABEL.en}</span>
           )}
           <span className="course-terms">
             {c.terms

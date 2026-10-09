@@ -8,8 +8,7 @@ import TeX from "../../components/TeX"
 
 const ext = { target: "_blank", rel: "noopener noreferrer" }
 
-// The detailed topic pages (model testing, simulations, galaxies) are in English only.
-const more = "En savoir plus (en anglais)"
+const more = "En savoir plus"
 
 const ResearchPageFr = () => (
   <Layout lang="fr">
@@ -44,7 +43,7 @@ const ResearchPageFr = () => (
           <li>Comment les galaxies et leurs trous noirs grandissent-ils dans la toile cosmique&nbsp;?</li>
         </ul>
         <p style={{ marginTop: "2em" }}>
-          Les principaux articles sont sur la <Link to="/publications/">page des publications</Link>.
+          Les principaux articles sont sur la <Link to="/fr/publications/">page des publications</Link>.
         </p>
       </div>
     </section>
@@ -54,7 +53,7 @@ const ResearchPageFr = () => (
         <SectionFrame
           title="Tester le modèle standard de la cosmologie"
           image="/images/2param_inverted_edited_edited.png"
-          link="/modeltesting/"
+          link="/fr/modeltesting/"
           moreLabel={more}
           description={
             <ul>
@@ -80,7 +79,7 @@ const ResearchPageFr = () => (
         <SectionFrame
           title="Simulations cosmologiques"
           image="/images/zoom_t91_long.jpg"
-          link="/simulations/"
+          link="/fr/simulations/"
           moreLabel={more}
           description={
             <p>
@@ -98,7 +97,7 @@ const ResearchPageFr = () => (
         <SectionFrame
           title="Formation et évolution des galaxies"
           image="/images/HR4_1919_1199.jpg"
-          link="/galaxy-formation-and-evolution/"
+          link="/fr/galaxy-formation-and-evolution/"
           moreLabel={more}
           description={
             <ul>

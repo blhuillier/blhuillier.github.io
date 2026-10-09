@@ -1,6 +1,6 @@
 import React from "react"
 import meta from "../siteMeta"
-import { BILINGUAL, langOf, otherLangPath } from "../i18n"
+import { LANGS, langOf, basePath, hasVersion, pathIn } from "../i18n"
 
 /**
  * Rendered from each page's exported `Head`.
@@ -9,9 +9,10 @@ import { BILINGUAL, langOf, otherLangPath } from "../i18n"
  */
 const Seo = ({ title, fullTitle, description, pathname = "/", image, noindex, children }) => {
   const lang = langOf(pathname)
-  const enPath = lang === "fr" ? otherLangPath(pathname) : pathname
-  const bilingual = BILINGUAL.includes(enPath)
-  const pageTitle = fullTitle || (title ? meta.titleTemplate.replace("%s", title) : meta.title)
+  const base = basePath(pathname)
+  const versions = LANGS.filter((l) => hasVersion(base, l))
+  const template = lang === "ko" ? "%s — 벤자민 루일리예" : meta.titleTemplate
+  const pageTitle = fullTitle || (title ? template.replace("%s", title) : meta.title)
   const pageDescription = description || meta.description
   const url = `${meta.siteUrl}${pathname}`
   const pageImage = `${meta.siteUrl}${image || meta.image}`
@@ -23,14 +24,15 @@ const Seo = ({ title, fullTitle, description, pathname = "/", image, noindex, ch
       <meta name="author" content={meta.author} />
       <link rel="canonical" href={url} />
       {noindex && <meta name="robots" content="noindex" />}
-      {bilingual && (
+      {versions.length > 1 && (
         <>
-          <link rel="alternate" hrefLang="en" href={`${meta.siteUrl}${enPath}`} />
-          <link rel="alternate" hrefLang="fr" href={`${meta.siteUrl}/fr${enPath}`} />
-          <link rel="alternate" hrefLang="x-default" href={`${meta.siteUrl}${enPath}`} />
+          {versions.map((l) => (
+            <link key={l} rel="alternate" hrefLang={l} href={`${meta.siteUrl}${pathIn(base, l)}`} />
+          ))}
+          <link rel="alternate" hrefLang="x-default" href={`${meta.siteUrl}${base}`} />
         </>
       )}
-      <meta property="og:locale" content={lang === "fr" ? "fr_FR" : "en_US"} />
+      <meta property="og:locale" content={{ en: "en_US", fr: "fr_FR", ko: "ko_KR" }[lang]} />
 
       <meta property="og:type" content="website" />
       <meta property="og:site_name" content="Benjissi" />
