@@ -88,6 +88,14 @@ const TheGroupPage = () => (
               ]}
             />
           </div>
+
+          <div id="kangsoo">
+            <GroupMember
+              name="Kangsoo Lee | 이강수"
+              role="Undergraduate Researcher"
+              period="Since September 2026"
+            />
+          </div>
         </div>
       </div>
     </section>

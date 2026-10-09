@@ -87,6 +87,15 @@ const TheGroupPageKo = () => (
               ]}
             />
           </div>
+
+          <div id="kangsoo">
+            <GroupMember
+              lang="ko"
+              name="Kangsoo Lee | 이강수"
+              role="학부 연구생"
+              period="2026년 9월부터"
+            />
+          </div>
         </div>
       </div>
     </section>

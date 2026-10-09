@@ -92,6 +92,15 @@ const TheGroupPageFr = () => (
               ]}
             />
           </div>
+
+          <div id="kangsoo">
+            <GroupMember
+              lang="fr"
+              name="Kangsoo Lee | 이강수"
+              role="Étudiant-chercheur de licence"
+              period="Depuis septembre 2026"
+            />
+          </div>
         </div>
       </div>
     </section>

@@ -97,6 +97,9 @@ const TeachingPageFr = () => (
                   <h3 className="supervision-h">Projets de recherche et stages</h3>
                   <ul style={disc}>
                     <li>
+                      <strong>Depuis sept. 2026</strong> — Kangsoo Lee (licence, 4ᵉ année, Sejong)
+                    </li>
+                    <li>
                       <strong>Depuis sept. 2026</strong> — Mathias Tan (master, CentraleSupélec)&nbsp;:
                       applications cosmologiques du transport optimal
                     </li>

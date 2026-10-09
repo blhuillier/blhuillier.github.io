@@ -90,6 +90,9 @@ const TeachingPage = () => (
               <h3 className="supervision-h">Research projects and internships</h3>
               <ul style={{ listStyle: "disc", paddingLeft: "1.2em" }}>
                 <li>
+                  <strong>Sept. 2026 → now</strong> — Kangsoo Lee (Sejong, senior undergraduate)
+                </li>
+                <li>
                   <strong>Sept. 2026 → now</strong> — Mathias Tan (Master&apos;s, CentraleSupélec):
                   cosmological applications of optimal transport
                 </li>

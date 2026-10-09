@@ -84,6 +84,9 @@ const TeachingPageKo = () => (
                   <h3 className="supervision-h">연구 프로젝트와 인턴십</h3>
                   <ul style={disc}>
                     <li>
+                      <strong>2026년 9월 – 현재</strong> — 이강수 (세종대학교 학부 4학년)
+                    </li>
+                    <li>
                       <strong>2026년 9월 – 현재</strong> — Mathias Tan (석사, CentraleSupélec):
                       최적 수송의 우주론적 응용
                     </li>
