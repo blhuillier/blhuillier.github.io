@@ -7,9 +7,9 @@
 .group-member {
   display: grid;
   grid-template-columns: 130px minmax(0, 1fr);
+  align-items: start;          /* photo keeps its own height, text may run longer */
   background: var(--dark-soft);
   color: #e9e6e0;
-  min-height: 190px;
 }
 
 .group-member--light {
@@ -18,12 +18,13 @@
   border: 1px solid var(--line);
 }
 
+/* Every portrait gets the same 4:5 frame, cropped from the top so faces stay in view. */
 .group-member__photo {
+  display: block;
   width: 100%;
-  height: 100%;
-  min-height: 190px;
+  aspect-ratio: 4 / 5;
   object-fit: cover;
-  object-position: center top;
+  object-position: center 20%;
 }
 
 .group-member__info { padding: 22px 24px; }
@@ -76,7 +77,8 @@
   background: var(--paper-alt);
   border: 1px solid var(--line);
 }
-.pi-card__photo { width: 100%; height: 100%; object-fit: cover; min-height: 320px; }
+.pi-card { align-items: start; }
+.pi-card__photo { display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center 20%; }
 .pi-card__body { padding: 36px 40px; }
 .pi-card__name { font-size: 1.4rem; font-weight: 600; margin: 0 0 .1em; }
 .pi-card__role {
@@ -93,6 +95,6 @@
   .group-member { grid-template-columns: 100px minmax(0, 1fr); }
   .group-member__info { padding: 18px; }
   .pi-card { grid-template-columns: 1fr; }
-  .pi-card__photo { min-height: 260px; }
+  .pi-card__photo { width: min(100%, 320px); margin: 0 auto; }
   .pi-card__body { padding: 26px 22px; }
 }
