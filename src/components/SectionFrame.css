@@ -60,14 +60,16 @@
   grid-template-columns: repeat(2, minmax(0, 1fr));
   max-width: 1400px;
   margin: 0 auto;
+  container-type: inline-size;   /* lets tiles size themselves from the grid width */
+  --tile-gap: 0px;
 }
 
-.tile-grid--gap { gap: 20px; }
+.tile-grid--gap { --tile-gap: 20px; gap: var(--tile-gap); }
 
+/* Square by default, but a minimum only: a tile with more content simply grows,
+   and the other tile in its row stretches to match. */
 .tile-grid > .section-frame {
-  aspect-ratio: 1 / 1;          /* square at least… */
-  min-height: min-content;      /* …but grow when the content is taller */
-  overflow: clip;               /* not a scroll container, so aspect-ratio can grow */
+  min-height: calc((100cqw - var(--tile-gap)) / 2);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -77,12 +79,12 @@
 .tile-grid > .section-frame .section-frame__content { width: 100%; }
 
 /* a tile spanning the whole row, sized by its content */
-.tile-grid > .section-frame.tile--wide { grid-column: 1 / -1; aspect-ratio: auto; }
+.tile-grid > .section-frame.tile--wide { grid-column: 1 / -1; min-height: 0; }
 .tile--wide .section-frame__content { max-width: 1040px; }
 
 /* two side-by-side lists inside a wide tile (teaching) */
 .split-cols { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 56px; }
-.split-cols h3 {
+.split-cols h3, .stacked-lists h3 {
   font-family: var(--font-display); font-size: .78rem; font-weight: 600;
   letter-spacing: .2em; text-transform: uppercase; color: var(--accent); margin: 0 0 1em;
 }
@@ -98,7 +100,7 @@
 
 @media (max-width: 800px) {
   .tile-grid { grid-template-columns: 1fr; }
-  .tile-grid > .section-frame { aspect-ratio: auto; padding: 56px 24px; }
+  .tile-grid > .section-frame { min-height: 0; padding: 56px 24px; }
   .split-cols { grid-template-columns: 1fr; }
 }
 
@@ -106,3 +108,6 @@
   font-family: var(--font-display); font-size: .78rem; font-weight: 600;
   letter-spacing: .2em; text-transform: uppercase; color: var(--accent); margin: 1.6em 0 .8em;
 }
+.split-cols > div > .supervision-h:first-child { margin-top: .4em; }
+.supervision-intro { text-align: center; margin-bottom: 1.6em; }
+.stacked-lists > div + div { margin-top: 1.6em; }

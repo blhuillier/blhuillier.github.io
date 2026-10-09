@@ -96,12 +96,15 @@ const TeachingPage = () => (
         />
 
         <SectionFrame
+          className="tile--wide"
           title="Student supervision"
           light
           align="left"
           description={
             <>
-              <p>I am always happy to work with motivated students.</p>
+              <p className="supervision-intro">I am always happy to work with motivated students.</p>
+              <div className="split-cols">
+              <div>
               <h3 className="supervision-h">Current graduate students</h3>
               <ul style={{ listStyle: "disc", paddingLeft: "1.2em" }}>
                 <li>
@@ -123,6 +126,8 @@ const TeachingPage = () => (
                   cosmology. Now a PhD student at CosmoStat, CEA Saclay
                 </li>
               </ul>
+              </div>
+              <div>
               <h3 className="supervision-h">Research projects and internships</h3>
               <ul style={{ listStyle: "disc", paddingLeft: "1.2em" }}>
                 <li>
@@ -158,6 +163,8 @@ const TeachingPage = () => (
                   co-supervised): redshift-space distortions and supernovae to constrain gravity
                 </li>
               </ul>
+              </div>
+              </div>
             </>
           }
         />
@@ -197,13 +204,12 @@ const TeachingPage = () => (
         />
 
         <SectionFrame
-          className="tile--wide"
           title="Teaching Assistant, Université Paris Diderot"
           dateRange="2008 – 2011"
           light
           align="left"
           description={
-            <div className="split-cols">
+            <div className="stacked-lists">
               <div>
                 <h3>Physics</h3>
                 <ul style={{ listStyle: "disc", paddingLeft: "1.2em" }}>
