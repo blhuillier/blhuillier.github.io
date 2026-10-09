@@ -77,10 +77,9 @@ const TheGroupPage = () => (
           <div id="sihyeong">
             <GroupMember
               name="Si Hyeong Noh | 노시형"
-              role="Post-Graduate Research Assistant"
-              period="Spring 2023 – present"
+              role="PhD Candidate"
+              period="Fall 2026 – present (M.Sc. 2023–2025)"
               researchFocus={<p>Gravitational theory, testing modified gravity, data analysis.</p>}
-              currentPosition="M.Sc., Sejong University, 2025"
               photo="/images/sihyeong-web.jpg"
               links={[
                 { kind: "web", href: "https://sites.google.com/view/starrynote88/", label: "Website" },
@@ -133,7 +132,7 @@ const TheGroupPage = () => (
             <strong>
               <a href="https://github.com/sghwang-cosmos" {...ext}>Seung-gyu Hwang</a> | 황승규
             </strong>{" "}
-            — Yonsei University M.Sc. 2019–2022; Sejong post-Master&apos;s researcher 2022–2025.
+            — Yonsei University M.Sc. 2019–2021; Sejong post-Master&apos;s researcher 2022–2025.
             Gaussian process regression in cosmology. Now a PhD student at CosmoStat, CEA Saclay.
           </li>
           <li>
@@ -143,7 +142,7 @@ const TheGroupPage = () => (
               </a>{" "}
               | 다비드 페르난데스 길
             </strong>{" "}
-            — Post-Master&apos;s researcher, 2022. Alignment of AGN and galaxies (co-supervised with
+            — Post-Master&apos;s researcher, 2022–2023. Alignment of AGN and galaxies (co-supervised with
             Jeff Hodgson, main supervisor). Now a PhD candidate at Centro de Estudios de Física del
             Cosmos de Aragón, Teruel, Spain.
           </li>

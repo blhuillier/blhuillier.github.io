@@ -101,3 +101,8 @@
   .tile-grid > .section-frame { aspect-ratio: auto; padding: 56px 24px; }
   .split-cols { grid-template-columns: 1fr; }
 }
+
+.section-frame__body .supervision-h {
+  font-family: var(--font-display); font-size: .78rem; font-weight: 600;
+  letter-spacing: .2em; text-transform: uppercase; color: var(--accent); margin: 1.6em 0 .8em;
+}

@@ -205,7 +205,8 @@ const ResearchPage = () => (
         <p>
           <strong>France–Korea collaboration.</strong> Building on the PHC STAR partnership with
           the Institut d&apos;Astrophysique Spatiale (CNRS / Université Paris-Saclay) and on joint
-          work with KASI, combining early- and late-Universe probes.
+          work with KASI, combining early- and late-Universe probes. I will be a visiting professor
+          at IAS in January–February 2027.
         </p>
       </div>
     </section>

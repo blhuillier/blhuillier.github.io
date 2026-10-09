@@ -47,6 +47,14 @@ const news = [
     ),
   },
   {
+    date: "2026-09-01",
+    body: (
+      <>
+        <Link to="/the-group/#sihyeong">Si Hyeong Noh</Link> starts his PhD in the group.
+      </>
+    ),
+  },
+  {
     date: "2026-08-25",
     body: (
       <>

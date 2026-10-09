@@ -102,27 +102,60 @@ const TeachingPage = () => (
           description={
             <>
               <p>I am always happy to work with motivated students.</p>
+              <h3 className="supervision-h">Current graduate students</h3>
               <ul style={{ listStyle: "disc", paddingLeft: "1.2em" }}>
                 <li>
-                  <strong>Sept. 2026 → now</strong> — Mathias Tan (CentraleSupélec, intern):
+                  <strong>Sept. 2026 → now</strong> — Si Hyeong Noh, PhD (M.Sc. 2023–2025,
+                  weak-lensing cosmology)
+                </li>
+                <li>
+                  <strong>Sept. 2024 → now</strong> — Cléa Millard, PhD: Type Ia supernova cosmology
+                </li>
+                <li>
+                  <strong>2023 → now</strong> — Hyeon Kim, integrated Master–PhD: N-body simulations
+                </li>
+              </ul>
+              <h3 className="supervision-h">Former students</h3>
+              <ul style={{ listStyle: "disc", paddingLeft: "1.2em" }}>
+                <li>
+                  <strong>2019 → 2025</strong> — Seung-gyu Hwang: M.Sc. at Yonsei (2019–2021), then
+                  post-Master researcher at Sejong (2022–2025). Gaussian process regression in
+                  cosmology. Now a PhD student at CosmoStat, CEA Saclay
+                </li>
+              </ul>
+              <h3 className="supervision-h">Research projects and internships</h3>
+              <ul style={{ listStyle: "disc", paddingLeft: "1.2em" }}>
+                <li>
+                  <strong>Sept. 2026 → now</strong> — Mathias Tan (Master&apos;s, CentraleSupélec):
                   cosmological applications of optimal transport
                 </li>
-                <li><strong>2023 → now</strong> — Si Hyeong Noh, Hyeon Kim, Cléa Millard</li>
                 <li>
-                  <strong>2022</strong> — Co-supervision of David Fernández Gil (Post-Master&apos;s
-                  researcher): alignment of AGN and galaxies
+                  <strong>Spring 2026</strong> — Tarik Ouadjou (CentraleSupélec, co-supervised with
+                  A. Rimmel), Ussan Abbassi (ENS Paris), Edwyn Howarth (Sorbonne)
                 </li>
                 <li>
-                  <strong>Dec. 2019 → 2025</strong> — Seung-gyu Hwang (Yonsei, Master&apos;s):
-                  testing gravity with the large-scale structure
+                  <strong>Summer 2023</strong> — Manal Ikram Bensahli (ESTACA, undergraduate):
+                  information theory and Fermi light curves
                 </li>
                 <li>
-                  <strong>Summer 2019</strong> — Sohee Chun (Emory, rising sophomore): SN Ia
-                  cosmology
+                  <strong>Spring 2023</strong> — Cléa Millard (Master&apos;s, Strasbourg): Type Ia
+                  supernova cosmology
                 </li>
                 <li>
-                  <strong>Summer 2017</strong> — Co-supervision of Hyungjin Kim (Waterloo,
-                  Master&apos;s): using redshift-space distortions and supernovae to constrain gravity
+                  <strong>2022 → 2023</strong> — David Fernández Gil (post-Master project,
+                  co-supervised with J. Hodgson): alignment of AGN jets and their host galaxies,
+                  published in <em>Nature Astronomy</em>
+                </li>
+                <li>
+                  <strong>2021 → 2022</strong> — Seokhyeon Yoo and Hyeon Kim (Sejong undergraduates):
+                  cosmological probes
+                </li>
+                <li>
+                  <strong>Summer 2019</strong> — Sohee Chun (Emory): Type Ia supernova cosmology
+                </li>
+                <li>
+                  <strong>Summer 2017</strong> — Hyungjin Kim (Master&apos;s, Waterloo,
+                  co-supervised): redshift-space distortions and supernovae to constrain gravity
                 </li>
               </ul>
             </>
