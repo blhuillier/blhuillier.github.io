@@ -62,7 +62,7 @@ const news = [
       <>
         <Link to="/the-group/#clea">Cléa Millard</Link>&apos;s paper “Model independent test of the
         FLRW metric and the curvature in light of DESI DR2” is published in <em>JCAP</em>.{" "}
-        {/* TODO: replace with the JCAP DOI link once it is indexed */}
+        <a href="https://doi.org/10.1088/1475-7516/2026/08/016" {...ext}>JCAP08(2026)016</a> ·{" "}
         <a href="https://arxiv.org/abs/2601.20293" {...ext}>arXiv:2601.20293</a>
       </>
     ),
