@@ -412,6 +412,12 @@ button.btn { background: transparent; color: inherit; cursor: pointer; }
 .plain-links { list-style: none; padding: 0; margin: 0; text-align: center; font-size: 1.05rem; }
 .plain-links li { margin: 0 0 .7em; }
 
+/* ---------- maths (KaTeX) ---------- */
+
+.tex-inline .katex { font-size: 1.05em; }
+.tex-block { margin: 1.4em 0; overflow-x: auto; overflow-y: hidden; }
+.tex-block .katex-display { margin: 0; }
+
 /* ---------- selected publications ---------- */
 
 .pub-legend { text-align: center; font-size: .85rem; color: var(--ink-soft); margin: -1em 0 2.4em; }

@@ -20,3 +20,6 @@ todo.md
 # Custom domain: only add this at DNS cutover, otherwise
 # blhuillier.github.io redirects to www.benjissi.com (still on Wix).
 static/CNAME
+
+# arXiv sources fetched by scripts/fetch_arxiv_figures.py (local only)
+figure-candidates/

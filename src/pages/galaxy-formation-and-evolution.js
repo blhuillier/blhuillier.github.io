@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import Layout from "../components/Layout"
 import Seo from "../components/Seo"
 import PageHero from "../components/PageHero"
+import { PaperList } from "../components/PaperSummary"
 
 const ext = { target: "_blank", rel: "noopener noreferrer" }
 
@@ -64,6 +65,11 @@ const GalaxyFormationPage = () => (
           </a>
           ).
         </p>
+
+        <h2 className="section-title" style={{ marginTop: "2.4em" }}>
+          Papers on galaxies and AGN
+        </h2>
+        <PaperList tags={["galaxies", "agn"]} />
 
         <p className="back-link">
           <Link to="/research/">← Back to research</Link>
