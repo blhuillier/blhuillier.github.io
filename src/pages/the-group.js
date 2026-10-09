@@ -102,6 +102,7 @@ const TheGroupPage = () => (
               light
               name="Mathias Tan"
               role="Master's Intern"
+              period="Since September 2026"
               researchFocus={
                 <p>Cosmological Applications of Optimal Transport. CentraleSupélec, France.</p>
               }

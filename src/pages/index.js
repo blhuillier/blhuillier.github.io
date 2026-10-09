@@ -36,6 +36,58 @@ const news = [
     embedHeight: 1699,
   },
   {
+    date: "2026-09-01",
+    body: (
+      <>
+        <Link to="/the-group/#mathias">Mathias Tan</Link> (
+        <a href="https://www.centralesupelec.fr/" {...ext}>CentraleSupélec</a>) joins the group as a
+        Master&apos;s intern to work on cosmological applications of optimal transport.
+      </>
+    ),
+  },
+  {
+    date: "2026-08-25",
+    body: (
+      <>
+        Paper with Jeffrey Hodgson et al. published in <em>Astronomy &amp; Astrophysics</em>: “A
+        refined method for measuring cosmological distances using variability and proper motions in
+        AGNs with VLBI-detected counter jets”.{" "}
+        <a href="https://doi.org/10.1051/0004-6361/202660314" {...ext}>A&amp;A 712, A240</a>
+      </>
+    ),
+  },
+  {
+    date: "2026-08-10",
+    body: (
+      <>
+        <Link to="/the-group/#clea">Cléa Millard</Link>&apos;s paper “Model independent test of the
+        FLRW metric and the curvature in light of DESI DR2” is published in <em>JCAP</em>.{" "}
+        {/* TODO: replace with the JCAP DOI link once it is indexed */}
+        <a href="https://arxiv.org/abs/2601.20293" {...ext}>arXiv:2601.20293</a>
+      </>
+    ),
+  },
+  {
+    date: "2026-07",
+    body: (
+      <>
+        Featured in <em>Le Petit Échotier</em> (Seoul Accueil, no. 202): « La science au-delà des
+        frontières, Regards vers l&apos;infini avec le Pr L&apos;Huillier, cosmologiste français en
+        Corée du Sud ».{" "}
+        <a href="https://www.seoulaccueil.com/wp-content/uploads/2026/06/PE202-online-version.pdf#page=60" {...ext}>Read the article (PDF, pp. 60–63)</a>
+      </>
+    ),
+  },
+  {
+    date: "2026-07",
+    body: (
+      <>
+        Invited talk at the 2026 KGWG Summer Meeting, Pohang: “Testing the ΛCDM Model with
+        Gravitational Waves”.
+      </>
+    ),
+  },
+  {
     date: "2026-06-04",
     body: (
       <>
@@ -81,6 +133,29 @@ const news = [
         <Link to="/the-group/#clea">Cléa Millard</Link>&apos;s first paper, on tests of the FLRW
         model, was submitted:{" "}
         <a href="https://arxiv.org/abs/2601.20293" {...ext}>arXiv:2601.20293</a>.
+      </>
+    ),
+  },
+  {
+    date: "2026-01",
+    body: (
+      <>
+        The <a href="https://lfseoul.org/en/" {...ext}>Lycée Français de Séoul</a> team I mentored
+        won 3rd prize and the Prix de la Société Française d&apos;Acoustique at the final of the 33rd
+        Olympiades de Physique France, with the project « Voir (plus) rouge… mène au côté obscur de
+        la force ! ».{" "}
+        <a href="https://pr.sejong.ac.kr/news/people/faculty.do?mode=view&articleNo=863364" {...ext}>
+          Sejong University press release
+        </a>
+      </>
+    ),
+  },
+  {
+    date: "2026-01",
+    body: (
+      <>
+        Invited talk at <em>New Perspectives in Cosmology</em>, APCTP, Pohang: “Litmus Tests of the
+        Flat-ΛCDM Model with Stage IV Data”.
       </>
     ),
   },
@@ -334,8 +409,8 @@ const IndexPage = () => (
         </div>
 
         <ul className="news-list">
-          {news.map((item) => (
-            <li key={item.date + String(item.body)}>
+          {news.map((item, i) => (
+            <li key={`${item.date}-${i}`}>
               <span className="news-date">{item.date}</span>
               <p className="news-body">{item.body}</p>
               {item.press && (

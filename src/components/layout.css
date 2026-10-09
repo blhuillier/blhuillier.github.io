@@ -361,6 +361,12 @@ li { margin-bottom: .35em; }
 
 .news-archive-toggle { text-align: center; margin-top: 32px; }
 
+/* ---------- press list (outreach) ---------- */
+
+.press-list { list-style: none; padding: 0; margin: 0; }
+.press-list li { padding: 14px 0; border-top: 1px solid var(--line); }
+.press-list li:last-child { border-bottom: 1px solid var(--line); }
+
 /* ---------- contact band ---------- */
 
 .contact-band { text-align: center; }

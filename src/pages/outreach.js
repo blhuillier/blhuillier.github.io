@@ -50,7 +50,8 @@ const OutreachPage = () => (
         >
           <p>
             I mentored students from the Seoul French School for the French National Physics Olympiad.
-            The team qualified for the finals and was awarded 3rd prize in January 2026.
+            The team qualified for the finals and, in January 2026, won 3rd prize and the Prix de la
+            Société Française d&apos;Acoustique.
           </p>
           <p>
             <a href="https://pr.sejong.ac.kr/news/people/faculty.do?mode=view&articleNo=863364" {...ext}>
@@ -121,7 +122,33 @@ const OutreachPage = () => (
         >
           <p>Presentation of French science and scientists, with Korean interpretation.</p>
         </OutreachItem>
+      </div>
+    </section>
 
+    <section className="section section--white">
+      <div className="wrap--narrow">
+        <h2 className="section-title">In the press</h2>
+        <ul className="press-list">
+          <li>
+            <strong>July 2026</strong> — <em>Le Petit Échotier</em> (Seoul Accueil, no. 202): « La
+            science au-delà des frontières, Regards vers l&apos;infini avec le Pr L&apos;Huillier,
+            cosmologiste français en Corée du Sud ».{" "}
+            <a href="https://www.seoulaccueil.com/wp-content/uploads/2026/06/PE202-online-version.pdf#page=60" {...ext}>Read (PDF, pp. 60–63)</a>
+          </li>
+          <li>
+            <strong>October 2026</strong> — LinkedIn post by the Scientific Sector of the French
+            Embassy in Korea on the PHC STAR France–Korea collaboration.{" "}
+            <a href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7513525563123347456" {...ext}>
+              View on LinkedIn
+            </a>
+          </li>
+          <li>
+            <strong>2026</strong> — Sejong University press release on the Physics Olympiad team.{" "}
+            <a href="https://pr.sejong.ac.kr/news/people/faculty.do?mode=view&articleNo=863364" {...ext}>
+              Read
+            </a>
+          </li>
+        </ul>
       </div>
     </section>
   </Layout>
