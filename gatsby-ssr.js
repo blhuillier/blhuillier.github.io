@@ -1,8 +1,8 @@
 const React = require("react")
 
 // Preconnect + load the two webfonts once, in the document head.
-exports.onRenderBody = ({ setHeadComponents, setHtmlAttributes }) => {
-  setHtmlAttributes({ lang: "en" })
+exports.onRenderBody = ({ setHeadComponents, setHtmlAttributes, pathname = "/" }) => {
+  setHtmlAttributes({ lang: /^\/fr(\/|$)/.test(pathname) ? "fr" : "en" })
   setHeadComponents([
     <link key="gf-pre1" rel="preconnect" href="https://fonts.googleapis.com" />,
     <link

@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import ParallaxBg from "./ParallaxBg"
 import "./SectionFrame.css"
 
-const SectionFrame = ({ title, dateRange, description, image, light, align, link, className }) => (
+const SectionFrame = ({ title, dateRange, description, image, light, align, link, className, moreLabel = "Read more" }) => (
   <section
     className={`section-frame${light ? " section-frame--light" : ""}${className ? ` ${className}` : ""}`}
   >
@@ -18,7 +18,7 @@ const SectionFrame = ({ title, dateRange, description, image, light, align, link
       </div>
       {link && (
         <p className="section-frame__more">
-          <Link className="btn" to={link}>Read more</Link>
+          <Link className="btn" to={link}>{moreLabel}</Link>
         </p>
       )}
     </div>

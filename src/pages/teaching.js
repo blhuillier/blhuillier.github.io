@@ -4,51 +4,10 @@ import Seo from "../components/Seo"
 import PageHero from "../components/PageHero"
 import SummaryFrame from "../components/SummaryFrame"
 import SectionFrame from "../components/SectionFrame"
+import CourseList from "../components/CourseList"
+import { graduate, undergraduate } from "../data/courses"
 
 const ext = { target: "_blank", rel: "noopener noreferrer" }
-
-const NOW = "Fall 2026"
-
-// Grouped by course, most recent first. Terms listed oldest → newest.
-const graduate = [
-  { name: "Stellar Dynamics and Gravitation", terms: ["Fall 2026"] },
-  { name: "Astronomical Data Analysis", terms: ["Spring 2021", "Fall 2025"] },
-  { name: "Mathematical Astronomy", terms: ["Fall 2022", "Spring 2024"] },
-  { name: "Advanced Astronomical Instrumentation", terms: ["Fall 2023"] },
-  { name: "Cosmology", terms: ["Fall 2021"] },
-]
-
-const undergraduate = [
-  { name: "Gravitation and General Relativity", terms: ["Fall 2026"] },
-  {
-    name: "Mathematical Physics I",
-    terms: ["Spring 2025", "Spring 2026"],
-    link: "https://github.com/blhuillier/MathPhysI",
-  },
-  { name: "Mathematical Physics II", terms: ["Fall 2025"] },
-  { name: "Physics of Everyday Life", terms: ["Fall 2024"] },
-  { name: "General Physics I", terms: ["Spring 2022", "Spring 2023", "Spring 2024"] },
-  { name: "Introduction to Astronomy", terms: ["Fall 2023"] },
-]
-
-const CourseList = ({ heading, courses }) => (
-  <div>
-    <h3>{heading}</h3>
-    <ul className="course-list">
-      {courses.map((c) => (
-        <li key={c.name}>
-          <span className="course-name">
-            {c.link ? <a href={c.link} {...ext}>{c.name}</a> : c.name}
-          </span>
-          {c.terms.includes(NOW) && <span className="course-now">Now</span>}
-          <span className="course-terms">
-            {c.terms.filter((t) => t !== NOW).join(" · ")}
-          </span>
-        </li>
-      ))}
-    </ul>
-  </div>
-)
 
 const TeachingPage = () => (
   <Layout>

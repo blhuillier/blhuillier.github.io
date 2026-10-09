@@ -18,12 +18,13 @@ const GroupMember = ({
   links = [],
   photo,
   light,
+  lang = "en",
 }) => (
   <article className={`group-member${light ? " group-member--light" : ""}`}>
     <img
       className="group-member__photo"
       src={photo || "/images/placeholder.jpeg"}
-      alt={`Portrait of ${name}`}
+      alt={lang === "fr" ? `Portrait de ${name}` : `Portrait of ${name}`}
       loading="lazy"
     />
     <div className="group-member__info">
@@ -32,7 +33,7 @@ const GroupMember = ({
       {period && <p className="group-member__period">{period}</p>}
       {researchFocus && <div className="group-member__focus">{researchFocus}</div>}
       {currentPosition && (
-        <p className="group-member__current">Now: {currentPosition}</p>
+        <p className="group-member__current">{lang === "fr" ? "Aujourd\u2019hui\u00a0:" : "Now:"} {currentPosition}</p>
       )}
       {links.length > 0 && (
         <ul className="social-bar">
