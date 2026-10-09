@@ -30,7 +30,7 @@ const pressKr = [
 const news = [
   {
     date: "2026-10-07",
-    body: <>New post on LinkedIn.</>,
+    body: <>Post on LinkedIn by the Scientific Sector of the French Embassy in Korea</>,
     // LinkedIn post shown inline below the text
     embed: "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7513525563123347456",
     embedHeight: 1699,
@@ -360,6 +360,12 @@ const IndexPage = () => (
                     loading="lazy"
                     title="Embedded LinkedIn post"
                   />
+                  {/* Content blockers often hide LinkedIn frames; this link always shows. */}
+                  <p className="press-links">
+                    <a href={item.embed.replace("/embed/", "/")} {...ext}>
+                      View the post on LinkedIn →
+                    </a>
+                  </p>
                 </div>
               )}
             </li>
