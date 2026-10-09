@@ -2,6 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import Layout from "../components/Layout"
 import Seo from "../components/Seo"
+import ParallaxBg from "../components/ParallaxBg"
 
 const ext = { target: "_blank", rel: "noopener noreferrer" }
 
@@ -199,6 +200,7 @@ const IndexPage = () => (
     <section className="home-hero">
       <img
         className="home-hero__img"
+        data-parallax="img"
         src="/images/aboutmefinal1.jpg"
         alt="Illustration of Benjamin L'Huillier running, working at a laptop, and playing music, against a cosmology blackboard"
       />
@@ -304,8 +306,8 @@ const IndexPage = () => (
 
         <div
           className="news-feature"
-          style={{ backgroundImage: 'url("/images/file-20241111-15-3hrrqd.avif")' }}
         >
+          <ParallaxBg image="/images/file-20241111-15-3hrrqd.avif" />
           <div className="news-feature__inner">
             <h3 className="news-feature__title">
               Detection of an orthogonal alignment between parsec-scale AGN jets and their host

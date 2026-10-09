@@ -1,12 +1,13 @@
 import React from "react"
 import { Link } from "gatsby"
+import ParallaxBg from "./ParallaxBg"
 import "./SectionFrame.css"
 
 const SectionFrame = ({ title, dateRange, description, image, light, align, link }) => (
   <section
     className={`section-frame${light ? " section-frame--light" : ""}`}
-    style={image ? { backgroundImage: `url("${image}")` } : undefined}
   >
+    {image && <ParallaxBg image={image} />}
     <div className="section-frame__content">
       {title && <h2 className="section-frame__title">{title}</h2>}
       {dateRange && <p className="section-frame__dates">{dateRange}</p>}

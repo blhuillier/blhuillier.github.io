@@ -181,6 +181,8 @@ li { margin-bottom: .35em; }
 /* ---------- page hero band ---------- */
 
 .page-hero {
+  overflow: hidden;
+  background-color: var(--dark);
   position: relative;
   min-height: 300px;
   display: flex;
@@ -213,6 +215,27 @@ li { margin-bottom: .35em; }
   font-size: clamp(1.15rem, 2.6vw, 1.7rem);
   margin: .5em 0 0;
   color: #f1e6d6;
+}
+
+/* ---------- parallax ---------- */
+
+/* Image layer 30% taller than its container; gatsby-browser.js shifts it
+   by up to 15% of the container height as the section crosses the screen. */
+.parallax-bg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -15%;
+  bottom: -15%;
+  background-size: cover;
+  background-position: center;
+  will-change: transform;
+  pointer-events: none;
+}
+
+/* Pre-scale the banner image so it doesn't jump when the script first runs. */
+@media (prefers-reduced-motion: no-preference) {
+  .home-hero__img[data-parallax] { transform: scale(1.16); will-change: transform; }
 }
 
 /* ---------- home hero ---------- */
@@ -298,6 +321,8 @@ li { margin-bottom: .35em; }
 /* ---------- news ---------- */
 
 .news-feature {
+  overflow: hidden;
+  background-color: var(--dark);
   position: relative;
   display: flex;
   align-items: flex-end;
