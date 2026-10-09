@@ -48,6 +48,7 @@ const TeachingPage = () => (
           <div>
             <p className="section-frame__dates" style={{ marginBottom: ".6em" }}>Graduate school</p>
             <ul>
+              <li>Fall 2026 — Stellar Dynamics and Gravitation</li>
               <li>Fall 2025 — Astronomical Data Analysis</li>
               <li>Spring 2024 — Mathematical Astronomy</li>
               <li>Fall 2023 — Advanced Astronomical Instrumentation</li>
@@ -59,6 +60,7 @@ const TeachingPage = () => (
           <div>
             <p className="section-frame__dates" style={{ marginBottom: ".6em" }}>Undergraduate</p>
             <ul>
+              <li>Fall 2026 — Gravitation and General Relativity</li>
               <li>Spring 2026 — <a href="https://github.com/blhuillier/MathPhysI" {...ext}>Mathematical Physics I</a></li>
               <li>Fall 2025 — Mathematical Physics II</li>
               <li>Spring 2025 — Mathematical Physics I</li>
