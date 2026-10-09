@@ -38,7 +38,17 @@ function requestUpdate() {
 
 let enabled = false
 
+// Mark the page as scrolled so the phone header can shrink (see layout.css).
+// Hysteresis (on past 80px, off above 20px) avoids flicker at the threshold.
+function updateScrolled() {
+  const root = document.documentElement
+  if (window.scrollY > 80) root.classList.add("is-scrolled")
+  else if (window.scrollY < 20) root.classList.remove("is-scrolled")
+}
+
 export const onClientEntry = () => {
+  window.addEventListener("scroll", updateScrolled, { passive: true })
+  updateScrolled()
   const reduce = window.matchMedia("(prefers-reduced-motion: reduce)")
   if (reduce.matches) return
   enabled = true

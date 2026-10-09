@@ -357,9 +357,22 @@ li { margin-bottom: .35em; }
 
 /* Embedded posts (LinkedIn): fixed height from the embed code, width shrinks on phones */
 .news-embed { margin-top: .9em; }
-.news-embed iframe { display: block; width: 100%; max-width: 504px; border: 0; background: #fff; }
+/* Full column width. A frame can't size itself to LinkedIn's content, so each
+   embed passes measured heights (--h0 wide … --h3 phone) via embedHeights. */
+.news-embed iframe {
+  display: block;
+  width: 100%;
+  height: var(--h0, 800px);
+  border: 0;
+  background: #fff;
+}
+@media (max-width: 1100px) { .news-embed iframe { height: var(--h1, var(--h0, 800px)); } }
+@media (max-width: 800px)  { .news-embed iframe { height: var(--h2, var(--h1, 900px)); } }
+@media (max-width: 560px)  { .news-embed iframe { height: var(--h3, var(--h2, 1000px)); } }
 
 .news-archive-toggle { text-align: center; margin-top: 32px; }
+.news-list > li.is-collapsed { display: none; }
+button.btn { background: transparent; color: inherit; cursor: pointer; }
 
 /* ---------- press list (outreach) ---------- */
 
@@ -465,7 +478,12 @@ li { margin-bottom: .35em; }
   }
   .site-nav ul { flex-direction: column; align-items: stretch; gap: 0; padding: 6px 16px 12px; }
   .site-nav li + li { border-top: 1px solid var(--line); }
-  .site-nav a { padding: 14px 4px; text-align: right; }
+  .site-nav a { padding: 14px 4px; text-align: right; font-size: .95rem; }
+  /* Compact header while reading: hide the icon row, shrink the logo. */
+  .site-logo img { transition: width .2s ease; }
+  .is-scrolled .site-header .social-bar { display: none; }
+  .is-scrolled .site-logo img { width: 150px; }
+  .is-scrolled .site-header__inner { padding: 6px 0; }
   .site-nav a.is-active { box-shadow: none; }
   .social-bar { gap: 18px; }
   .social-bar a { padding: 9px; margin: -9px; }

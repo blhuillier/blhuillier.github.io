@@ -42,3 +42,6 @@
   .outreach-item__media--empty { display: none; }
   .outreach-item__body { padding: 26px 22px; }
 }
+
+/* Easier to tap on phones */
+.outreach-item__title a { display: inline-block; padding: 6px 0; }

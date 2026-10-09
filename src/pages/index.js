@@ -33,7 +33,8 @@ const news = [
     body: <>Post on LinkedIn by the Scientific Sector of the French Embassy in Korea</>,
     // LinkedIn post shown inline below the text
     embed: "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7513525563123347456",
-    embedHeight: 1699,
+    // Heights measured for this post: wide screen, tablet, small tablet, phone
+    embedHeights: [1360, 1480, 1700, 2250],
   },
   {
     date: "2026-09-01",
@@ -277,6 +278,66 @@ const news = [
   },
 ]
 
+// Homepage shows the latest NEWS_PREVIEW items; the button reveals the rest.
+// Older items stay in the HTML (just hidden), so search engines still index them.
+const NEWS_PREVIEW = 8
+
+const NewsList = ({ items }) => {
+  const [all, setAll] = React.useState(false)
+  return (
+    <>
+      <ul className="news-list">
+        {items.map((item, i) => (
+          <li key={`${item.date}-${i}`} className={!all && i >= NEWS_PREVIEW ? "is-collapsed" : undefined}>
+            <span className="news-date">{item.date}</span>
+            <p className="news-body">{item.body}</p>
+            {item.press && (
+              <p className="press-links">
+                Press releases in Korean:{" "}
+                {item.press.map(([label, href], i) => (
+                  <React.Fragment key={href + label}>
+                    {i > 0 && " · "}
+                    <a href={href} {...ext}>{label}</a>
+                  </React.Fragment>
+                ))}
+              </p>
+            )}
+            {item.embed && (
+              <div className="news-embed">
+                <iframe
+                  src={item.embed}
+                  height={(item.embedHeights || [800])[0]}
+                  style={Object.fromEntries(
+                    (item.embedHeights || []).map((h, i) => [`--h${i}`, `${h}px`])
+                  )}
+                  width="504"
+                  frameBorder="0"
+                  allowFullScreen
+                  loading="lazy"
+                  title="Embedded LinkedIn post"
+                />
+                {/* Content blockers often hide LinkedIn frames; this link always shows. */}
+                <p className="press-links">
+                  <a href={item.embed.replace("/embed/", "/")} {...ext}>
+                    View the post on LinkedIn →
+                  </a>
+                </p>
+              </div>
+            )}
+          </li>
+        ))}
+      </ul>
+      {items.length > NEWS_PREVIEW && (
+        <div className="news-archive-toggle">
+          <button className="btn" type="button" onClick={() => setAll((v) => !v)}>
+            {all ? "Show fewer" : `Show all news (${items.length})`}
+          </button>
+        </div>
+      )}
+    </>
+  )
+}
+
 const IndexPage = () => (
   <Layout>
     <section className="home-hero">
@@ -408,44 +469,7 @@ const IndexPage = () => (
           </div>
         </div>
 
-        <ul className="news-list">
-          {news.map((item, i) => (
-            <li key={`${item.date}-${i}`}>
-              <span className="news-date">{item.date}</span>
-              <p className="news-body">{item.body}</p>
-              {item.press && (
-                <p className="press-links">
-                  Press releases in Korean:{" "}
-                  {item.press.map(([label, href], i) => (
-                    <React.Fragment key={href + label}>
-                      {i > 0 && " · "}
-                      <a href={href} {...ext}>{label}</a>
-                    </React.Fragment>
-                  ))}
-                </p>
-              )}
-              {item.embed && (
-                <div className="news-embed">
-                  <iframe
-                    src={item.embed}
-                    height={item.embedHeight || 600}
-                    width="504"
-                    frameBorder="0"
-                    allowFullScreen
-                    loading="lazy"
-                    title="Embedded LinkedIn post"
-                  />
-                  {/* Content blockers often hide LinkedIn frames; this link always shows. */}
-                  <p className="press-links">
-                    <a href={item.embed.replace("/embed/", "/")} {...ext}>
-                      View the post on LinkedIn →
-                    </a>
-                  </p>
-                </div>
-              )}
-            </li>
-          ))}
-        </ul>
+        <NewsList items={news} />
       </div>
     </section>
 
