@@ -18,8 +18,8 @@ const CourseList = ({ heading, courses, lang = "en" }) => (
     <ul className="course-list">
       {courses.map((c) => (
         <li key={c.name}>
-          <span className="course-name">
-            {c.link ? <a href={c.link} {...ext}>{c.name}</a> : c.name}
+          <span className="course-name" title={lang !== "en" ? c.name : undefined}>
+            {c.link ? <a href={c.link} {...ext}>{c[lang] || c.name}</a> : c[lang] || c.name}
           </span>
           {c.terms.includes(NOW) && (
             <span className="course-now">{NOW_LABEL[lang] || NOW_LABEL.en}</span>
