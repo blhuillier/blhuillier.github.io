@@ -355,6 +355,10 @@ li { margin-bottom: .35em; }
 .press-links { font-size: .86rem; color: var(--ink-soft); margin: .5em 0 0; }
 .press-links a { white-space: nowrap; }
 
+/* Embedded posts (LinkedIn): fixed height from the embed code, width shrinks on phones */
+.news-embed { margin-top: .9em; }
+.news-embed iframe { display: block; width: 100%; max-width: 504px; border: 0; background: #fff; }
+
 .news-archive-toggle { text-align: center; margin-top: 32px; }
 
 /* ---------- contact band ---------- */

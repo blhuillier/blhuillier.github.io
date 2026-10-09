@@ -29,6 +29,13 @@ const pressKr = [
 
 const news = [
   {
+    date: "2026-10-07",
+    body: <>New post on LinkedIn.</>,
+    // LinkedIn post shown inline below the text
+    embed: "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7513525563123347456",
+    embedHeight: 1699,
+  },
+  {
     date: "2026-06-04",
     body: (
       <>
@@ -341,6 +348,19 @@ const IndexPage = () => (
                     </React.Fragment>
                   ))}
                 </p>
+              )}
+              {item.embed && (
+                <div className="news-embed">
+                  <iframe
+                    src={item.embed}
+                    height={item.embedHeight || 600}
+                    width="504"
+                    frameBorder="0"
+                    allowFullScreen
+                    loading="lazy"
+                    title="Embedded LinkedIn post"
+                  />
+                </div>
               )}
             </li>
           ))}
