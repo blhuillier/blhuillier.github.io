@@ -102,7 +102,11 @@
   tags:
   - model-testing
   - supernovae
-  labels: [key-papers, curvature, supernovae, bao]
+  labels: [key-papers, curvature, supernovae, bao, iterative-smoothing]
+  headline:
+    en: 'Is the Universe flat? A test with DESI DR2'
+    fr: 'L’Univers est-il plat ? Un test avec DESI DR2'
+    ko: '우주는 평탄한가? DESI DR2를 이용한 검증'
   summary: We reconstruct distances and the Hubble rate from Pantheon+ and DES supernovae without assuming any dark energy model, and combine them with DESI DR2 baryon acoustic oscillations to test the FLRW metric and measure the spatial curvature. With Pantheon+ and DESI DR2 we find $\Omega_{k,0} = 0.045^{+0.045}_{-0.081}$, consistent with flatness and with Planck 2018.
   figure:
     src: /images/papers/millard2026-flrw.webp
@@ -125,6 +129,10 @@
   - agn
   - galaxies
   labels: [key-papers, agn, galaxy-formation, vlbi]
+  headline:
+    en: 'Black-hole jets know their host galaxy'
+    fr: 'Les jets des trous noirs « connaissent » leur galaxie'
+    ko: '블랙홀 제트는 모은하를 ‘알고’ 있다'
   summary: 'Comparing VLBI jet directions with optical host-galaxy shapes for about 6,000 AGN, we detect a weak but significant alignment between the parsec-scale jet and the minor axis of its host galaxy: a link between the black hole and its host across three orders of magnitude in scale.'
   figure:
     src: /images/papers/fernandezgil2025-alignment.webp
@@ -144,7 +152,11 @@
   tags:
   - model-testing
   - supernovae
-  labels: [key-papers, curvature, supernovae, bao]
+  labels: [key-papers, curvature, supernovae, bao, iterative-smoothing]
+  headline:
+    en: 'Litmus tests for Rubin and DESI'
+    fr: 'Des tests décisifs pour Rubin et DESI'
+    ko: 'Rubin과 DESI를 위한 리트머스 검증'
   summary: Reconstructing the expansion history from simulated LSST supernovae and combining it with simulated DESI 5-year BAO, we forecast constraints of up to ±4% on the curvature and ±0.1 on $c/(H_0 r_\mathrm{d})$, without assuming any form of dark energy.
   figure:
     src: /images/papers/lhuillier2025-litmus.webp
@@ -224,6 +236,10 @@
   - methods
   - supernovae
   labels: [key-papers, supernovae, gaussian-processes]
+  headline:
+    en: 'Gaussian processes, done right'
+    fr: 'Bien utiliser les processus gaussiens'
+    ko: '가우시안 과정, 제대로 쓰기'
   summary: 'The choice of mean function and hyperparameters biases Gaussian process reconstructions of supernova distances: a zero mean gives unphysical results and a best-fit ΛCDM mean biases them. Marginalising over a family of mean functions and over the hyperparameters removes the bias, whatever the kernel.'
   figure:
     src: /images/papers/hwang2023-gp.png
@@ -452,7 +468,7 @@
   tags:
   - model-testing
   - modified-gravity
-  labels: [key-papers, curvature, modified-gravity, supernovae, bao, growth]
+  labels: [key-papers, curvature, modified-gravity, supernovae, bao, growth, iterative-smoothing]
   summary: Combining model-independent expansion reconstructions from Pantheon supernovae and BAO, we test the FLRW metric and flatness, and use eBOSS DR14Q growth data to constrain $\Omega_\mathrm{m}$, $\gamma$ and $\sigma_8$. Everything is consistent with a flat FLRW universe, General Relativity and $\Lambda$, with some tension at $z > 1$.
   figure:
     src: /images/papers/shafieloo2018-falsifying.png
@@ -555,6 +571,10 @@
   - modified-gravity
   - dark-matter
   labels: [key-papers, modified-gravity, dark-energy, dark-matter, simulations]
+  headline:
+    en: 'Haloes beyond General Relativity'
+    fr: 'Des halos au-delà de la relativité générale'
+    ko: '일반상대성이론을 넘어선 헤일로'
   summary: In N-body simulations of $f(R)$ gravity, DGP and coupled dark energy, $f(R)$ raises halo spin and weakens the spin alignment of interacting pairs, while only strongly coupled dark energy increases the halo interaction rate and the alignment of halo shapes with the large-scale structure.
   figure:
     src: /images/papers/lhuillier2017-modgrav.webp
@@ -610,7 +630,11 @@
   tags:
   - model-testing
   - supernovae
-  labels: [key-papers, curvature, supernovae, bao]
+  labels: [key-papers, curvature, supernovae, bao, iterative-smoothing]
+  headline:
+    en: 'Testing ΛCDM without assuming it'
+    fr: 'Tester ΛCDM sans le supposer'
+    ko: 'ΛCDM을 가정하지 않고 ΛCDM 검증하기'
   summary: Combining BOSS DR12 BAO with JLA supernovae, we measure $H_0 r_\mathrm{d}$ without assuming a cosmological model and introduce the $\Theta(z)$ diagnostic of the flat-FLRW metric. The results are consistent with a flat FLRW universe within $2\sigma$.
   figure:
     src: /images/papers/lhuillier2017-flrw.png

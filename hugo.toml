@@ -16,6 +16,8 @@ timeZone = "Asia/Seoul"
   image = "/images/og-image.jpg"
   # true only for a preview copy: every page gets <meta name="robots" content="noindex">
   preview = false
+  # GoatCounter visitor statistics (no cookies): the site code chosen at goatcounter.com, e.g. "benjissi". Empty = off.
+  goatcounter = ""
   # main navigation: page path + i18n key for the label
   nav = [
     { page = "/", key = "nav_home" },
@@ -52,6 +54,17 @@ timeZone = "Asia/Seoul"
       defaultTitle = "벤자민 루일리예 (Benjamin L’Huillier) — 우주론 연구자"
       description = "벤자민 루일리예는 세종대학교 물리천문학과 조교수입니다."
       locale = "ko_KR"
+
+# static/images is also mounted under assets/ so Hugo can make smaller copies (srcset)
+[[module.mounts]]
+  source = "assets"
+  target = "assets"
+[[module.mounts]]
+  source = "static/images"
+  target = "assets/images"
+[[module.mounts]]
+  source = "static"
+  target = "static"
 
 [markup.goldmark.renderer]
   unsafe = true

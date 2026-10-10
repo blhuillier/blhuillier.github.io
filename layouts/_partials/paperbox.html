@@ -1,9 +1,12 @@
 {{- $p := .p -}}
 <article class="paper-box{{ if not $p.figure }} paper-box--text{{ end }}" id="{{ $p.id }}">
 {{- with $p.figure }}
-<figure class="paper-box__figure"><img src="{{ .src }}" alt="{{ .caption | replaceRE `\$|\\(mathrm|mathcal|,)?|[{}^_]` "" }}" loading="lazy">{{ with .caption }}<figcaption>{{ partial "richtext.html" . }}</figcaption>{{ end }}</figure>
+<figure class="paper-box__figure">{{ $img := resources.Get (strings.TrimPrefix "/" .src) }}<img src="{{ .src }}"{{ with $img }}{{ if gt .Width 700 }}{{ $sm := .Resize "560x webp q85" }} srcset="{{ $sm.RelPermalink }} 560w, {{ $.p.figure.src }} {{ .Width }}w" sizes="(max-width: 760px) 92vw, 420px"{{ end }} width="{{ .Width }}" height="{{ .Height }}"{{ end }} alt="{{ .caption | replaceRE `\$|\\(mathrm|mathcal|,)?|[{}^_]` "" }}" loading="lazy">{{ with .caption }}<figcaption>{{ partial "richtext.html" . }}</figcaption>{{ end }}</figure>
 {{- end }}
 <div class="paper-box__body">
+{{- with $p.headline }}{{ with index . $.lang | default .en }}
+<p class="paper-box__headline">{{ . }}</p>
+{{- end }}{{ end }}
 <p class="paper-box__meta">{{ $p.year }} · {{ with $p.journal }}<em>{{ . }}</em>{{ else }}{{ i18n "preprint" }}{{ end }}</p>
 <h3 class="paper-box__title">{{ partial "richtext.html" $p.title }}</h3>
 <p class="paper-box__authors">{{ range $i, $a := $p.authors }}{{ if $i }}, {{ end }}{{ if hasPrefix $a "L'Huillier, B." }}<strong>{{ $a }}</strong>{{ else }}{{ $a }}{{ end }}{{ end }}</p>

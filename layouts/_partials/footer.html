@@ -1,13 +1,13 @@
 <footer class="site-footer">
 <div class="site-footer__inner">
 <div>
-<h4>Benjamin L&#39;Huillier</h4>
+<h2 class="footer-heading">Benjamin L&#39;Huillier</h2>
 <p>{{ i18n "footer_role" }}</p>
 <p>{{ i18n "footer_dept" }}</p>
 <p>{{ i18n "footer_univ" }}</p>
 </div>
 <div>
-<h4>{{ i18n "footer_where" }}</h4>
+<h2 class="footer-heading">{{ i18n "footer_where" }}</h2>
 {{- if ne site.Language.Lang "ko" }}
 <p>Gwangjin-gu, Neungdong-ro 209</p>
 {{- end }}
@@ -15,7 +15,7 @@
 <p><a href="mailto:benjamin@sejong.ac.kr">benjamin@sejong.ac.kr</a></p>
 </div>
 <div>
-<h4>{{ i18n "footer_elsewhere" }}</h4>
+<h2 class="footer-heading">{{ i18n "footer_elsewhere" }}</h2>
 {{ partial "social.html" (dict "keys" false) }}
 </div>
 </div>

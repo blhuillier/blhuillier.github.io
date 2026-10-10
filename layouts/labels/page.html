@@ -23,6 +23,7 @@
 <section class="section section--paper">
 <div class="wrap">
 {{ partial "labelbar.html" (dict "active" $id) }}
+<h2 class="visually-hidden">{{ i18n "nav_publications" }}</h2>
 <div class="paper-list">
 {{- range sort $list "year" "desc" }}
 {{ partial "paperbox.html" (dict "p" . "lang" site.Language.Lang) }}

@@ -62,7 +62,7 @@
         var label = c.dataset.label
         var on = label ? sel.indexOf(label) >= 0 : sel.length === 0
         c.classList.toggle("is-active", on)
-        c.setAttribute("aria-pressed", on ? "true" : "false")
+        if (on) c.setAttribute("aria-current", "true"); else c.removeAttribute("aria-current")
         if (on && label && bar.contains(c)) names.push(c.firstChild.textContent.trim())
       })
       status.textContent = sel.length ? status.dataset.shown.replace("%n", n).replace("%l", names.join(status.dataset.or)) : status.dataset.all

@@ -6,7 +6,14 @@
     {{- $path := printf "static%s" (replace (index . 1) "%20" " ") -}}
     {{- if fileExists $path -}}
       {{- with images.Config $path -}}
-        {{- $c = replace $c $tag (replace $tag "<img " (printf `<img width="%d" height="%d" ` .Width .Height)) -}}
+        {{- $extra := "" -}}
+        {{- with resources.Get (strings.TrimPrefix "/static/" (printf "/%s" $path) | strings.TrimPrefix "/") -}}
+          {{- if and (gt .Width 1100) (not (findRE `\ssrcset=` $tag)) (in (slice "image/jpeg" "image/png" "image/webp") .MediaType.Type) -}}
+            {{- $sm := .Resize "800x webp q82" -}}
+            {{- $extra = printf `srcset="%s 800w, %s %dw" sizes="100vw" ` $sm.RelPermalink .RelPermalink .Width -}}
+          {{- end -}}
+        {{- end -}}
+        {{- $c = replace $c $tag (replace $tag "<img " (printf `<img width="%d" height="%d" %s` .Width .Height $extra)) -}}
       {{- end -}}
     {{- end -}}
   {{- end -}}
