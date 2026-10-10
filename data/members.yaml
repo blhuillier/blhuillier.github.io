@@ -1,0 +1,96 @@
+# Group members shown as cards on the Group page ({{< member id="..." >}}).
+# role / period / researchFocus: one entry per language (en, fr, ko).
+# links: kind = email | github | web | scholar.
+- id: clea
+  name: Cléa Millard | 클레아
+  photo: /images/clea.jpg
+  light: false
+  links:
+  - kind: email
+    href: mailto:clea.millard@gmail.com
+  role:
+    en: PhD Candidate
+    fr: Doctorante
+    ko: 박사과정
+  period:
+    en: Fall 2024 – present
+    fr: Depuis l’automne 2024
+    ko: 2024 가을 – 현재
+  researchFocus:
+    en: Type Ia supernova cosmology.
+    fr: Cosmologie avec les supernovae de type Ia.
+    ko: Ia형 초신성 우주론.
+- id: hyeon
+  name: Hyeon Kim | 김현
+  photo: /images/hyeon-web.jpg
+  light: false
+  links:
+  - kind: github
+    href: https://github.com/HyeonKim1
+  - kind: email
+    href: mailto:hyeon970526@gmail.com
+  role:
+    en: Integrated Master–PhD
+    fr: Cursus intégré master–doctorat
+    ko: 석박사 통합과정
+  period:
+    en: Spring 2023 – present
+    fr: Depuis le printemps 2023
+    ko: 2023 봄 – 현재
+  researchFocus:
+    en: Cosmological simulations, cluster cosmology, the early Universe.
+    fr: Simulations cosmologiques, cosmologie des amas, Univers primordial.
+    ko: 우주론 시뮬레이션, 은하단 우주론, 초기 우주.
+- id: sihyeong
+  name: Si Hyeong Noh | 노시형
+  photo: /images/sihyeong-web.jpg
+  light: false
+  links:
+  - kind: web
+    href: https://sites.google.com/view/starrynote88/
+  - kind: github
+    href: https://github.com/NohSiHyeong
+  - kind: email
+    href: mailto:starrynote88@gmail.com
+  role:
+    en: PhD Candidate
+    fr: Doctorant
+    ko: 박사과정
+  period:
+    en: Fall 2026 – present (M.Sc. 2023–2025)
+    fr: Depuis l’automne 2026 (master 2023–2025)
+    ko: 2026 가을 – 현재 (석사 2023–2025)
+  researchFocus:
+    en: Gravitational theory, testing modified gravity, data analysis.
+    fr: Théorie de la gravitation, tests de la gravité modifiée, analyse de données.
+    ko: 중력 이론, 수정 중력 검증, 데이터 분석.
+- id: kangsoo
+  name: Kangsoo Lee | 이강수
+  photo: null
+  light: false
+  links: []
+  role:
+    en: Undergraduate Researcher
+    fr: Étudiant-chercheur de licence
+    ko: 학부 연구생
+  period:
+    en: Since September 2026
+    fr: Depuis septembre 2026
+    ko: 2026년 9월부터
+- id: mathias
+  name: Mathias Tan
+  photo: null
+  light: true
+  links: []
+  role:
+    en: Master's Intern
+    fr: Stagiaire de master
+    ko: 석사 인턴
+  period:
+    en: Since September 2026
+    fr: Depuis septembre 2026
+    ko: 2026년 9월부터
+  researchFocus:
+    en: Cosmological Applications of Optimal Transport. CentraleSupélec, France.
+    fr: Applications cosmologiques du transport optimal. CentraleSupélec, France.
+    ko: 최적 수송의 우주론적 응용. CentraleSupélec(프랑스).

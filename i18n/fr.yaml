@@ -1,0 +1,31 @@
+nav_home: Accueil
+nav_research: Recherche
+nav_publications: Publications
+nav_teaching: Enseignement
+nav_group: Le groupe
+nav_outreach: Médiation
+nav_contact: Contact
+home_aria: Benjissi — accueil
+logo_alt: Benjissi — Benjamin L'Huillier, cosmologiste et astrophysicien
+menu_open: Ouvrir le menu
+menu_close: Fermer le menu
+nav_aria: Navigation principale
+footer_role: Professeur assistant
+footer_dept: Département de physique et d’astronomie
+footer_univ: Université Sejong, Séoul
+footer_where: Où me trouver
+footer_country: Séoul 05006, Corée du Sud
+footer_elsewhere: Sur le web
+news_press: 'Communiqués de presse en coréen :'
+news_linkedin: Voir la publication sur LinkedIn →
+news_embed_title: Publication LinkedIn intégrée
+news_fewer: Afficher moins
+news_all: Toutes les actualités ({{ .Count }})
+preprint: prépublication arXiv
+now_label: En cours
+portrait_of: Portrait de {{ .Name }}
+now_prefix: 'Aujourd’hui :'
+link_email: E-mail
+link_github: GitHub
+link_web: Site web
+link_scholar: Google Scholar

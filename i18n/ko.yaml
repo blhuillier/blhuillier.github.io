@@ -1,0 +1,31 @@
+nav_home: 홈
+nav_research: 연구
+nav_publications: 논문
+nav_teaching: 교육
+nav_group: 연구실
+nav_outreach: 과학 소통
+nav_contact: 연락처
+home_aria: Benjissi — 홈
+logo_alt: Benjissi — 우주론 연구자 벤자민 루일리예
+menu_open: 메뉴 열기
+menu_close: 메뉴 닫기
+nav_aria: 주 메뉴
+footer_role: 조교수
+footer_dept: 세종대학교 물리천문학과
+footer_univ: 서울
+footer_where: 찾아오시는 길
+footer_country: 서울특별시 광진구 능동로 209 (05006)
+footer_elsewhere: 온라인
+news_press: '국내 언론 보도:'
+news_linkedin: LinkedIn에서 게시물 보기 →
+news_embed_title: LinkedIn 게시물
+news_fewer: 접기
+news_all: 소식 전체 보기 ({{ .Count }})
+preprint: arXiv 프리프린트
+now_label: 진행 중
+portrait_of: '{{ .Name }} 사진'
+now_prefix: '현재:'
+link_email: 이메일
+link_github: GitHub
+link_web: 웹사이트
+link_scholar: Google Scholar

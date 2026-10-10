@@ -1,0 +1,22 @@
+{{- $lang := .Page.Language.Lang -}}
+{{- $light := eq (.Get "light") "true" -}}
+{{- range where site.Data.members "id" (.Get "id") }}
+{{- $name := .name }}
+<article class="group-member{{ if $light }} group-member--light{{ end }}">
+<img class="group-member__photo" src="{{ .photo | default "/images/placeholder.jpeg" }}" alt="{{ i18n "portrait_of" (dict "Name" $name) }}" loading="lazy">
+<div class="group-member__info">
+{{- with .role }}{{ with index . $lang }}<p class="group-member__role">{{ . }}</p>{{ end }}{{ end }}
+<h3 class="group-member__name">{{ $name }}</h3>
+{{- with .period }}{{ with index . $lang }}<p class="group-member__period">{{ . }}</p>{{ end }}{{ end }}
+{{- with .researchFocus }}{{ with index . $lang }}<div class="group-member__focus"><p>{{ . }}</p></div>{{ end }}{{ end }}
+{{- with .links }}
+<ul class="social-bar">
+{{- range . }}
+{{- $label := i18n (printf "link_%s" .kind) }}
+<li><a href="{{ .href }}" title="{{ $label }}" aria-label="{{ $name }} — {{ $label }}" target="_blank" rel="noopener noreferrer">{{ partial (printf "icons/%s.html" (cond (eq .kind "github") "github_member" .kind)) . }}</a></li>
+{{- end }}
+</ul>
+{{- end }}
+</div>
+</article>
+{{- end -}}

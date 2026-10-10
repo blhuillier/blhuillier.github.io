@@ -1,0 +1,3 @@
+{{- range $i, $part := split . "$" -}}
+{{- if modBool $i 2 }}{{ $part }}{{ else }}<span class="tex-inline">{{ transform.ToMath $part (dict "output" "htmlAndMathml") }}</span>{{ end -}}
+{{- end -}}

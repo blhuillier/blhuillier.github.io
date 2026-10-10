@@ -1,0 +1,59 @@
+# Benjamin L'Huillier — personal website (Hugo).
+# Preview: the workflow overrides baseURL with the GitHub Pages address.
+baseURL = "https://www.benjissi.com/"
+title = "Benjamin L'Huillier"
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
+disableKinds = ["taxonomy", "term", "rss", "section"]
+enableRobotsTXT = false
+timeZone = "Asia/Seoul"
+
+[params]
+  siteName = "Benjissi"
+  author = "Benjamin L'Huillier"
+  image = "/images/og-image.jpg"
+  # true only for a preview copy: every page gets <meta name="robots" content="noindex">
+  preview = false
+  # main navigation: page path + i18n key for the label
+  nav = [
+    { page = "/", key = "nav_home" },
+    { page = "/research", key = "nav_research" },
+    { page = "/publications", key = "nav_publications" },
+    { page = "/teaching", key = "nav_teaching" },
+    { page = "/the-group", key = "nav_group" },
+    { page = "/outreach", key = "nav_outreach" },
+    { page = "/contact", key = "nav_contact" },
+  ]
+  headerSocial = ["scholar", "github", "x", "linkedin"]
+
+[languages]
+  [languages.en]
+    languageName = "English"
+    weight = 1
+    [languages.en.params]
+      titleTemplate = "%s — Benjamin L'Huillier"
+      defaultTitle = "Benjamin L'Huillier — Cosmologist & Astrophysicist"
+      description = "Benjamin L'Huillier is a French cosmologist and Assistant Professor at Sejong University, Seoul. He tests the concordance model of cosmology with N-body simulations and advanced statistical methods."
+      locale = "en_US"
+  [languages.fr]
+    languageName = "Français"
+    weight = 2
+    [languages.fr.params]
+      titleTemplate = "%s — Benjamin L'Huillier"
+      defaultTitle = "Benjamin L’Huillier — Cosmologiste et astrophysicien"
+      description = "Benjamin L’Huillier est un cosmologiste français, professeur assistant à l’Université Sejong (Séoul)."
+      locale = "fr_FR"
+  [languages.ko]
+    languageName = "한국어"
+    weight = 3
+    [languages.ko.params]
+      titleTemplate = "%s — 벤자민 루일리예"
+      defaultTitle = "벤자민 루일리예 (Benjamin L’Huillier) — 우주론 연구자"
+      description = "벤자민 루일리예는 세종대학교 물리천문학과 조교수입니다."
+      locale = "ko_KR"
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[minify]
+  minifyOutput = true

@@ -1,0 +1,8 @@
+{{- $keys := .keys -}}
+<ul class="social-bar">
+{{- range site.Data.profiles }}
+{{- if or (not $keys) (in $keys .key) }}
+<li><a href="{{ .href }}" title="{{ .label }}" aria-label="{{ .label }}" target="_blank" rel="noopener noreferrer">{{ partial (printf "icons/%s.html" .key) . }}</a></li>
+{{- end }}
+{{- end }}
+</ul>

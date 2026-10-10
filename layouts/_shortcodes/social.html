@@ -1,0 +1,3 @@
+{{- $keys := false -}}
+{{- with .Get "keys" }}{{ $keys = split . "," }}{{ end -}}
+{{ partial "social.html" (dict "keys" $keys) }}

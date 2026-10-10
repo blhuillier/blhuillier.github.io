@@ -1,0 +1,8 @@
+{{- $base := (urls.Parse site.BaseURL).Path | default "/" -}}
+{{- $c := string .Content -}}
+{{- if ne $base "/" -}}
+  {{- $c = replaceRE `(href|src)="/` (printf `${1}="%s` $base) $c -}}
+  {{- $c = replaceRE `url\(&quot;/` (printf `url(&quot;%s` $base) $c -}}
+  {{- $c = replaceRE `url\(&#34;/` (printf `url(&#34;%s` $base) $c -}}
+{{- end -}}
+{{- $c | safeHTML -}}

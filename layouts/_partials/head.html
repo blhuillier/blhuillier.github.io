@@ -1,0 +1,42 @@
+{{- $p := site.Params -}}
+{{- $title := $p.defaultTitle -}}
+{{- with .Params.fullTitle }}{{ $title = . }}{{ else }}{{ with .Params.title }}{{ $title = printf $p.titleTemplate . }}{{ end }}{{ end -}}
+{{- $desc := .Params.description | default $p.description -}}
+{{- $img := printf "%s%s" (strings.TrimSuffix "/" site.BaseURL) $p.image -}}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ $title }}</title>
+<meta name="description" content="{{ $desc }}">
+<meta name="author" content="{{ $p.author }}">
+<link rel="canonical" href="{{ .Permalink }}">
+{{- if $p.preview }}
+<meta name="robots" content="noindex, nofollow">
+{{- end }}
+{{- if gt (len .AllTranslations) 1 }}
+{{- range .AllTranslations }}
+<link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}">
+{{- end }}
+{{- range .AllTranslations }}{{ if eq .Language.Lang "en" }}
+<link rel="alternate" hreflang="x-default" href="{{ .Permalink }}">
+{{- end }}{{ end }}
+{{- end }}
+<meta property="og:locale" content="{{ $p.locale }}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{{ $p.siteName }}">
+<meta property="og:title" content="{{ $title }}">
+<meta property="og:description" content="{{ $desc }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:image" content="{{ $img }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ $title }}">
+<meta name="twitter:description" content="{{ $desc }}">
+<meta name="twitter:image" content="{{ $img }}">
+<link rel="icon" href="{{ "favicon.png" | relURL }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700&family=Kaushan+Script&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
+{{- with resources.Get "css/main.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}">
+{{- end }}
+{{- if .IsHome }}{{ partial "schema.html" . }}{{ end }}

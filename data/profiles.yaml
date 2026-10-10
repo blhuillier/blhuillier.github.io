@@ -1,0 +1,22 @@
+# Profile links used by the social icon bars (order = display order).
+- key: scholar
+  href: https://scholar.google.com/citations?user=vksMsj0AAAAJ&hl=en
+  label: Google Scholar
+- key: orcid
+  href: https://orcid.org/0000-0003-2934-6243
+  label: ORCID
+- key: researchgate
+  href: https://www.researchgate.net/profile/Benjamin-Lhuillier
+  label: ResearchGate
+- key: github
+  href: https://github.com/blhuillier
+  label: GitHub
+- key: x
+  href: https://twitter.com/blhuilllier
+  label: X (Twitter)
+- key: linkedin
+  href: https://www.linkedin.com/in/lhuillierbenjamin/
+  label: LinkedIn
+- key: instagram
+  href: https://www.instagram.com/_benjissi_
+  label: Instagram

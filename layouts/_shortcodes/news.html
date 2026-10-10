@@ -1,0 +1,16 @@
+{{- $lang := .Page.Language.Lang -}}
+{{- $items := site.Data.news -}}
+{{- $n := len $items -}}
+<ul class="news-list">
+{{- range $i, $it := $items }}
+<li{{ if ge $i 8 }} class="is-collapsed"{{ end }}><span class="news-date">{{ $it.date }}</span><p class="news-body">{{ (index $it $lang | default $it.en) | safeHTML }}</p>
+{{- with $it.press }}<p class="press-links">{{ i18n "news_press" }} {{ range $j, $pr := . }}{{ if $j }} · {{ end }}<a href="{{ $pr.url }}" target="_blank" rel="noopener noreferrer">{{ $pr.label }}</a>{{ end }}</p>{{ end }}
+{{- with $it.embed }}
+{{- $style := "" }}{{ range $k, $hh := $it.embedHeights }}{{ $style = printf "%s--h%d:%dpx;" $style $k $hh }}{{ end }}
+<div class="news-embed"><iframe src="{{ . }}" height="{{ index $it.embedHeights 0 }}" style="{{ $style | safeCSS }}" width="504" frameborder="0" allowfullscreen loading="lazy" title="{{ i18n "news_embed_title" }}"></iframe><p class="press-links"><a href="{{ replace . "/embed/" "/" }}" target="_blank" rel="noopener noreferrer">{{ i18n "news_linkedin" }}</a></p></div>
+{{- end }}</li>
+{{- end }}
+</ul>
+{{- if gt $n 8 }}
+<div class="news-archive-toggle"><button class="btn" type="button" data-news-toggle data-label-all="{{ i18n "news_all" (dict "Count" $n) }}" data-label-fewer="{{ i18n "news_fewer" }}">{{ i18n "news_all" (dict "Count" $n) }}</button></div>
+{{- end -}}

@@ -1,0 +1,31 @@
+nav_home: Home
+nav_research: Research
+nav_publications: Publications
+nav_teaching: Teaching
+nav_group: The Group
+nav_outreach: Outreach
+nav_contact: Contact
+home_aria: Benjissi — home
+logo_alt: Benjissi — Benjamin L'Huillier, cosmologist and astrophysicist
+menu_open: Open menu
+menu_close: Close menu
+nav_aria: Primary
+footer_role: Assistant Professor
+footer_dept: Department of Physics and Astronomy
+footer_univ: Sejong University, Seoul
+footer_where: Where to find me
+footer_country: Seoul 05006, South Korea
+footer_elsewhere: Elsewhere
+news_press: 'Press releases in Korean:'
+news_linkedin: View the post on LinkedIn →
+news_embed_title: Embedded LinkedIn post
+news_fewer: Show fewer
+news_all: Show all news ({{ .Count }})
+preprint: arXiv preprint
+now_label: Now
+portrait_of: Portrait of {{ .Name }}
+now_prefix: 'Now:'
+link_email: Email
+link_github: GitHub
+link_web: Website
+link_scholar: Google Scholar

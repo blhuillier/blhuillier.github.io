@@ -1,0 +1,6 @@
+{{- $m := .Get "math" -}}
+{{- if eq (.Get "block") "true" -}}
+<div class="tex-block">{{ transform.ToMath $m (dict "displayMode" true "output" "htmlAndMathml") }}</div>
+{{- else -}}
+<span class="tex-inline">{{ transform.ToMath $m (dict "output" "htmlAndMathml") }}</span>
+{{- end -}}

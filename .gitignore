@@ -1,25 +1,15 @@
-.DS_Store
-
-# Node / Gatsby local dependencies
-node_modules/
-
-# Gatsby local build and cache output
-.cache/
+# Hugo
 public/
+resources/_gen/
+.hugo_build.lock
 
-# Local env / logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-.env
-.env.*
+# Local only
+node_modules/
+.cache/
+.venv/
 graphify-out/
-todo.md
-
-# Custom domain: only add this at DNS cutover, otherwise
-# blhuillier.github.io redirects to www.benjissi.com (still on Wix).
-static/CNAME
-
-# arXiv sources fetched by scripts/fetch_arxiv_figures.py (local only)
+Claude outputs/
 figure-candidates/
+todo.md
+.env
+.DS_Store

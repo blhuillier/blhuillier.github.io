@@ -1,0 +1,17 @@
+{{- $lang := .Page.Language.Lang -}}
+{{- $now := site.Data.courses.now -}}
+<div><h3>{{ .Get "heading" }}</h3><ul class="course-list">
+{{- range index site.Data.courses (.Get "list") }}
+{{- $t := index . $lang | default .name }}
+<li><span class="course-name"{{ if ne $lang "en" }} title="{{ .name }}"{{ end }}>{{ with .link }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">{{ $t }}</a>{{ else }}{{ $t }}{{ end }}</span>
+{{- if in .terms $now }}<span class="course-now">{{ i18n "now_label" }}</span>{{ end -}}
+{{- $terms := slice }}
+{{- range .terms }}{{ if ne . $now }}
+{{- $s := . }}
+{{- if eq $lang "fr" }}{{ $s = $s | replaceRE `^Spring` "Printemps" | replaceRE `^Fall` "Automne" | replaceRE `^Summer` "Été" | replaceRE `^Winter` "Hiver" }}{{ end }}
+{{- if eq $lang "ko" }}{{ $s = $s | replaceRE `^Spring (\d{4})$` "$1 봄" | replaceRE `^Fall (\d{4})$` "$1 가을" | replaceRE `^Summer (\d{4})$` "$1 여름" | replaceRE `^Winter (\d{4})$` "$1 겨울" }}{{ end }}
+{{- $terms = $terms | append $s }}
+{{- end }}{{ end -}}
+<span class="course-terms">{{ delimit $terms " · " }}</span></li>
+{{- end }}
+</ul></div>

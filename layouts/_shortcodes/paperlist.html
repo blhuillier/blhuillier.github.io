@@ -1,0 +1,10 @@
+{{- $tags := split (.Get "tags") "," -}}
+{{- with .Get "tag" }}{{ $tags = slice . }}{{ end -}}
+{{- $list := slice -}}
+{{- range site.Data.papers }}{{ if intersect .tags $tags }}{{ $list = $list | append . }}{{ end }}{{ end -}}
+{{- $lang := .Page.Language.Lang -}}
+<div class="paper-list">
+{{- range sort $list "year" "desc" }}
+{{ partial "paperbox.html" (dict "p" . "lang" $lang) }}
+{{- end }}
+</div>

@@ -1,0 +1,14 @@
+{{- $page := . -}}
+<nav class="lang-switch" aria-label="Language / Langue / 언어">
+{{- range site.Languages }}
+{{- $l := .Lang }}
+{{- $target := "" }}
+{{- range $page.AllTranslations }}{{ if eq .Language.Lang $l }}{{ $target = .RelPermalink }}{{ end }}{{ end }}
+{{- if not $target }}{{ range site.Home.AllTranslations }}{{ if eq .Language.Lang $l }}{{ $target = .RelPermalink }}{{ end }}{{ end }}{{ end }}
+{{- if eq $l site.Language.Lang }}
+<span class="is-current" lang="{{ $l }}" title="{{ .LanguageName }}" aria-current="true">{{ partial (printf "flags/%s.html" $l) . }}<span class="visually-hidden">{{ .LanguageName }}</span></span>
+{{- else }}
+<a href="{{ $target }}" hreflang="{{ $l }}" lang="{{ $l }}" title="{{ .LanguageName }}">{{ partial (printf "flags/%s.html" $l) . }}<span class="visually-hidden">{{ .LanguageName }}</span></a>
+{{- end }}
+{{- end }}
+</nav>

@@ -1,0 +1,13 @@
+{{- $p := .p -}}
+<article class="paper-box{{ if not $p.figure }} paper-box--text{{ end }}" id="{{ $p.id }}">
+{{- with $p.figure }}
+<figure class="paper-box__figure"><img src="{{ .src }}" alt="{{ .caption | replaceRE `\$|\\(mathrm|mathcal|,)?|[{}^_]` "" }}" loading="lazy">{{ with .caption }}<figcaption>{{ partial "richtext.html" . }}</figcaption>{{ end }}</figure>
+{{- end }}
+<div class="paper-box__body">
+<p class="paper-box__meta">{{ $p.year }} · {{ with $p.journal }}<em>{{ . }}</em>{{ else }}{{ i18n "preprint" }}{{ end }}</p>
+<h3 class="paper-box__title">{{ partial "richtext.html" $p.title }}</h3>
+<p class="paper-box__authors">{{ range $i, $a := $p.authors }}{{ if $i }}, {{ end }}{{ if hasPrefix $a "L'Huillier, B." }}<strong>{{ $a }}</strong>{{ else }}{{ $a }}{{ end }}{{ end }}</p>
+<p class="paper-box__summary">{{ partial "richtext.html" $p.summary }}</p>
+<span class="paper-links">{{ with $p.doi }}<a href="https://doi.org/{{ . }}" target="_blank" rel="noopener noreferrer">DOI</a>{{ end }}{{ if and $p.doi $p.arxiv }} · {{ end }}{{ with $p.arxiv }}<a href="https://arxiv.org/abs/{{ . }}" target="_blank" rel="noopener noreferrer">arXiv:{{ . }}</a>{{ end }}</span>
+</div>
+</article>
