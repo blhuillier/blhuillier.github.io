@@ -1,0 +1,10 @@
+{{- /* Small chips for one paper's labels, linking to the label pages. Context: slice of label ids. */ -}}
+{{- $map := partialCached "labelmap.html" site.Language.Lang site.Language.Lang -}}
+{{- $chips := slice -}}
+{{- range . -}}
+  {{- $id := . -}}
+  {{- with index $map $id -}}{{- with site.GetPage (printf "/labels/%s" $id) -}}
+    {{- $chips = $chips | append (printf `<a class="label-chip label-chip--%s" href="%s">%s</a>` (index $map $id).group .RelPermalink (index $map $id).name) -}}
+  {{- end }}{{ end -}}
+{{- end -}}
+{{- with $chips }}<p class="paper-labels">{{ delimit . "" | safeHTML }}</p>{{ end -}}

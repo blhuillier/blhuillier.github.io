@@ -9,7 +9,7 @@
 {{- range site.Params.nav }}
 {{- $item := . }}
 {{- with site.GetPage $item.page }}
-<li><a href="{{ .RelPermalink }}"{{ if eq .RelPermalink $page.RelPermalink }} class="is-active"{{ end }}>{{ i18n $item.key }}</a></li>
+<li><a href="{{ .RelPermalink }}"{{ if or (eq .RelPermalink $page.RelPermalink) (and (eq $item.page "/publications") (eq $page.Section "labels")) }} class="is-active"{{ end }}>{{ i18n $item.key }}</a></li>
 {{- end }}
 {{- end }}
 </ul>

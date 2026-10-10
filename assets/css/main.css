@@ -907,3 +907,41 @@ button.btn { background: transparent; color: inherit; cursor: pointer; }
 
 .summary-frame p { margin: 0 0 1.1em; }
 .summary-frame p:last-child { margin-bottom: 0; }
+
+/* ---------- Paper labels ---------- */
+.label-chip {
+  display: inline-flex; align-items: center; gap: .4em;
+  padding: .28em .8em; border: 1px solid var(--line); border-radius: 999px;
+  background: var(--paper-alt); color: var(--ink-soft);
+  font-size: .82rem; line-height: 1.3; white-space: nowrap;
+  transition: background .15s ease, color .15s ease, border-color .15s ease;
+}
+.label-chip:hover { color: var(--ink); border-color: var(--accent); }
+.label-chip.is-active { background: var(--accent); border-color: var(--accent); color: #fff; }
+.label-chip__n { font-size: .75em; opacity: .65; font-variant-numeric: tabular-nums; }
+.label-chip--role { border-style: dashed; }
+
+.label-bar { display: grid; gap: .7em; margin: 0 auto 2.2em; max-width: 980px; }
+.label-bar__group { display: flex; flex-wrap: wrap; align-items: center; gap: .45em; }
+.label-bar__heading {
+  flex: 0 0 8.5em; font-size: .72rem; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--ink-faint); font-weight: 600;
+}
+@media (max-width: 640px) { .label-bar__heading { flex-basis: 100%; } }
+
+.paper-labels { display: flex; flex-wrap: wrap; gap: .35em; margin: .9em 0 0; }
+.paper-labels .label-chip { font-size: .74rem; padding: .18em .65em; }
+.section--dark .label-chip { background: transparent; color: #cfcac1; border-color: var(--line-dark); }
+
+.paper-filter__status { font-size: .9rem; color: var(--ink-soft); margin: 0 0 1.4em; text-align: center; }
+.paper-filter__reset {
+  margin-left: .6em; font: inherit; font-size: .85rem; color: var(--ink); background: none;
+  border: 0; border-bottom: 1px solid var(--accent); padding: 0; cursor: pointer;
+}
+.pub-list--all li[hidden] { display: none; }
+.page-hero__kicker { font-size: .78rem; letter-spacing: .14em; text-transform: uppercase; margin: 0 0 .6em; }
+.page-hero__kicker a { color: inherit; opacity: .8; }
+.label-more { text-align: center; margin: 2.4em 0 0; }
+.page-hero__title--label { text-transform: none; letter-spacing: .08em; }
+#all-papers { scroll-margin-top: 70px; }
+.label-bar__heading { flex-basis: 10em; }

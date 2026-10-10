@@ -29,3 +29,12 @@ link_email: Email
 link_github: GitHub
 link_web: Website
 link_scholar: Google Scholar
+labels_aria: Paper labels
+label_count: '{{ if eq .Count 1 }}1 paper{{ else }}{{ .Count }} papers{{ end }}'
+label_description: 'Papers by Benjamin L''Huillier on {{ .Label }}: summaries, figures and links.'
+label_back: ← All papers by topic
+filter_heading: Papers by topic
+filter_intro: Click a label to show only the papers on that topic.
+filter_all: All {{ .Count }} papers
+filter_shown: '{{ .Count }} papers: {{ .Label }}'
+filter_reset: Show all

@@ -1,0 +1,23 @@
+{{ define "main" }}
+{{- $id := .Params.label -}}
+{{- $list := slice -}}
+{{- range site.Data.papers }}{{ if in (partial "paperlabels.html" .) $id }}{{ $list = $list | append . }}{{ end }}{{ end -}}
+<section class="page-hero page-hero--plain">
+<div class="page-hero__inner">
+<p class="page-hero__kicker"><a href="{{ (site.GetPage "/publications").RelPermalink }}">{{ i18n "nav_publications" }}</a></p>
+<h1 class="page-hero__title page-hero__title--label">{{ .Title }}</h1>
+<p class="page-hero__tagline">{{ i18n "label_count" (len $list) }}</p>
+</div>
+</section>
+<section class="section section--paper">
+<div class="wrap">
+{{ partial "labelbar.html" (dict "active" $id) }}
+<div class="paper-list">
+{{- range sort $list "year" "desc" }}
+{{ partial "paperbox.html" (dict "p" . "lang" site.Language.Lang) }}
+{{- end }}
+</div>
+<p class="label-more"><a href="{{ (site.GetPage "/publications").RelPermalink }}#all-papers">{{ i18n "label_back" }}</a></p>
+</div>
+</section>
+{{ end }}

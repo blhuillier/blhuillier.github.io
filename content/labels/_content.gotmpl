@@ -1,0 +1,15 @@
+{{- /* One page per label (data/labels.yaml) in every language: /labels/<id>/, /fr/labels/<id>/, /ko/labels/<id>/ */ -}}
+{{- .EnableAllLanguages -}}
+{{- $lang := .Site.Language.Lang -}}
+{{- range $g := .Site.Data.labels -}}
+  {{- range $g.labels -}}
+    {{- $name := index . $lang | default .en -}}
+    {{- $desc := i18n "label_description" (dict "Label" $name) -}}
+    {{- $.AddPage (dict
+        "path" .id
+        "title" $name
+        "kind" "page"
+        "params" (dict "title" $name "description" $desc "label" .id)
+      ) -}}
+  {{- end -}}
+{{- end -}}

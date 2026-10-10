@@ -1,0 +1,6 @@
+{{- /* Label ids of a paper: its "labels" plus first-author / students, derived from the author list */ -}}
+{{- $l := slice -}}
+{{- range .labels }}{{ $l = $l | append . }}{{ end -}}
+{{- with index .authors 0 }}{{ if hasPrefix . "L'Huillier" }}{{ $l = $l | append "first-author" }}{{ end }}{{ end -}}
+{{- if in (delimit .authors "|") "†" }}{{ $l = $l | append "students" }}{{ end -}}
+{{- return $l -}}

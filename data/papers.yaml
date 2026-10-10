@@ -18,6 +18,7 @@
   - lensing
   - large-scale-structure
   - model-testing
+  labels: [large-scale-structure, lensing]
   summary: We reconstruct the linear matter power spectrum at $z = 0$ from joint Planck PR4, ACT DR6 and SPT-3G CMB lensing, using a modified Richardson–Lucy deconvolution. The result follows the linear prediction on large scales, lies systematically higher for $k \gtrsim 0.1\,\mathrm{Mpc}^{-1}$, and partly preserves the BAO feature.
   figure:
     src: /images/papers/dawn2026-lenses1.png
@@ -38,6 +39,7 @@
   - lensing
   - large-scale-structure
   - model-testing
+  labels: [large-scale-structure, lensing]
   summary: A regularised Richardson–Lucy framework tests scale-dependent departures from the nonlinear matter power spectrum using galaxy clustering, galaxy–galaxy lensing and cosmic shear. On LSST Year-10-like mocks, oscillations of about 1% or more are recovered over $0.1 \lesssim k \lesssim 0.5\,\mathrm{Mpc}^{-1}$, and a 1% oscillation is detected at about $2.6\sigma$.
   figure:
     src: /images/papers/jiang2026-lenses2.webp
@@ -61,6 +63,7 @@
   tags:
   - agn
   - distances
+  labels: [agn, vlbi]
   summary: We extend the ‘speed-gun’ distance method using the proper motions of both the approaching jet and the counter-jet, which removes its dependence on the Doppler factor. For 3C 84 we obtain an angular-diameter distance of 71–79 Mpc depending on the assumed geometry; the spherical case agrees with SH0ES-calibrated supernovae.
   figure:
     src: /images/papers/hodgson2026-counterjets.png
@@ -81,6 +84,7 @@
   tags:
   - clusters
   - model-testing
+  labels: [clusters, supernovae, iterative-smoothing]
   summary: From a model-independent expansion history reconstructed from supernovae, we infer with iterative smoothing how the hydrostatic mass bias of galaxy clusters depends on mass and redshift, using X-ray gas fractions. Reconciling clusters with CMB constraints requires this bias to evolve with time.
   figure:
     src: /images/papers/kim2026-clusters.png
@@ -98,6 +102,7 @@
   tags:
   - model-testing
   - supernovae
+  labels: [curvature, supernovae, bao]
   summary: We reconstruct distances and the Hubble rate from Pantheon+ and DES supernovae without assuming any dark energy model, and combine them with DESI DR2 baryon acoustic oscillations to test the FLRW metric and measure the spatial curvature. With Pantheon+ and DESI DR2 we find $\Omega_{k,0} = 0.045^{+0.045}_{-0.081}$, consistent with flatness and with Planck 2018.
   figure:
     src: /images/papers/millard2026-flrw.webp
@@ -119,6 +124,7 @@
   tags:
   - agn
   - galaxies
+  labels: [agn, galaxy-formation, vlbi]
   summary: 'Comparing VLBI jet directions with optical host-galaxy shapes for about 6,000 AGN, we detect a weak but significant alignment between the parsec-scale jet and the minor axis of its host galaxy: a link between the black hole and its host across three orders of magnitude in scale.'
   figure:
     src: /images/papers/fernandezgil2025-alignment.webp
@@ -138,6 +144,7 @@
   tags:
   - model-testing
   - supernovae
+  labels: [curvature, supernovae, bao]
   summary: Reconstructing the expansion history from simulated LSST supernovae and combining it with simulated DESI 5-year BAO, we forecast constraints of up to ±4% on the curvature and ±0.1 on $c/(H_0 r_\mathrm{d})$, without assuming any form of dark energy.
   figure:
     src: /images/papers/lhuillier2025-litmus.webp
@@ -157,6 +164,7 @@
   tags:
   - agn
   - distances
+  labels: [agn, vlbi]
   summary: We extend the ‘standard speed-gun’ distance method by using the maximum intrinsic brightness temperature of a source instead of its Doppler factor. Forecasts show that recovering the cosmology depends mainly on how well this temperature is known and on the number of observed flares.
   figure:
     src: /images/papers/hodgson2023-speedgun.webp
@@ -176,6 +184,7 @@
   tags:
   - model-testing
   - modified-gravity
+  labels: [modified-gravity, growth, gaussian-processes]
   summary: We reconstruct the effective gravitational coupling $G_\mathrm{eff}(z)$ as a Gaussian process from forecast stage-IV growth data. DESI-like surveys could detect departures from General Relativity if dark energy is well determined; massive neutrinos do not change this, but assuming a ΛCDM expansion biases the inferred $\Omega_\mathrm{m}$ and $\sigma_8$.
   figure:
     src: /images/papers/calderon2023-joint2.png
@@ -193,6 +202,7 @@
   tags:
   - supernovae
   - model-testing
+  labels: [supernovae]
   summary: The best-fit ΛCDM $\chi^2$ of Pantheon+ is unusually small, and its residuals scatter less than the covariance matrix predicts, pointing to errors overestimated by about 7%. After accounting for this, no deviation from ΛCDM is found.
   figure:
     src: /images/papers/keeley2024-pantheon.png
@@ -213,6 +223,7 @@
   - model-testing
   - methods
   - supernovae
+  labels: [supernovae, gaussian-processes]
   summary: 'The choice of mean function and hyperparameters biases Gaussian process reconstructions of supernova distances: a zero mean gives unphysical results and a best-fit ΛCDM mean biases them. Marginalising over a family of mean functions and over the hyperparameters removes the bias, whatever the kernel.'
   figure:
     src: /images/papers/hwang2023-gp.png
@@ -232,6 +243,7 @@
   tags:
   - model-testing
   - dark-energy
+  labels: [dark-energy, supernovae, bao, growth, gaussian-processes]
   summary: Gaussian processes reconstruct the dark energy density from forecast stage-IV supernova, BAO and redshift-space-distortion data, assuming only a flat FLRW universe that becomes matter-dominated at high redshift, which also yields the growth history. Several dark energy models can be distinguished from ΛCDM at $2\sigma$ or more.
   figure:
     src: /images/papers/calderon2022-joint1.webp
@@ -249,6 +261,7 @@
   tags:
   - agn
   - galaxies
+  labels: [agn, galaxy-formation, vlbi]
   summary: Matching over 9,000 VLBI sources from the Astrogeo catalogue to their optical host galaxies and fitting the hosts' shapes, this first study finds no clear correlation between host morphology and jet direction.
   figure:
     src: /images/papers/fernandezgil2025-alignment.webp
@@ -267,6 +280,7 @@
   tags:
   - model-testing
   - methods
+  labels: [dark-energy, supernovae, iterative-smoothing, model-selection]
   summary: On simulated Roman supernova data, Bayesian model selection finds the true model when it is among the candidates, but otherwise only picks the least wrong one. A frequentist test based on iterative smoothing can instead conclude that all tested models are false.
   figure:
     src: /images/papers/koo2022-bayes.png
@@ -285,6 +299,7 @@
   tags:
   - model-testing
   - methods
+  labels: [dark-energy, supernovae, iterative-smoothing, model-selection]
   summary: Likelihood distributions derived from the non-parametric iterative smoothing method let us test a dark energy model and estimate its parameters without comparing it to an alternative. On WFIRST-like mocks we quantify how confidently different dark energy models can be distinguished.
   figure:
     src: /images/papers/koo2021-modelselection.webp
@@ -303,6 +318,7 @@
   tags:
   - dark-energy
   - model-testing
+  labels: [dark-energy]
   summary: We study dark sectors made of a negative cosmological constant plus a late-time accelerating component. The acceleration is often transient and some models eventually contract; current data show no decisive evidence for a negative $\Lambda$, but the best fits are phantom at $z \gtrsim 1$.
   figure:
     src: /images/papers/calderon2021-neglambda.png
@@ -322,6 +338,7 @@
   tags:
   - agn
   - distances
+  labels: [agn, vlbi]
   summary: We propose measuring AGN distances by comparing the physical size implied by variability with the angular size measured by VLBI. For 3C 84 we find $D_A = 72^{+5}_{-6}$ Mpc, consistent with other measurements at that redshift.
   figure:
     src: /images/papers/hodgson2020-vlbi.webp
@@ -340,6 +357,7 @@
   tags:
   - supernovae
   - model-testing
+  labels: [supernovae, iterative-smoothing]
   summary: Reconstructing the expansion history from JLA supernovae with iterative smoothing while sampling the light-curve hyper-parameters, we find hyper-parameters consistent with those from ΛCDM, CPL and PEDE fits, and no significant redshift evolution.
   figure:
     src: /images/papers/koo2020-jla.webp
@@ -359,6 +377,7 @@
   tags:
   - dark-energy
   - simulations
+  labels: [dark-energy, large-scale-structure, simulations]
   summary: Using k-evolution N-body simulations, we quantify non-linear k-essence dark energy perturbations through an effective modification $\mu$ of the Poisson equation, show that linear theory is accurate at large sound speeds, and propose a simulation-calibrated parametrisation of $\mu$.
   figure:
     src: /images/papers/hassani2020-kessence.webp
@@ -377,6 +396,7 @@
   tags:
   - model-testing
   - modified-gravity
+  labels: [modified-gravity, growth, supernovae, gaussian-processes]
   summary: From redshift-space distortion data alone, we reconstruct the growth history with crossing statistics and Gaussian processes, derive the expansion history from it, and fit supernovae to constrain $\Omega_{\mathrm{m},0}$ and $\sigma_{8,0}$. The results are consistent with flat ΛCDM and General Relativity.
   figure:
     src: /images/papers/lhuillier2020-defying.png
@@ -395,6 +415,7 @@
   tags:
   - gravitational-waves
   - model-testing
+  labels: [gravitational-waves, supernovae, gaussian-processes]
   summary: Gaussian process regression can remove the bias in reconstructing $H(z)$ from gravitational-wave standard sirens, and combined with supernovae it tests $H_0$ and ΛCDM. Dark-siren redshifts need close to spectroscopic precision to avoid significant bias.
   figure:
     src: /images/papers/keeley2020-sirens.webp
@@ -413,6 +434,7 @@
   tags:
   - model-testing
   - supernovae
+  labels: [supernovae, gaussian-processes]
   summary: A model-independent analysis of the Pantheon supernovae shows deviations from ΛCDM at $z \gtrsim 1$. They vanish with a simple Malmquist-like correction, but neither $\chi^2$ tests nor Gaussian processes find that this extra correction is statistically required.
   figure:
     src: /images/papers/lhuillier2019-pantheon.webp
@@ -430,6 +452,7 @@
   tags:
   - model-testing
   - modified-gravity
+  labels: [curvature, modified-gravity, supernovae, bao, growth]
   summary: Combining model-independent expansion reconstructions from Pantheon supernovae and BAO, we test the FLRW metric and flatness, and use eBOSS DR14Q growth data to constrain $\Omega_\mathrm{m}$, $\gamma$ and $\sigma_8$. Everything is consistent with a flat FLRW universe, General Relativity and $\Lambda$, with some tension at $z > 1$.
   figure:
     src: /images/papers/shafieloo2018-falsifying.png
@@ -447,6 +470,7 @@
   tags:
   - model-testing
   - modified-gravity
+  labels: [modified-gravity, supernovae, growth]
   summary: We reconstruct the expansion history from supernovae and fit growth-rate data to constrain $\Omega_\mathrm{m}$, the growth index $\gamma$ and $\sigma_8$ without a dark energy model. The results agree with ΛCDM in General Relativity, and requiring a positive dark energy density tightens them further.
   figure:
     src: /images/papers/lhuillier2018-growth.png
@@ -467,6 +491,7 @@
   tags:
   - large-scale-structure
   - simulations
+  labels: [large-scale-structure, simulations]
   summary: 'Large-deviation statistics predict the one-point PDF and clustering of projected densities in cylinders, in agreement with the Horizon Run 4 simulation to within a few percent in the quasi-linear regime: a tool for photometric surveys such as DES and Euclid.'
   figure:
     src: /images/papers/uhlemann2018-cylinders.jpg
@@ -487,6 +512,7 @@
   - primordial
   - simulations
   - large-scale-structure
+  labels: [early-universe, large-scale-structure, simulations]
   summary: Can large-scale structure distinguish primordial power spectra with features that the CMB cannot? With 15 DESI-like N-body simulations, we show that the halo mass function and two-point correlation function cannot, but simple counts-in-cells statistics can.
   figure:
     src: /images/papers/lhuillier2018-features.webp
@@ -507,6 +533,7 @@
   tags:
   - large-scale-structure
   - simulations
+  labels: [large-scale-structure, simulations]
   summary: We model the bias of tracer densities in spheres with a quadratic bias relation and the large-deviation dark matter PDF, validated on Horizon Run 4 subhaloes. This allows a joint estimate of the non-linear dark matter variance and the bias parameters.
   figure:
     src: /images/papers/uhlemann2018-separation.webp
@@ -527,6 +554,7 @@
   - simulations
   - modified-gravity
   - dark-matter
+  labels: [modified-gravity, dark-energy, dark-matter, simulations]
   summary: In N-body simulations of $f(R)$ gravity, DGP and coupled dark energy, $f(R)$ raises halo spin and weakens the spin alignment of interacting pairs, while only strongly coupled dark energy increases the halo interaction rate and the alignment of halo shapes with the large-scale structure.
   figure:
     src: /images/papers/lhuillier2017-modgrav.webp
@@ -544,6 +572,7 @@
   tags:
   - simulations
   - dark-matter
+  labels: [dark-matter, simulations]
   summary: In Horizon Run 4, interacting haloes have lower spin and are more spherical than typical haloes. Pairs start with antiparallel spins that gradually become parallel, interactions are mostly radial, and alignments are strongest for massive, close pairs and persist up to $z = 4$.
   figure:
     src: /images/papers/lhuillier2017-ecology2.webp
@@ -564,6 +593,7 @@
   tags:
   - large-scale-structure
   - simulations
+  labels: [large-scale-structure, simulations]
   summary: Parameter-free analytic bias functions extend Kaiser bias into the mildly non-linear regime, using large-deviation statistics and spherical collapse. They match Horizon Run 4 at the percent level down to about $10\,h^{-1}\,\mathrm{Mpc}$, and reduce the variance of the estimator about fivefold.
   figure:
     src: /images/papers/uhlemann2017-kaiser.png
@@ -580,6 +610,7 @@
   tags:
   - model-testing
   - supernovae
+  labels: [curvature, supernovae, bao]
   summary: Combining BOSS DR12 BAO with JLA supernovae, we measure $H_0 r_\mathrm{d}$ without assuming a cosmological model and introduce the $\Theta(z)$ diagnostic of the flat-FLRW metric. The results are consistent with a flat FLRW universe within $2\sigma$.
   figure:
     src: /images/papers/lhuillier2017-flrw.png
@@ -599,6 +630,7 @@
   - simulations
   - large-scale-structure
   - dark-matter
+  labels: [large-scale-structure, dark-matter, simulations]
   summary: Horizon Run 4 follows $6300^3$ particles in a $3150\,h^{-1}\,\mathrm{Mpc}$ box, with halo merger trees down to $2.7\times10^{11}\,h^{-1}\,M_\odot$. The halo mass function departs from universality and evolves with redshift, and the BAO peak in mock galaxy correlations broadens and shifts. The data are public.
   figure:
     src: /images/papers/kim2015-hr4.jpg
@@ -616,6 +648,7 @@
   tags:
   - simulations
   - dark-matter
+  labels: [dark-matter, simulations]
   summary: Using Horizon Run 4, we measure how often haloes interact as a function of environment, separation, mass ratio, mass and redshift. Most interactions happen at density contrast $\delta \approx 20$, while the interacting fraction peaks at $\delta \approx 1000$; we provide a fitting formula and identify two interaction modes.
   figure:
     src: /images/papers/lhuillier2015-ecology1.webp
@@ -634,6 +667,7 @@
   - simulations
   - methods
   - dark-matter
+  labels: [simulations]
   summary: We test how the pre-initial configuration, the order of Lagrangian perturbation theory and the starting redshift affect N-body results. Glass and grid give similar results at $z \lesssim 2$, while first-order LPT underestimates massive haloes by about 2% and small-scale power by 6%.
   figure:
     src: /images/papers/lhuillier2014-ic.png
@@ -651,6 +685,7 @@
   tags:
   - galaxies
   - simulations
+  labels: [galaxy-formation, simulations]
   summary: Multi-zoom cosmological simulations show that galaxies grow mostly by smooth accretion, which brings on average 77% of their mass, while mergers bring 23%. Only the most massive galaxies grow significantly through mergers.
   figure:
     src: /images/papers/lhuillier2012-accretion.webp

@@ -1,0 +1,45 @@
+# Labels for the papers in papers.yaml (field "labels").
+# Each label gets a page /labels/<id>/ (also /fr/ and /ko/) and a chip on the Publications page.
+# "first-author" and "students" are set automatically from the author list
+# (first author L'Huillier; any author marked †): don't add them by hand.
+- id: topics
+  en: Topics
+  fr: Thèmes
+  ko: 주제
+  labels:
+  - { id: dark-energy, en: Dark energy, fr: Énergie noire, ko: 암흑에너지 }
+  - { id: modified-gravity, en: Modified gravity, fr: Gravité modifiée, ko: 수정 중력 }
+  - { id: curvature, en: Curvature & FLRW, fr: Courbure et FLRW, ko: 곡률과 FLRW 계량 }
+  - { id: early-universe, en: Early Universe, fr: Univers primordial, ko: 초기 우주 }
+  - { id: dark-matter, en: Dark matter haloes, fr: Halos de matière noire, ko: 암흑물질 헤일로 }
+  - { id: large-scale-structure, en: Large-scale structure, fr: Grandes structures, ko: 우주 거대구조 }
+  - { id: galaxy-formation, en: Galaxy formation, fr: Formation des galaxies, ko: 은하 형성 }
+  - { id: agn, en: AGN & jets, fr: AGN et jets, ko: 활동은하핵과 제트 }
+- id: probes
+  en: Data & probes
+  fr: Données et sondes
+  ko: 관측 자료
+  labels:
+  - { id: supernovae, en: Type Ia supernovae, fr: Supernovae Ia, ko: Ia형 초신성 }
+  - { id: bao, en: BAO, fr: BAO, ko: 중입자 음향 진동(BAO) }
+  - { id: growth, en: Growth of structure (RSD), fr: Croissance des structures (RSD), ko: 구조 성장(RSD) }
+  - { id: lensing, en: Gravitational lensing, fr: Lentilles gravitationnelles, ko: 중력렌즈 }
+  - { id: gravitational-waves, en: Gravitational waves, fr: Ondes gravitationnelles, ko: 중력파 }
+  - { id: clusters, en: Galaxy clusters, fr: Amas de galaxies, ko: 은하단 }
+  - { id: vlbi, en: VLBI, fr: VLBI, ko: VLBI }
+- id: methods
+  en: Methods
+  fr: Méthodes
+  ko: 방법
+  labels:
+  - { id: gaussian-processes, en: Gaussian processes, fr: Processus gaussiens, ko: 가우시안 과정 }
+  - { id: iterative-smoothing, en: Iterative smoothing, fr: Lissage itératif, ko: 반복 평활법 }
+  - { id: simulations, en: Simulations, fr: Simulations, ko: 시뮬레이션 }
+  - { id: model-selection, en: Model selection, fr: Sélection de modèles, ko: 모형 선택 }
+- id: role
+  en: Authorship
+  fr: Rôle
+  ko: 역할
+  labels:
+  - { id: first-author, en: First author, fr: Premier auteur, ko: 제1저자 }
+  - { id: students, en: With my students, fr: Avec mes étudiants, ko: 지도 학생과 함께 }

@@ -1,0 +1,9 @@
+{{- /* Label id → (name, group) for the current language, from data/labels.yaml */ -}}
+{{- $lang := site.Language.Lang -}}
+{{- $m := dict -}}
+{{- range $g := site.Data.labels -}}
+  {{- range $g.labels -}}
+    {{- $m = merge $m (dict .id (dict "name" (index . $lang | default .en) "group" $g.id)) -}}
+  {{- end -}}
+{{- end -}}
+{{- return $m -}}

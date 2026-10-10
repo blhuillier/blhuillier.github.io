@@ -9,5 +9,6 @@
 <p class="paper-box__authors">{{ range $i, $a := $p.authors }}{{ if $i }}, {{ end }}{{ if hasPrefix $a "L'Huillier, B." }}<strong>{{ $a }}</strong>{{ else }}{{ $a }}{{ end }}{{ end }}</p>
 <p class="paper-box__summary">{{ partial "richtext.html" $p.summary }}</p>
 <span class="paper-links">{{ with $p.doi }}<a href="https://doi.org/{{ . }}" target="_blank" rel="noopener noreferrer">DOI</a>{{ end }}{{ if and $p.doi $p.arxiv }} · {{ end }}{{ with $p.arxiv }}<a href="https://arxiv.org/abs/{{ . }}" target="_blank" rel="noopener noreferrer">arXiv:{{ . }}</a>{{ end }}</span>
+{{ partial "labelchips.html" (partial "paperlabels.html" $p) }}
 </div>
 </article>

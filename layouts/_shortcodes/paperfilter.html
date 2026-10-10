@@ -1,0 +1,11 @@
+{{- /* Publications page: label chips that filter the list of all papers on the site (JS), with label pages as fallback links. */ -}}
+{{- $papers := sort site.Data.papers "year" "desc" -}}
+<div class="paper-filter" data-paper-filter>
+{{ partial "labelbar.html" (dict "active" "") }}
+<p class="paper-filter__status" aria-live="polite"><span data-filter-status data-all="{{ i18n "filter_all" (len $papers) }}" data-shown="{{ i18n "filter_shown" (dict "Count" "%n" "Label" "%l") }}">{{ i18n "filter_all" (len $papers) }}</span> <button type="button" class="paper-filter__reset" data-filter-reset hidden>{{ i18n "filter_reset" }}</button></p>
+<ol class="pub-list pub-list--all" reversed>
+{{- range $papers }}
+<li data-labels="{{ delimit (partial "paperlabels.html" .) " " }}"><span class="pub-authors">{{ range $i, $a := .authors }}{{ if $i }}, {{ end }}{{ if hasPrefix $a "L'Huillier, B." }}<strong>{{ $a }}</strong>{{ else }}{{ $a }}{{ end }}{{ end }}</span> ({{ .year }}). <span class="pub-title">{{ partial "richtext.html" .title }}</span>. <em>{{ .journal | default (i18n "preprint") }}</em>. <span class="paper-links">{{ with .doi }}<a href="https://doi.org/{{ . }}" target="_blank" rel="noopener noreferrer">DOI</a>{{ end }}{{ if and .doi .arxiv }} · {{ end }}{{ with .arxiv }}<a href="https://arxiv.org/abs/{{ . }}" target="_blank" rel="noopener noreferrer">arXiv:{{ . }}</a>{{ end }}</span></li>
+{{- end }}
+</ol>
+</div>
