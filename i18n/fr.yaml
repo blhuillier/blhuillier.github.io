@@ -34,7 +34,8 @@ label_count: '{{ if eq .Count 1 }}1 article{{ else }}{{ .Count }} articles{{ end
 label_description: 'Articles de Benjamin L’Huillier — {{ .Label }} : résumés, figures et liens.'
 label_back: ← Tous les articles
 filter_heading: Articles par thème
-filter_intro: Cliquez sur une étiquette pour n’afficher que les articles correspondants.
+filter_intro: Cliquez sur une ou plusieurs étiquettes pour afficher les articles correspondants.
 filter_all: Les {{ .Count }} articles
 filter_shown: '{{ .Count }} articles : {{ .Label }}'
 label_all: Tous
+filter_or: ' ou '

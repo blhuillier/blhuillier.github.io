@@ -34,7 +34,8 @@ label_count: '{{ if eq .Count 1 }}1 paper{{ else }}{{ .Count }} papers{{ end }}'
 label_description: 'Papers by Benjamin L''Huillier on {{ .Label }}: summaries, figures and links.'
 label_back: ← All papers
 filter_heading: Papers by topic
-filter_intro: Click a label to show only the papers on that topic.
+filter_intro: Click one or more labels to show the papers on those topics.
 filter_all: All {{ .Count }} papers
 filter_shown: '{{ .Count }} papers: {{ .Label }}'
 label_all: All
+filter_or: ' or '

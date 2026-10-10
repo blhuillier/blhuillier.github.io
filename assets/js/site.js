@@ -38,44 +38,54 @@
   })
 
 
-  // Research page: label chips filter the paper boxes (the chips are also links to the label pages)
+  // Research page: label chips filter the paper boxes (the chips are also links to the label pages).
+  // Several labels can be selected: a paper is shown if it has any of them (OR).
+  // The page opens on the key papers; the first label clicked from that state replaces it.
   document.querySelectorAll("[data-paper-filter]").forEach(function (box) {
-    var items = box.querySelectorAll(".paper-filter__item")
-    var chips = box.querySelectorAll(".label-chip[data-label]")
+    var items = [].slice.call(box.querySelectorAll(".paper-filter__item"))
+    var chips = [].slice.call(box.querySelectorAll(".label-chip[data-label]"))
     var bar = box.querySelector(".label-bar")
+    var barChips = chips.filter(function (c) { return bar.contains(c) })
     var status = box.querySelector("[data-filter-status]")
     var section = box.closest("section")
-    function apply(label, push) {
-      var n = 0, name = ""
-      items.forEach(function (li) {
-        var ok = !label || (" " + li.dataset.labels + " ").indexOf(" " + label + " ") >= 0
-        li.hidden = !ok
-        if (ok) n++
-      })
+    var known = barChips.map(function (c) { return c.dataset.label }).filter(Boolean)
+    var sel = [box.dataset.default], pristine = true
+    function has(item, labels) {
+      var l = " " + item.dataset.labels + " "
+      return !labels.length || labels.some(function (x) { return l.indexOf(" " + x + " ") >= 0 })
+    }
+    function apply(push) {
+      var n = 0
+      items.forEach(function (it) { var ok = has(it, sel); it.hidden = !ok; if (ok) n++ })
+      var names = []
       chips.forEach(function (c) {
-        var on = c.dataset.label === label
+        var label = c.dataset.label
+        var on = label ? sel.indexOf(label) >= 0 : sel.length === 0
         c.classList.toggle("is-active", on)
         c.setAttribute("aria-pressed", on ? "true" : "false")
-        if (on && label && bar.contains(c)) name = c.firstChild.textContent.trim()
+        if (on && label && bar.contains(c)) names.push(c.firstChild.textContent.trim())
       })
-      status.textContent = label ? status.dataset.shown.replace("%n", n).replace("%l", name) : status.dataset.all
-      if (push) history.replaceState(null, "", "#" + (label || "all"))
+      status.textContent = sel.length ? status.dataset.shown.replace("%n", n).replace("%l", names.join(status.dataset.or)) : status.dataset.all
+      if (push) history.replaceState(null, "", "#" + (sel.join("+") || "all"))
     }
     chips.forEach(function (c) {
       c.addEventListener("click", function (e) {
         if (e.metaKey || e.ctrlKey || e.shiftKey || e.button) return
         e.preventDefault()
         var label = c.dataset.label
-        var inBox = !bar.contains(c)
-        // a chip in the bar toggles; a chip inside a paper box always selects its label
-        apply(label && !inBox && c.classList.contains("is-active") ? "" : label, true)
-        if (inBox) section.scrollIntoView({ behavior: "smooth" })
+        if (!bar.contains(c)) { sel = [label]; section.scrollIntoView({ behavior: "smooth" }) }   // chip inside a paper box
+        else if (!label) sel = []                                                                 // "All"
+        else if (sel.indexOf(label) >= 0) sel = sel.filter(function (x) { return x !== label })
+        else sel = pristine ? [label] : sel.concat(label)
+        pristine = false
+        apply(true)
       })
     })
     function fromHash() {
       var h = decodeURIComponent(location.hash.slice(1))
-      if (h === "all") { apply("", false); section.scrollIntoView() }
-      else if (h && box.querySelector('.label-chip[data-label="' + h + '"]')) { apply(h, false); section.scrollIntoView() }
+      var want = h === "all" ? [] : h.split("+").filter(function (x) { return known.indexOf(x) >= 0 })
+      if (h === "all" || want.length) { sel = want; pristine = false; apply(false); section.scrollIntoView() }
+      else apply(false)
     }
     fromHash()
     window.addEventListener("hashchange", fromHash)

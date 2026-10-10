@@ -9,6 +9,8 @@
 <main>{{ block "main" . }}{{ end }}</main>
 {{ partial "footer.html" . }}
 </div>
-<script src="{{ "js/site.js" | relURL }}" defer></script>
+{{- with resources.Get "js/site.js" | minify | fingerprint }}
+<script src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" defer></script>
+{{- end }}
 </body>
 </html>

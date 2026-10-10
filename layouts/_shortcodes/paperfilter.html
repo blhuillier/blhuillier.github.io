@@ -6,7 +6,7 @@
 {{- $n := 0 }}{{ range $papers }}{{ if in (partial "paperlabels.html" .) $default }}{{ $n = add $n 1 }}{{ end }}{{ end -}}
 <div class="paper-filter" data-paper-filter data-default="{{ $default }}">
 {{ partial "labelbar.html" (dict "active" $default) }}
-<p class="paper-filter__status" aria-live="polite" data-filter-status data-all="{{ i18n "filter_all" (len $papers) }}" data-shown="{{ i18n "filter_shown" (dict "Count" "%n" "Label" "%l") }}">{{ i18n "filter_shown" (dict "Count" $n "Label" (index $map $default).name) }}</p>
+<p class="paper-filter__status" aria-live="polite" data-filter-status data-all="{{ i18n "filter_all" (len $papers) }}" data-shown="{{ i18n "filter_shown" (dict "Count" "%n" "Label" "%l") }}" data-or="{{ i18n "filter_or" }}">{{ i18n "filter_shown" (dict "Count" $n "Label" (index $map $default).name) }}</p>
 <div class="paper-list">
 {{- range $papers }}{{ $l := partial "paperlabels.html" . }}
 <div class="paper-filter__item" data-labels="{{ delimit $l " " }}"{{ if not (in $l $default) }} hidden{{ end }}>
