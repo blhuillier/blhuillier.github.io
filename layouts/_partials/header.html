@@ -1,7 +1,7 @@
 {{- $page := . -}}
 <header class="site-header">
 <div class="site-header__inner">
-<a href="{{ site.Home.RelPermalink }}" class="site-logo" aria-label="{{ i18n "home_aria" }}"><img src="{{ "images/benjissi-logo-web.png" | relURL }}" alt="{{ i18n "logo_alt" }}"></a>
+<a href="{{ site.Home.RelPermalink }}" class="site-logo" aria-label="{{ i18n "home_aria" }}">{{ $logo := images.Config "static/images/benjissi-logo-web.png" }}<img src="{{ "images/benjissi-logo-web.png" | relURL }}" width="{{ $logo.Width }}" height="{{ $logo.Height }}" alt="{{ i18n "logo_alt" }}"></a>
 <div class="site-header__right">
 <button class="nav-toggle" type="button" aria-label="{{ i18n "menu_open" }}" data-label-open="{{ i18n "menu_open" }}" data-label-close="{{ i18n "menu_close" }}" aria-expanded="false" aria-controls="primary-nav"><span class="nav-toggle__bar"></span><span class="nav-toggle__bar"></span><span class="nav-toggle__bar"></span></button>
 <nav id="primary-nav" aria-label="{{ i18n "nav_aria" }}" class="site-nav">

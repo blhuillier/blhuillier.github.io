@@ -3,7 +3,7 @@
 # links: kind = email | github | web | scholar.
 - id: clea
   name: Cléa Millard | 클레아
-  photo: /images/clea.jpg
+  photo: /images/clea.webp
   light: false
   links:
   - kind: email
@@ -22,7 +22,7 @@
     ko: Ia형 초신성 우주론.
 - id: hyeon
   name: Hyeon Kim | 김현
-  photo: /images/hyeon-web.jpg
+  photo: /images/hyeon-web.webp
   light: false
   links:
   - kind: github
@@ -43,7 +43,7 @@
     ko: 우주론 시뮬레이션, 은하단 우주론, 초기 우주.
 - id: sihyeong
   name: Si Hyeong Noh | 노시형
-  photo: /images/sihyeong-web.jpg
+  photo: /images/sihyeong-web.webp
   light: false
   links:
   - kind: web

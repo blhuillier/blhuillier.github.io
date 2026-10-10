@@ -1,0 +1,14 @@
+{{- /* Adds width/height (read from the file in static/) to every <img src="/images/…"> that has none, so the browser reserves space before the image loads. */ -}}
+{{- $c := . -}}
+{{- range findRESubmatch `<img [^>]*?src="(/images/[^"]+)"[^>]*>` $c -}}
+  {{- $tag := index . 0 -}}
+  {{- if not (findRE `\swidth=` $tag) -}}
+    {{- $path := printf "static%s" (replace (index . 1) "%20" " ") -}}
+    {{- if fileExists $path -}}
+      {{- with images.Config $path -}}
+        {{- $c = replace $c $tag (replace $tag "<img " (printf `<img width="%d" height="%d" ` .Width .Height)) -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- return $c -}}

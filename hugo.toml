@@ -2,6 +2,8 @@
 # Preview: the workflow overrides baseURL with the GitHub Pages address.
 baseURL = "https://www.benjissi.com/"
 title = "Benjamin L'Huillier"
+# page dates (sitemap <lastmod>) come from the last git commit touching each content file
+enableGitInfo = true
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false
 disableKinds = ["taxonomy", "term", "rss", "section"]

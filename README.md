@@ -22,6 +22,12 @@ Inside page files, `{{< ... >}}` are shortcodes that insert data:
 `{{< news >}}`, `{{< paperlist tag="simulations" >}}`, `{{< member id="clea" >}}`,
 `{{< courses list="graduate" heading="…" >}}`, `{{< tex math=`\Omega_k` >}}`.
 
+## Images
+
+Put images in `static/images/` and reference them as `/images/name.webp`. Prefer WebP, at most
+~1400 px wide (1920 px for full-width backgrounds). `width`/`height` are added automatically
+at build time.
+
 ## Adding a news item
 
 Add at the top of `data/news.yaml`:

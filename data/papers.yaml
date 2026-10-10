@@ -40,7 +40,7 @@
   - model-testing
   summary: A regularised Richardson–Lucy framework tests scale-dependent departures from the nonlinear matter power spectrum using galaxy clustering, galaxy–galaxy lensing and cosmic shear. On LSST Year-10-like mocks, oscillations of about 1% or more are recovered over $0.1 \lesssim k \lesssim 0.5\,\mathrm{Mpc}^{-1}$, and a 1% oscillation is detected at about $2.6\sigma$.
   figure:
-    src: /images/papers/jiang2026-lenses2.png
+    src: /images/papers/jiang2026-lenses2.webp
     caption: Reconstructions of a 5% oscillatory feature from 1000 noisy LSST-like mocks (blue), their median (green) and the truth (red).
 - id: hodgson2026-counterjets
   authors:
@@ -100,7 +100,7 @@
   - supernovae
   summary: We reconstruct distances and the Hubble rate from Pantheon+ and DES supernovae without assuming any dark energy model, and combine them with DESI DR2 baryon acoustic oscillations to test the FLRW metric and measure the spatial curvature. With Pantheon+ and DESI DR2 we find $\Omega_{k,0} = 0.045^{+0.045}_{-0.081}$, consistent with flatness and with Planck 2018.
   figure:
-    src: /images/papers/millard2026-flrw.png
+    src: /images/papers/millard2026-flrw.webp
     caption: '$\mathcal{O}_k(z)$ from supernova reconstructions combined with DESI DR2, for three data sets, colour-coded by $\Delta\chi^2$; right: the resulting likelihoods.'
 - id: fernandezgil2025-alignment
   authors:
@@ -121,7 +121,7 @@
   - galaxies
   summary: 'Comparing VLBI jet directions with optical host-galaxy shapes for about 6,000 AGN, we detect a weak but significant alignment between the parsec-scale jet and the minor axis of its host galaxy: a link between the black hole and its host across three orders of magnitude in scale.'
   figure:
-    src: /images/papers/fernandezgil2025-alignment.png
+    src: /images/papers/fernandezgil2025-alignment.webp
     caption: 'How the jet–host angle is measured: VLBI jet position angle (a) against the minor axis of the optical host in DES, DESI LS, SDSS and SkyMapper (b–e).'
 - id: lhuillier2025-litmus
   authors:
@@ -140,7 +140,7 @@
   - supernovae
   summary: Reconstructing the expansion history from simulated LSST supernovae and combining it with simulated DESI 5-year BAO, we forecast constraints of up to ±4% on the curvature and ±0.1 on $c/(H_0 r_\mathrm{d})$, without assuming any form of dark energy.
   figure:
-    src: /images/papers/lhuillier2025-litmus.png
+    src: /images/papers/lhuillier2025-litmus.webp
     caption: 'The curvature diagnostic $\mathcal{O}_k$ on mocks from four fiducial models: it recovers $\Omega_{k,0} = 0.1$ when the input is curved.'
 - id: hodgson2023-speedgun
   authors:
@@ -159,7 +159,7 @@
   - distances
   summary: We extend the ‘standard speed-gun’ distance method by using the maximum intrinsic brightness temperature of a source instead of its Doppler factor. Forecasts show that recovering the cosmology depends mainly on how well this temperature is known and on the number of observed flares.
   figure:
-    src: /images/papers/hodgson2023-speedgun.png
+    src: /images/papers/hodgson2023-speedgun.webp
     caption: Simulated speed-gun distance measurements (30 sources, 10 flares each) for four redshift distributions, with the recovered cosmology.
 - id: calderon2023-joint2
   authors:
@@ -234,7 +234,7 @@
   - dark-energy
   summary: Gaussian processes reconstruct the dark energy density from forecast stage-IV supernova, BAO and redshift-space-distortion data, assuming only a flat FLRW universe that becomes matter-dominated at high redshift, which also yields the growth history. Several dark energy models can be distinguished from ΛCDM at $2\sigma$ or more.
   figure:
-    src: /images/papers/calderon2022-joint1.png
+    src: /images/papers/calderon2022-joint1.webp
     caption: Joint reconstructions of the effective gravitational coupling, $H(z)$ and $f\sigma_8(z)$ for three fiducial cosmologies; dashed lines show the truth.
 - id: fernandezgil2023-vlbi
   authors:
@@ -251,7 +251,7 @@
   - galaxies
   summary: Matching over 9,000 VLBI sources from the Astrogeo catalogue to their optical host galaxies and fitting the hosts' shapes, this first study finds no clear correlation between host morphology and jet direction.
   figure:
-    src: /images/papers/fernandezgil2025-alignment.png
+    src: /images/papers/fernandezgil2025-alignment.webp
     caption: 'How the jet–host angle is measured: VLBI jet position angle (a) against the minor axis of the optical host in DES, DESI LS, SDSS and SkyMapper (b–e). (Figure from the 2025 follow-up paper.)'
 - id: koo2022-bayes
   authors:
@@ -287,7 +287,7 @@
   - methods
   summary: Likelihood distributions derived from the non-parametric iterative smoothing method let us test a dark energy model and estimate its parameters without comparing it to an alternative. On WFIRST-like mocks we quantify how confidently different dark energy models can be distinguished.
   figure:
-    src: /images/papers/koo2021-modelselection.png
+    src: /images/papers/koo2021-modelselection.webp
     caption: Distributions of $\Delta\chi^2$ between the smoothed and best-fit models over WFIRST-like ΛCDM mocks, for ΛCDM, PEDE and Kink.
 - id: calderon2021-neglambda
   authors:
@@ -324,7 +324,7 @@
   - distances
   summary: We propose measuring AGN distances by comparing the physical size implied by variability with the angular size measured by VLBI. For 3C 84 we find $D_A = 72^{+5}_{-6}$ Mpc, consistent with other measurements at that redshift.
   figure:
-    src: /images/papers/hodgson2020-vlbi.jpg
+    src: /images/papers/hodgson2020-vlbi.webp
     caption: 43 GHz VLBI maps of 3C 84 (2015–2017). The arrow marks the flaring region used for the distance measurement.
 - id: koo2020-jla
   authors:
@@ -342,7 +342,7 @@
   - model-testing
   summary: Reconstructing the expansion history from JLA supernovae with iterative smoothing while sampling the light-curve hyper-parameters, we find hyper-parameters consistent with those from ΛCDM, CPL and PEDE fits, and no significant redshift evolution.
   figure:
-    src: /images/papers/koo2020-jla.png
+    src: /images/papers/koo2020-jla.webp
     caption: Constraints on the JLA light-curve parameters from iterative smoothing (red) compared with ΛCDM, CPL and PEDE.
 - id: hassani2020-kessence
   authors:
@@ -361,7 +361,7 @@
   - simulations
   summary: Using k-evolution N-body simulations, we quantify non-linear k-essence dark energy perturbations through an effective modification $\mu$ of the Poisson equation, show that linear theory is accurate at large sound speeds, and propose a simulation-calibrated parametrisation of $\mu$.
   figure:
-    src: /images/papers/hassani2020-kessence.png
+    src: /images/papers/hassani2020-kessence.webp
     caption: Ratio $\mu(k,z)$ of the k-essence to ΛCDM gravitational potential for sound speed $c_s^2 = 10^{-4}$, non-linear (points) versus linear (dashed).
 - id: lhuillier2020-defying
   authors:
@@ -397,7 +397,7 @@
   - model-testing
   summary: Gaussian process regression can remove the bias in reconstructing $H(z)$ from gravitational-wave standard sirens, and combined with supernovae it tests $H_0$ and ΛCDM. Dark-siren redshifts need close to spectroscopic precision to avoid significant bias.
   figure:
-    src: /images/papers/keeley2020-sirens.png
+    src: /images/papers/keeley2020-sirens.webp
     caption: Gaussian-process reconstructions of $1/H(z)$ and $D_L(z)$ from standard sirens and supernovae for a ΛCDM input, relative to the best-fit ΛCDM.
 - id: lhuillier2019-pantheon
   authors:
@@ -415,7 +415,7 @@
   - supernovae
   summary: A model-independent analysis of the Pantheon supernovae shows deviations from ΛCDM at $z \gtrsim 1$. They vanish with a simple Malmquist-like correction, but neither $\chi^2$ tests nor Gaussian processes find that this extra correction is statistically required.
   figure:
-    src: /images/papers/lhuillier2019-pantheon.png
+    src: /images/papers/lhuillier2019-pantheon.webp
     caption: 'Iterative smoothing of Pantheon: residuals, $h(z)$, the $Om$ diagnostic and $w(z)$. Every curve fits the data better than the best-fit ΛCDM.'
 - id: shafieloo2018-falsifying
   authors:
@@ -489,7 +489,7 @@
   - large-scale-structure
   summary: Can large-scale structure distinguish primordial power spectra with features that the CMB cannot? With 15 DESI-like N-body simulations, we show that the halo mass function and two-point correlation function cannot, but simple counts-in-cells statistics can.
   figure:
-    src: /images/papers/lhuillier2018-features.png
+    src: /images/papers/lhuillier2018-features.webp
     caption: Primordial power spectra with features (left) and the resulting linear matter power spectra relative to Planck 2015 (right).
 - id: uhlemann2018-separation
   authors:
@@ -509,7 +509,7 @@
   - simulations
   summary: We model the bias of tracer densities in spheres with a quadratic bias relation and the large-deviation dark matter PDF, validated on Horizon Run 4 subhaloes. This allows a joint estimate of the non-linear dark matter variance and the bias parameters.
   figure:
-    src: /images/papers/uhlemann2018-separation.png
+    src: /images/papers/uhlemann2018-separation.webp
     caption: Halo density against dark matter density in spheres of $15\,h^{-1}\,\mathrm{Mpc}$ at $z = 0$, with the reconstructed bias function (red).
 - id: lhuillier2017-modgrav
   authors:
@@ -529,7 +529,7 @@
   - dark-matter
   summary: In N-body simulations of $f(R)$ gravity, DGP and coupled dark energy, $f(R)$ raises halo spin and weakens the spin alignment of interacting pairs, while only strongly coupled dark energy increases the halo interaction rate and the alignment of halo shapes with the large-scale structure.
   figure:
-    src: /images/papers/lhuillier2017-modgrav.png
+    src: /images/papers/lhuillier2017-modgrav.webp
     caption: Halo interaction rate versus mass in ΛCDM and in $f(R)$, DGP and coupled dark energy simulations.
 - id: lhuillier2017-ecology2
   authors:
@@ -546,7 +546,7 @@
   - dark-matter
   summary: In Horizon Run 4, interacting haloes have lower spin and are more spherical than typical haloes. Pairs start with antiparallel spins that gradually become parallel, interactions are mostly radial, and alignments are strongest for massive, close pairs and persist up to $z = 4$.
   figure:
-    src: /images/papers/lhuillier2017-ecology2.png
+    src: /images/papers/lhuillier2017-ecology2.webp
     caption: Evolution of the alignment between the spins of interacting haloes, by environment (columns) and mass (rows).
 - id: uhlemann2017-kaiser
   authors:
@@ -618,7 +618,7 @@
   - dark-matter
   summary: Using Horizon Run 4, we measure how often haloes interact as a function of environment, separation, mass ratio, mass and redshift. Most interactions happen at density contrast $\delta \approx 20$, while the interacting fraction peaks at $\delta \approx 1000$; we provide a fitting formula and identify two interaction modes.
   figure:
-    src: /images/papers/lhuillier2015-ecology1.png
+    src: /images/papers/lhuillier2015-ecology1.webp
     caption: 'Haloes in the cosmic web at $z = 0$ (top) and $z = 1$ (bottom): the densest environments (red) sit in the nodes, intermediate ones (cyan) in filaments.'
 - id: lhuillier2014-ic
   authors:
@@ -653,5 +653,5 @@
   - simulations
   summary: Multi-zoom cosmological simulations show that galaxies grow mostly by smooth accretion, which brings on average 77% of their mass, while mergers bring 23%. Only the most massive galaxies grow significantly through mergers.
   figure:
-    src: /images/papers/lhuillier2012-accretion.png
+    src: /images/papers/lhuillier2012-accretion.webp
     caption: Fraction of stellar mass gained through smooth accretion rather than mergers, versus galaxy mass. The mean is 77%.

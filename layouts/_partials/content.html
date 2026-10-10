@@ -1,5 +1,5 @@
 {{- $base := (urls.Parse site.BaseURL).Path | default "/" -}}
-{{- $c := string .Content -}}
+{{- $c := partial "imgdims.html" (string .Content) -}}
 {{- if ne $base "/" -}}
   {{- $c = replaceRE `(href|src)="/` (printf `${1}="%s` $base) $c -}}
   {{- $c = replaceRE `url\(&quot;/` (printf `url(&quot;%s` $base) $c -}}
