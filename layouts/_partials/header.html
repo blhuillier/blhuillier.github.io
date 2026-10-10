@@ -9,7 +9,7 @@
 {{- range site.Params.nav }}
 {{- $item := . }}
 {{- with site.GetPage $item.page }}
-<li><a href="{{ .RelPermalink }}{{ with $item.anchor }}#{{ . }}{{ end }}"{{ if or (and (not $item.anchor) (eq .RelPermalink $page.RelPermalink)) (and $item.anchor (eq $page.Section "labels")) }} class="is-active"{{ end }}>{{ i18n $item.key }}</a></li>
+<li><a href="{{ .RelPermalink }}{{ with $item.anchor }}#{{ . }}{{ end }}"{{ if or (and (not $item.anchor) (eq .RelPermalink $page.RelPermalink)) (and (eq $item.page "/research") (eq $page.Section "labels")) }} class="is-active"{{ end }}>{{ i18n $item.key }}</a></li>
 {{- end }}
 {{- end }}
 </ul>

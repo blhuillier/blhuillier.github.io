@@ -20,7 +20,6 @@ timeZone = "Asia/Seoul"
   nav = [
     { page = "/", key = "nav_home" },
     { page = "/research", key = "nav_research" },
-    { page = "/research", anchor = "papers", key = "nav_publications" },
     { page = "/teaching", key = "nav_teaching" },
     { page = "/the-group", key = "nav_group" },
     { page = "/outreach", key = "nav_outreach" },

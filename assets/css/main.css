@@ -945,3 +945,6 @@ button.btn { background: transparent; color: inherit; cursor: pointer; }
 .page-hero__title--label { text-transform: none; letter-spacing: .08em; }
 #papers { scroll-margin-top: 70px; }
 .label-bar__heading { flex-basis: 10em; }
+.paper-filter .paper-list { max-width: 1100px; margin: 0 auto; }
+.paper-labels .label-chip.is-active { background: var(--accent-soft); border-color: var(--accent); color: var(--ink); }
+@media (max-width: 640px) { .label-bar__heading { flex-basis: 100%; } }

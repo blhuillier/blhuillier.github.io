@@ -38,10 +38,11 @@
   })
 
 
-  // Research page: label chips filter the list of papers (the chips are also links to the label pages)
+  // Research page: label chips filter the paper boxes (the chips are also links to the label pages)
   document.querySelectorAll("[data-paper-filter]").forEach(function (box) {
-    var items = box.querySelectorAll(".pub-list--all li")
+    var items = box.querySelectorAll(".paper-filter__item")
     var chips = box.querySelectorAll(".label-chip[data-label]")
+    var bar = box.querySelector(".label-bar")
     var status = box.querySelector("[data-filter-status]")
     var section = box.closest("section")
     function apply(label, push) {
@@ -55,7 +56,7 @@
         var on = c.dataset.label === label
         c.classList.toggle("is-active", on)
         c.setAttribute("aria-pressed", on ? "true" : "false")
-        if (on && label) name = c.firstChild.textContent.trim()
+        if (on && label && bar.contains(c)) name = c.firstChild.textContent.trim()
       })
       status.textContent = label ? status.dataset.shown.replace("%n", n).replace("%l", name) : status.dataset.all
       if (push) history.replaceState(null, "", "#" + (label || "all"))
@@ -65,7 +66,10 @@
         if (e.metaKey || e.ctrlKey || e.shiftKey || e.button) return
         e.preventDefault()
         var label = c.dataset.label
-        apply(label && c.classList.contains("is-active") ? "" : label, true)
+        var inBox = !bar.contains(c)
+        // a chip in the bar toggles; a chip inside a paper box always selects its label
+        apply(label && !inBox && c.classList.contains("is-active") ? "" : label, true)
+        if (inBox) section.scrollIntoView({ behavior: "smooth" })
       })
     })
     function fromHash() {
