@@ -9,7 +9,9 @@ the `gatsby-archive` branch.
 | What | File |
 |---|---|
 | News on the homepage (EN / FR / KO) | `data/news.yaml` |
-| Papers (summary boxes on the topic pages) | `data/papers.yaml` |
+| Papers (list on the Research page, boxes on the label pages); field `labels` | `data/papers.yaml` |
+| Label names (EN/FR/KO) and header images | `data/labels.yaml` |
+| Text at the top of a label page | `label-intros/<label>.html` (`.fr.html`, `.ko.html`) |
 | Group members (cards on the Group page) | `data/members.yaml` |
 | Courses at Sejong | `data/courses.yaml` |
 | Profile links (icons) | `data/profiles.yaml` |
@@ -19,7 +21,7 @@ the `gatsby-archive` branch.
 | Images, PDFs | `static/images/` |
 
 Inside page files, `{{< ... >}}` are shortcodes that insert data:
-`{{< news >}}`, `{{< paperlist tag="simulations" >}}`, `{{< member id="clea" >}}`,
+`{{< news >}}`, `{{< paperfilter >}}`, `{{< member id="clea" >}}`,
 `{{< courses list="graduate" heading="…" >}}`, `{{< tex math=`\Omega_k` >}}`.
 
 ## Images

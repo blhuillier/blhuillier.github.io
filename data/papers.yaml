@@ -102,7 +102,7 @@
   tags:
   - model-testing
   - supernovae
-  labels: [curvature, supernovae, bao]
+  labels: [key-papers, curvature, supernovae, bao]
   summary: We reconstruct distances and the Hubble rate from Pantheon+ and DES supernovae without assuming any dark energy model, and combine them with DESI DR2 baryon acoustic oscillations to test the FLRW metric and measure the spatial curvature. With Pantheon+ and DESI DR2 we find $\Omega_{k,0} = 0.045^{+0.045}_{-0.081}$, consistent with flatness and with Planck 2018.
   figure:
     src: /images/papers/millard2026-flrw.webp
@@ -124,7 +124,7 @@
   tags:
   - agn
   - galaxies
-  labels: [agn, galaxy-formation, vlbi]
+  labels: [key-papers, agn, galaxy-formation, vlbi]
   summary: 'Comparing VLBI jet directions with optical host-galaxy shapes for about 6,000 AGN, we detect a weak but significant alignment between the parsec-scale jet and the minor axis of its host galaxy: a link between the black hole and its host across three orders of magnitude in scale.'
   figure:
     src: /images/papers/fernandezgil2025-alignment.webp
@@ -144,7 +144,7 @@
   tags:
   - model-testing
   - supernovae
-  labels: [curvature, supernovae, bao]
+  labels: [key-papers, curvature, supernovae, bao]
   summary: Reconstructing the expansion history from simulated LSST supernovae and combining it with simulated DESI 5-year BAO, we forecast constraints of up to ±4% on the curvature and ±0.1 on $c/(H_0 r_\mathrm{d})$, without assuming any form of dark energy.
   figure:
     src: /images/papers/lhuillier2025-litmus.webp
@@ -223,7 +223,7 @@
   - model-testing
   - methods
   - supernovae
-  labels: [supernovae, gaussian-processes]
+  labels: [key-papers, supernovae, gaussian-processes]
   summary: 'The choice of mean function and hyperparameters biases Gaussian process reconstructions of supernova distances: a zero mean gives unphysical results and a best-fit ΛCDM mean biases them. Marginalising over a family of mean functions and over the hyperparameters removes the bias, whatever the kernel.'
   figure:
     src: /images/papers/hwang2023-gp.png
@@ -318,7 +318,7 @@
   tags:
   - dark-energy
   - model-testing
-  labels: [dark-energy]
+  labels: [key-papers, dark-energy]
   summary: We study dark sectors made of a negative cosmological constant plus a late-time accelerating component. The acceleration is often transient and some models eventually contract; current data show no decisive evidence for a negative $\Lambda$, but the best fits are phantom at $z \gtrsim 1$.
   figure:
     src: /images/papers/calderon2021-neglambda.png
@@ -452,7 +452,7 @@
   tags:
   - model-testing
   - modified-gravity
-  labels: [curvature, modified-gravity, supernovae, bao, growth]
+  labels: [key-papers, curvature, modified-gravity, supernovae, bao, growth]
   summary: Combining model-independent expansion reconstructions from Pantheon supernovae and BAO, we test the FLRW metric and flatness, and use eBOSS DR14Q growth data to constrain $\Omega_\mathrm{m}$, $\gamma$ and $\sigma_8$. Everything is consistent with a flat FLRW universe, General Relativity and $\Lambda$, with some tension at $z > 1$.
   figure:
     src: /images/papers/shafieloo2018-falsifying.png
@@ -470,7 +470,7 @@
   tags:
   - model-testing
   - modified-gravity
-  labels: [modified-gravity, supernovae, growth]
+  labels: [key-papers, modified-gravity, supernovae, growth]
   summary: We reconstruct the expansion history from supernovae and fit growth-rate data to constrain $\Omega_\mathrm{m}$, the growth index $\gamma$ and $\sigma_8$ without a dark energy model. The results agree with ΛCDM in General Relativity, and requiring a positive dark energy density tightens them further.
   figure:
     src: /images/papers/lhuillier2018-growth.png
@@ -554,7 +554,7 @@
   - simulations
   - modified-gravity
   - dark-matter
-  labels: [modified-gravity, dark-energy, dark-matter, simulations]
+  labels: [key-papers, modified-gravity, dark-energy, dark-matter, simulations]
   summary: In N-body simulations of $f(R)$ gravity, DGP and coupled dark energy, $f(R)$ raises halo spin and weakens the spin alignment of interacting pairs, while only strongly coupled dark energy increases the halo interaction rate and the alignment of halo shapes with the large-scale structure.
   figure:
     src: /images/papers/lhuillier2017-modgrav.webp
@@ -572,7 +572,7 @@
   tags:
   - simulations
   - dark-matter
-  labels: [dark-matter, simulations]
+  labels: [galaxy-formation, dark-matter, simulations]
   summary: In Horizon Run 4, interacting haloes have lower spin and are more spherical than typical haloes. Pairs start with antiparallel spins that gradually become parallel, interactions are mostly radial, and alignments are strongest for massive, close pairs and persist up to $z = 4$.
   figure:
     src: /images/papers/lhuillier2017-ecology2.webp
@@ -610,7 +610,7 @@
   tags:
   - model-testing
   - supernovae
-  labels: [curvature, supernovae, bao]
+  labels: [key-papers, curvature, supernovae, bao]
   summary: Combining BOSS DR12 BAO with JLA supernovae, we measure $H_0 r_\mathrm{d}$ without assuming a cosmological model and introduce the $\Theta(z)$ diagnostic of the flat-FLRW metric. The results are consistent with a flat FLRW universe within $2\sigma$.
   figure:
     src: /images/papers/lhuillier2017-flrw.png
@@ -630,7 +630,7 @@
   - simulations
   - large-scale-structure
   - dark-matter
-  labels: [large-scale-structure, dark-matter, simulations]
+  labels: [key-papers, large-scale-structure, dark-matter, simulations]
   summary: Horizon Run 4 follows $6300^3$ particles in a $3150\,h^{-1}\,\mathrm{Mpc}$ box, with halo merger trees down to $2.7\times10^{11}\,h^{-1}\,M_\odot$. The halo mass function departs from universality and evolves with redshift, and the BAO peak in mock galaxy correlations broadens and shifts. The data are public.
   figure:
     src: /images/papers/kim2015-hr4.jpg
@@ -648,7 +648,7 @@
   tags:
   - simulations
   - dark-matter
-  labels: [dark-matter, simulations]
+  labels: [galaxy-formation, dark-matter, simulations]
   summary: Using Horizon Run 4, we measure how often haloes interact as a function of environment, separation, mass ratio, mass and redshift. Most interactions happen at density contrast $\delta \approx 20$, while the interacting fraction peaks at $\delta \approx 1000$; we provide a fitting formula and identify two interaction modes.
   figure:
     src: /images/papers/lhuillier2015-ecology1.webp
@@ -667,7 +667,7 @@
   - simulations
   - methods
   - dark-matter
-  labels: [simulations]
+  labels: [key-papers, simulations]
   summary: We test how the pre-initial configuration, the order of Lagrangian perturbation theory and the starting redshift affect N-body results. Glass and grid give similar results at $z \lesssim 2$, while first-order LPT underestimates massive haloes by about 2% and small-scale power by 6%.
   figure:
     src: /images/papers/lhuillier2014-ic.png
@@ -685,7 +685,7 @@
   tags:
   - galaxies
   - simulations
-  labels: [galaxy-formation, simulations]
+  labels: [key-papers, galaxy-formation, simulations]
   summary: Multi-zoom cosmological simulations show that galaxies grow mostly by smooth accretion, which brings on average 77% of their mass, while mergers bring 23%. Only the most massive galaxies grow significantly through mergers.
   figure:
     src: /images/papers/lhuillier2012-accretion.webp

@@ -1,4 +1,5 @@
-{{- /* All labels, grouped, with paper counts. Context: (dict "active" "<label id or empty>") */ -}}
+{{- /* All labels, grouped, with paper counts. Context: (dict "active" "<label id, or empty for all papers>")
+       The "All" chip and the other chips are links (research page / label pages); on the research page site.js turns them into filters. */ -}}
 {{- $lang := site.Language.Lang -}}
 {{- $counts := dict -}}
 {{- range site.Data.papers -}}
@@ -10,6 +11,9 @@
 {{- range $g := site.Data.labels }}
 <div class="label-bar__group">
 <span class="label-bar__heading">{{ index $g $lang | default $g.en }}</span>
+{{- if eq $g.id "selection" }}
+<a class="label-chip label-chip--{{ $g.id }}{{ if eq $.active "" }} is-active{{ end }}" href="{{ (site.GetPage "/research").RelPermalink }}#all" data-label="">{{ i18n "label_all" }} <span class="label-chip__n">{{ len site.Data.papers }}</span></a>
+{{- end }}
 {{- range $g.labels }}{{ $n := index $counts .id | default 0 }}{{ if $n }}{{ with site.GetPage (printf "/labels/%s" .id) }}
 <a class="label-chip label-chip--{{ $g.id }}{{ if eq $.active .Params.label }} is-active{{ end }}" href="{{ .RelPermalink }}" data-label="{{ .Params.label }}"{{ if eq $.active .Params.label }} aria-current="page"{{ end }}>{{ .Title }} <span class="label-chip__n">{{ $n }}</span></a>
 {{- end }}{{ end }}{{ end }}

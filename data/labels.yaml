@@ -1,19 +1,26 @@
 # Labels for the papers in papers.yaml (field "labels").
+# Optional "image": background of the label page header. Optional intro text: label-intros/<id>[.fr|.ko].html
 # Each label gets a page /labels/<id>/ (also /fr/ and /ko/) and a chip on the Publications page.
 # "first-author" and "students" are set automatically from the author list
 # (first author L'Huillier; any author marked †): don't add them by hand.
+- id: selection
+  en: Selection
+  fr: Sélection
+  ko: 선별
+  labels:
+  - { id: key-papers, en: Key papers, fr: Articles clés, ko: 주요 논문 }
 - id: topics
   en: Topics
   fr: Thèmes
   ko: 주제
   labels:
   - { id: dark-energy, en: Dark energy, fr: Énergie noire, ko: 암흑에너지 }
-  - { id: modified-gravity, en: Modified gravity, fr: Gravité modifiée, ko: 수정 중력 }
-  - { id: curvature, en: Curvature & FLRW, fr: Courbure et FLRW, ko: 곡률과 FLRW 계량 }
+  - { id: modified-gravity, en: Modified gravity, fr: Gravité modifiée, ko: 수정 중력, image: /images/2param_inverted_edited_edited.png }
+  - { id: curvature, en: Curvature & FLRW, fr: Courbure et FLRW, ko: 곡률과 FLRW 계량, image: /images/2param_inverted_edited_edited.png }
   - { id: early-universe, en: Early Universe, fr: Univers primordial, ko: 초기 우주 }
   - { id: dark-matter, en: Dark matter haloes, fr: Halos de matière noire, ko: 암흑물질 헤일로 }
   - { id: large-scale-structure, en: Large-scale structure, fr: Grandes structures, ko: 우주 거대구조 }
-  - { id: galaxy-formation, en: Galaxy formation, fr: Formation des galaxies, ko: 은하 형성 }
+  - { id: galaxy-formation, en: Galaxy formation, fr: Formation des galaxies, ko: 은하 형성, image: /images/HR4_1919_1199.webp }
   - { id: agn, en: AGN & jets, fr: AGN et jets, ko: 활동은하핵과 제트 }
 - id: probes
   en: Data & probes
@@ -34,7 +41,7 @@
   labels:
   - { id: gaussian-processes, en: Gaussian processes, fr: Processus gaussiens, ko: 가우시안 과정 }
   - { id: iterative-smoothing, en: Iterative smoothing, fr: Lissage itératif, ko: 반복 평활법 }
-  - { id: simulations, en: Simulations, fr: Simulations, ko: 시뮬레이션 }
+  - { id: simulations, en: Simulations, fr: Simulations, ko: 시뮬레이션, image: /images/zoom_t91_long.webp }
   - { id: model-selection, en: Model selection, fr: Sélection de modèles, ko: 모형 선택 }
 - id: role
   en: Authorship

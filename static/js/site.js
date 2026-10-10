@@ -38,12 +38,12 @@
   })
 
 
-  // Publications: label chips filter the list of papers (the chips are also links to the label pages)
+  // Research page: label chips filter the list of papers (the chips are also links to the label pages)
   document.querySelectorAll("[data-paper-filter]").forEach(function (box) {
     var items = box.querySelectorAll(".pub-list--all li")
     var chips = box.querySelectorAll(".label-chip[data-label]")
     var status = box.querySelector("[data-filter-status]")
-    var reset = box.querySelector("[data-filter-reset]")
+    var section = box.closest("section")
     function apply(label, push) {
       var n = 0, name = ""
       items.forEach(function (li) {
@@ -54,26 +54,27 @@
       chips.forEach(function (c) {
         var on = c.dataset.label === label
         c.classList.toggle("is-active", on)
-        if (on) { c.setAttribute("aria-pressed", "true"); name = c.firstChild.textContent.trim() }
-        else c.removeAttribute("aria-pressed")
+        c.setAttribute("aria-pressed", on ? "true" : "false")
+        if (on && label) name = c.firstChild.textContent.trim()
       })
       status.textContent = label ? status.dataset.shown.replace("%n", n).replace("%l", name) : status.dataset.all
-      reset.hidden = !label
-      if (push) history.replaceState(null, "", label ? "#" + label : location.pathname)
+      if (push) history.replaceState(null, "", "#" + (label || "all"))
     }
     chips.forEach(function (c) {
       c.addEventListener("click", function (e) {
         if (e.metaKey || e.ctrlKey || e.shiftKey || e.button) return
         e.preventDefault()
-        apply(c.classList.contains("is-active") ? "" : c.dataset.label, true)
+        var label = c.dataset.label
+        apply(label && c.classList.contains("is-active") ? "" : label, true)
       })
     })
-    reset.addEventListener("click", function () { apply("", true) })
-    var h = decodeURIComponent(location.hash.slice(1))
-    if (h && box.querySelector('.label-chip[data-label="' + h + '"]')) {
-      apply(h, false)
-      box.closest("section").scrollIntoView()
+    function fromHash() {
+      var h = decodeURIComponent(location.hash.slice(1))
+      if (h === "all") { apply("", false); section.scrollIntoView() }
+      else if (h && box.querySelector('.label-chip[data-label="' + h + '"]')) { apply(h, false); section.scrollIntoView() }
     }
+    fromHash()
+    window.addEventListener("hashchange", fromHash)
   })
 
   // Parallax: [data-parallax="bg"] layers and [data-parallax="img"] banners drift on scroll

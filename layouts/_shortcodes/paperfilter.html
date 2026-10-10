@@ -1,11 +1,15 @@
-{{- /* Publications page: label chips that filter the list of all papers on the site (JS), with label pages as fallback links. */ -}}
+{{- /* Research page: label chips that filter the list of all papers on the site (site.js); opens on the key papers.
+       Without JavaScript the chips are links to the label pages. */ -}}
 {{- $papers := sort site.Data.papers "year" "desc" -}}
-<div class="paper-filter" data-paper-filter>
-{{ partial "labelbar.html" (dict "active" "") }}
-<p class="paper-filter__status" aria-live="polite"><span data-filter-status data-all="{{ i18n "filter_all" (len $papers) }}" data-shown="{{ i18n "filter_shown" (dict "Count" "%n" "Label" "%l") }}">{{ i18n "filter_all" (len $papers) }}</span> <button type="button" class="paper-filter__reset" data-filter-reset hidden>{{ i18n "filter_reset" }}</button></p>
+{{- $default := "key-papers" -}}
+{{- $map := partialCached "labelmap.html" site.Language.Lang site.Language.Lang -}}
+{{- $n := 0 }}{{ range $papers }}{{ if in (partial "paperlabels.html" .) $default }}{{ $n = add $n 1 }}{{ end }}{{ end -}}
+<div class="paper-filter" data-paper-filter data-default="{{ $default }}">
+{{ partial "labelbar.html" (dict "active" $default) }}
+<p class="paper-filter__status" aria-live="polite" data-filter-status data-all="{{ i18n "filter_all" (len $papers) }}" data-shown="{{ i18n "filter_shown" (dict "Count" "%n" "Label" "%l") }}">{{ i18n "filter_shown" (dict "Count" $n "Label" (index $map $default).name) }}</p>
 <ol class="pub-list pub-list--all" reversed>
-{{- range $papers }}
-<li data-labels="{{ delimit (partial "paperlabels.html" .) " " }}"><span class="pub-authors">{{ range $i, $a := .authors }}{{ if $i }}, {{ end }}{{ if hasPrefix $a "L'Huillier, B." }}<strong>{{ $a }}</strong>{{ else }}{{ $a }}{{ end }}{{ end }}</span> ({{ .year }}). <span class="pub-title">{{ partial "richtext.html" .title }}</span>. <em>{{ .journal | default (i18n "preprint") }}</em>. <span class="paper-links">{{ with .doi }}<a href="https://doi.org/{{ . }}" target="_blank" rel="noopener noreferrer">DOI</a>{{ end }}{{ if and .doi .arxiv }} · {{ end }}{{ with .arxiv }}<a href="https://arxiv.org/abs/{{ . }}" target="_blank" rel="noopener noreferrer">arXiv:{{ . }}</a>{{ end }}</span></li>
+{{- range $papers }}{{ $l := partial "paperlabels.html" . }}
+<li data-labels="{{ delimit $l " " }}"{{ if not (in $l $default) }} hidden{{ end }}><span class="pub-authors">{{ range $i, $a := .authors }}{{ if $i }}, {{ end }}{{ if hasPrefix $a "L'Huillier, B." }}<strong>{{ $a }}</strong>{{ else }}{{ $a }}{{ end }}{{ end }}</span> ({{ .year }}). <span class="pub-title">{{ partial "richtext.html" .title }}</span>. <em>{{ .journal | default (i18n "preprint") }}</em>. <span class="paper-links">{{ with .doi }}<a href="https://doi.org/{{ . }}" target="_blank" rel="noopener noreferrer">DOI</a>{{ end }}{{ if and .doi .arxiv }} · {{ end }}{{ with .arxiv }}<a href="https://arxiv.org/abs/{{ . }}" target="_blank" rel="noopener noreferrer">arXiv:{{ . }}</a>{{ end }}</span></li>
 {{- end }}
 </ol>
 </div>

@@ -1,15 +1,21 @@
-{{- /* One page per label (data/labels.yaml) in every language: /labels/<id>/, /fr/labels/<id>/, /ko/labels/<id>/ */ -}}
+{{- /* One page per label (data/labels.yaml) in every language: /labels/<id>/, /fr/labels/<id>/, /ko/labels/<id>/.
+       Optional intro text: label-intros/<id>.html (.fr.html, .ko.html). */ -}}
 {{- .EnableAllLanguages -}}
 {{- $lang := .Site.Language.Lang -}}
+{{- $sfx := cond (eq $lang "en") "" (printf ".%s" $lang) -}}
 {{- range $g := .Site.Data.labels -}}
   {{- range $g.labels -}}
     {{- $name := index . $lang | default .en -}}
     {{- $desc := i18n "label_description" (dict "Label" $name) -}}
+    {{- $intro := "" -}}
+    {{- $f := printf "label-intros/%s%s.html" .id $sfx -}}
+    {{- if fileExists $f }}{{ $intro = os.ReadFile $f }}{{ end -}}
     {{- $.AddPage (dict
         "path" .id
         "title" $name
         "kind" "page"
-        "params" (dict "title" $name "description" $desc "label" .id)
+        "content" (dict "mediaType" "text/html" "value" $intro)
+        "params" (dict "title" $name "description" $desc "label" .id "image" .image)
       ) -}}
   {{- end -}}
 {{- end -}}

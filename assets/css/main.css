@@ -943,5 +943,5 @@ button.btn { background: transparent; color: inherit; cursor: pointer; }
 .page-hero__kicker a { color: inherit; opacity: .8; }
 .label-more { text-align: center; margin: 2.4em 0 0; }
 .page-hero__title--label { text-transform: none; letter-spacing: .08em; }
-#all-papers { scroll-margin-top: 70px; }
+#papers { scroll-margin-top: 70px; }
 .label-bar__heading { flex-basis: 10em; }

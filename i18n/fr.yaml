@@ -32,9 +32,9 @@ link_scholar: Google Scholar
 labels_aria: Étiquettes des articles
 label_count: '{{ if eq .Count 1 }}1 article{{ else }}{{ .Count }} articles{{ end }}'
 label_description: 'Articles de Benjamin L’Huillier — {{ .Label }} : résumés, figures et liens.'
-label_back: ← Tous les articles par thème
+label_back: ← Tous les articles
 filter_heading: Articles par thème
 filter_intro: Cliquez sur une étiquette pour n’afficher que les articles correspondants.
 filter_all: Les {{ .Count }} articles
 filter_shown: '{{ .Count }} articles : {{ .Label }}'
-filter_reset: Tout afficher
+label_all: Tous
