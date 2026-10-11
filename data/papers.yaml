@@ -450,7 +450,7 @@
   tags:
   - model-testing
   - supernovae
-  labels: [supernovae, gaussian-processes]
+  labels: [supernovae, gaussian-processes, iterative-smoothing]
   summary: A model-independent analysis of the Pantheon supernovae shows deviations from ΛCDM at $z \gtrsim 1$. They vanish with a simple Malmquist-like correction, but neither $\chi^2$ tests nor Gaussian processes find that this extra correction is statistically required.
   figure:
     src: /images/papers/lhuillier2019-pantheon.webp
@@ -486,7 +486,7 @@
   tags:
   - model-testing
   - modified-gravity
-  labels: [key-papers, modified-gravity, supernovae, growth]
+  labels: [key-papers, modified-gravity, supernovae, growth, iterative-smoothing]
   summary: We reconstruct the expansion history from supernovae and fit growth-rate data to constrain $\Omega_\mathrm{m}$, the growth index $\gamma$ and $\sigma_8$ without a dark energy model. The results agree with ΛCDM in General Relativity, and requiring a positive dark energy density tightens them further.
   figure:
     src: /images/papers/lhuillier2018-growth.png
