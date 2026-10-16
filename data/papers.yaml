@@ -18,7 +18,7 @@
   - lensing
   - large-scale-structure
   - model-testing
-  labels: [large-scale-structure, lensing]
+  labels: [large-scale-structure, lensing, inverse-problems]
   summary: We reconstruct the linear matter power spectrum at $z = 0$ from joint Planck PR4, ACT DR6 and SPT-3G CMB lensing, using a modified Richardson–Lucy deconvolution. The result follows the linear prediction on large scales, lies systematically higher for $k \gtrsim 0.1\,\mathrm{Mpc}^{-1}$, and partly preserves the BAO feature.
   figure:
     src: /images/papers/dawn2026-lenses1.png
@@ -39,7 +39,7 @@
   - lensing
   - large-scale-structure
   - model-testing
-  labels: [large-scale-structure, lensing]
+  labels: [large-scale-structure, lensing, inverse-problems]
   summary: A regularised Richardson–Lucy framework tests scale-dependent departures from the nonlinear matter power spectrum using galaxy clustering, galaxy–galaxy lensing and cosmic shear. On LSST Year-10-like mocks, oscillations of about 1% or more are recovered over $0.1 \lesssim k \lesssim 0.5\,\mathrm{Mpc}^{-1}$, and a 1% oscillation is detected at about $2.6\sigma$.
   figure:
     src: /images/papers/jiang2026-lenses2.webp

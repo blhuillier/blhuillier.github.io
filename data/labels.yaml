@@ -9,6 +9,16 @@
   ko: 선별
   labels:
   - { id: key-papers, en: Key papers, fr: Articles clés, ko: 주요 논문 }
+- id: methods
+  en: Methods
+  fr: Méthodes
+  ko: 방법
+  labels:
+  - { id: gaussian-processes, en: Gaussian processes, fr: Processus gaussiens, ko: 가우시안 과정 }
+  - { id: iterative-smoothing, en: Iterative smoothing, fr: Lissage itératif, ko: 반복 평활법 }
+  - { id: simulations, en: Simulations, fr: Simulations, ko: 시뮬레이션, image: /images/zoom_t91_long.webp }
+  - { id: inverse-problems, en: Inverse problems, fr: Problèmes inverses, ko: 역문제 }
+  - { id: model-selection, en: Model selection, fr: Sélection de modèles, ko: 모형 선택 }
 - id: topics
   en: Topics
   fr: Thèmes
@@ -34,15 +44,6 @@
   - { id: gravitational-waves, en: Gravitational waves, fr: Ondes gravitationnelles, ko: 중력파 }
   - { id: clusters, en: Galaxy clusters, fr: Amas de galaxies, ko: 은하단 }
   - { id: vlbi, en: VLBI, fr: VLBI, ko: VLBI }
-- id: methods
-  en: Methods
-  fr: Méthodes
-  ko: 방법
-  labels:
-  - { id: gaussian-processes, en: Gaussian processes, fr: Processus gaussiens, ko: 가우시안 과정 }
-  - { id: iterative-smoothing, en: Iterative smoothing, fr: Lissage itératif, ko: 반복 평활법 }
-  - { id: simulations, en: Simulations, fr: Simulations, ko: 시뮬레이션, image: /images/zoom_t91_long.webp }
-  - { id: model-selection, en: Model selection, fr: Sélection de modèles, ko: 모형 선택 }
 - id: role
   en: Authorship
   fr: Rôle

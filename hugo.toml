@@ -35,24 +35,24 @@ timeZone = "Asia/Seoul"
     weight = 1
     [languages.en.params]
       titleTemplate = "%s — Benjamin L'Huillier"
-      defaultTitle = "Benjamin L'Huillier — Cosmologist & Astrophysicist"
-      description = "Benjamin L'Huillier is a French cosmologist and Assistant Professor at Sejong University, Seoul. He tests the concordance model of cosmology with N-body simulations and advanced statistical methods."
+      defaultTitle = "Benjamin L'Huillier — Cosmology, Statistics & Scientific Computing"
+      description = "Benjamin L'Huillier is a French cosmologist and Assistant Professor at Sejong University, Seoul. He develops non-parametric statistical methods (Gaussian processes, Bayesian model selection, inverse problems) and large-scale simulations to test the standard model of cosmology."
       locale = "en_US"
   [languages.fr]
     languageName = "Français"
     weight = 2
     [languages.fr.params]
       titleTemplate = "%s — Benjamin L'Huillier"
-      defaultTitle = "Benjamin L’Huillier — Cosmologiste et astrophysicien"
-      description = "Benjamin L’Huillier est un cosmologiste français, professeur assistant à l’Université Sejong (Séoul)."
+      defaultTitle = "Benjamin L’Huillier — Cosmologie, statistique et calcul scientifique"
+      description = "Benjamin L’Huillier est un cosmologiste français, professeur assistant à l’Université Sejong (Séoul). Il développe des méthodes statistiques non paramétriques (processus gaussiens, sélection bayésienne de modèles, problèmes inverses) et des simulations numériques à grande échelle pour tester le modèle standard de la cosmologie."
       locale = "fr_FR"
   [languages.ko]
     languageName = "한국어"
     weight = 3
     [languages.ko.params]
       titleTemplate = "%s — 벤자민 루일리예"
-      defaultTitle = "벤자민 루일리예 (Benjamin L’Huillier) — 우주론 연구자"
-      description = "벤자민 루일리예는 세종대학교 물리천문학과 조교수입니다."
+      defaultTitle = "벤자민 루일리예 (Benjamin L’Huillier) — 우주론 · 통계 · 과학 계산"
+      description = "벤자민 루일리예는 세종대학교 물리천문학과 조교수인 프랑스 우주론 학자로, 가우시안 과정, 베이즈 모형 선택, 역문제 등 비모수 통계 기법과 대규모 시뮬레이션을 개발해 표준 우주론 모형을 검증합니다."
       locale = "ko_KR"
 
 # static/images is also mounted under assets/ so Hugo can make smaller copies (srcset)
