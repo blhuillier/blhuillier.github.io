@@ -380,11 +380,13 @@ html[lang="ko"] .summary-frame h2 { letter-spacing: .08em; }
 
 /* Embedded posts (LinkedIn): fixed height from the embed code, width shrinks on phones */
 .news-embed { margin-top: .9em; }
-/* Full column width. A frame can't size itself to LinkedIn's content, so each
-   embed passes measured heights (--h0 wide … --h3 phone) via embedHeights. */
+/* LinkedIn's own embed width (504px), full column width on phones. A frame can't
+   size itself to LinkedIn's content, so each embed passes measured heights
+   (--h0 wide … --h3 phone) via embedHeights; measure them at these widths. */
 .news-embed iframe {
   display: block;
   width: 100%;
+  max-width: 504px;
   height: var(--h0, 800px);
   border: 0;
   background: #fff;
