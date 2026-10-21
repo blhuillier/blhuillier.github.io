@@ -17,7 +17,7 @@ timeZone = "Asia/Seoul"
   # true only for a preview copy: every page gets <meta name="robots" content="noindex">
   preview = false
   # GoatCounter visitor statistics (no cookies): the site code chosen at goatcounter.com, e.g. "benjissi". Empty = off.
-  goatcounter = ""
+  goatcounter = "benjissi"
   # main navigation: page path + i18n key for the label
   nav = [
     { page = "/", key = "nav_home" },
